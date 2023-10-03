@@ -1,0 +1,21 @@
+:root {
+  --font-sans: 'Source Sans 3 Variable', sans-serif;
+  --font-size-base: calc(1rem + 0.2vw);
+  --max-page-width: calc(1280 / 16 * 1rem);
+
+  --box-shadow: 0 1px 1px hsl(0 0% 0% / 0.12),
+  0 2px 2px hsl(0 0% 0% / 0.12),
+  0 4px 4px hsl(0 0% 0% / 0.12),
+  0 8px 8px hsl(0 0% 0% / 0.12),
+  0 16px 16px hsl(0 0% 0% / 0.12);
+
+  --box-shadow-sharp: 0 1px 1px hsl(0 0% 0% / 0.25),
+  0 2px 2px hsl(0 0% 0% / 0.20),
+  0 4px 4px hsl(0 0% 0% / 0.15),
+  0 8px 8px hsl(0 0% 0% / 0.10),
+  0 16px 16px hsl(0 0% 0% / 0.05);
+
+  @media screen and (min-width: 1024px) {
+    --font-size-base: calc(1.1rem + 0.2vw);
+  }
+}

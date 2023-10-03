@@ -1,0 +1,24 @@
+.header-title {
+
+  p {
+    color: hsl(0deg 0% 100%);
+    font-family: var(--font-sans);
+    font-size: 4rem;
+    font-weight: 525;
+    line-height: 0.9;
+    margin-block-start: 3rem;
+    margin-inline-start: 1.5rem;
+    text-align: left;
+  }
+
+  &__number {
+    font-weight: 325;
+  }
+
+  &__small {
+    font-size: 60%;
+    font-variant: all-small-caps;
+    font-weight: 300;
+    vertical-align: top;
+  }
+}

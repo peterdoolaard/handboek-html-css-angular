@@ -1,0 +1,12 @@
+header {
+  position: relative;
+}
+
+.header-container {
+  background: hsl(300deg 40% 35%);
+  block-size: 16rem;
+  clip-path: polygon(0 -1.5rem, 0 100%, 100% 85%, 100% -1.5rem);
+  display: flex;
+  margin-block: 2rem 4rem;
+  position: relative;
+}

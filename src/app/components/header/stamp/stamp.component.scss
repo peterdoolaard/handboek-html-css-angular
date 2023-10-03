@@ -1,0 +1,49 @@
+.header-stamp {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    background: hsl(0 0% 100%);
+    block-size: 10rem;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    display: grid;
+    inline-size: 10rem;
+    left: 50%;
+    margin-block-end: -2rem;
+    place-items: center;
+    position: absolute;
+    top: 8rem;
+  }
+}
+
+.stamp-content {
+
+  @media screen and (min-width: 768px) {
+    p {
+      border-block-end: 1px solid hsl(0 0% 0%);
+      color: hsl(0 0% 5%);
+      font-family: var(--font-sans);
+      font-size: 2rem;
+      font-variant-caps: all-petite-caps;
+      font-weight: 400;
+      text-align: center;
+      vertical-align: text-top;
+
+      &:last-of-type {
+        border-block-end: none;
+        font-size: 1.2rem;
+        line-height: 1.1;
+        margin-block-start: 0.5rem;
+
+        & span {
+          display: block;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    sup {
+      font-size: 50%;
+    }
+  }
+}

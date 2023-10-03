@@ -1,0 +1,42 @@
+/* AdBlocker detects the bol.com tracking URL and sets display: none */
+/* ngStyle detects the display value and in return shows the alternative widget with the clean URL */
+/* [ngStyle]="{'display': widgetAd.computedStyleMap().get('display')?.toString() === 'none' ? 'inline-block' : 'none'}" */
+.widget {
+  box-shadow: var(--box-shadow-sharp);
+  display: inline-block;
+  margin-block: 2em;
+
+  @media (min-width: 720px) {
+    margin-inline-start: calc(2rem + 250px);
+  }
+
+  + .widget {
+    display: none;
+  }
+}
+
+.widget img {
+  display: block;
+}
+
+.widget-container {
+  background: hsl(300deg 40% 90%);
+  display: flex;
+  flex-flow: column;
+}
+
+@media (min-width: 600px) {
+  .widget-container {
+    flex-flow: row;
+  }
+}
+
+.widget-text p {
+  display: flex;
+  flex-flow: column;
+  padding: 1em;
+}
+
+.widget-text__title {
+  font-weight: 500;
+}

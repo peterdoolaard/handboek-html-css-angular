@@ -1,1 +1,129 @@
-/* You can add global styles to this file, and also import other style files */
+@import "src/assets/styles/fonts";
+@import "src/assets/styles/variables";
+
+*,
+*:is(::before, ::after) {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: var(--font-size-base);
+}
+
+body {
+  background: hsl(300deg 40% 90%);
+  font-family: var(--font-sans);
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+:is(h1, h2, h3, p, pre) {
+  margin-block: 0;
+}
+
+:is(h1, h2, h3) {
+  color: hsl(0 0% 15%);
+  font-weight: 500;
+}
+
+p {
+  color: hsl(0 0% 5%);
+  font-weight: 400;
+}
+
+a:any-link {
+  text-decoration: none;
+}
+
+.screen-reader-text:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.page-wrapper {
+  background-color: hsl(0 0% 98%);
+  box-shadow: var(--box-shadow);
+  margin: auto;
+  max-inline-size: var(--max-page-width);
+  min-block-size: 100vh;
+  transform: translate(0);
+}
+
+.main-content {
+  padding: 0.5rem;
+}
+
+.inleiding {
+  padding-inline-end: 1rem;
+}
+
+@media (min-width: 700px) {
+  .inleiding {
+    align-items: baseline;
+    column-gap: 2rem;
+    display: grid;
+    grid-template-columns: minmax(min-content, 250px) 1fr;
+    max-width: 1024px;
+  }
+}
+
+.inleiding [class*='kop'] {
+  grid-column: 1;
+  line-height: 1;
+}
+
+.inleiding-subkop {
+  margin-block-start: 0.5rem;
+}
+
+.inleiding ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.inleiding li {
+  margin-block-end: 0.3rem;
+}
+
+.inleiding > p, ul {
+  grid-column: 2;
+  margin-block-end: 0.5em;
+}
+
+:any-link.link-text {
+  background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 55%) 5%, transparent 5%, transparent 100%);
+  color: hsl(300deg 40% 35%);
+}
+
+:any-link.link-text:is(:active, :hover) {
+  color: inherit;
+  animation: hover 180ms ease-in-out forwards 50ms;
+}
+
+@keyframes hover {
+  0% {
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 20%, transparent 20%, transparent 100%);
+  }
+  25% {
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 40%, transparent 20%, transparent 100%);
+  }
+  50% {
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 60%, transparent 20%, transparent 100%);
+  }
+  75% {
+    background: linear-gradient(to top,  hsl(300deg 40% 65%), hsl(300deg 40% 65%) 80%, transparent 20%, transparent 100%);
+  }
+  100% {
+    background: linear-gradient(to top,  hsl(300deg 40% 65%), hsl(300deg 40% 65%) 100%);
+  }
+}
+
+.errata {
+  font-weight: bold;
+}
+
