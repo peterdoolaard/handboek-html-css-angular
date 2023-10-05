@@ -9,4 +9,16 @@ header {
   display: flex;
   margin-block: 2rem 4rem;
   position: relative;
+
+  a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    block-size: 100%;
+    inline-size: 100%;
+
+    span {
+      visibility: hidden;
+    }
+  }
 }

@@ -1,0 +1,18 @@
+.body {
+  block-size: 200vh;
+  display: flex;
+  align-items: flex-start;
+}
+
+.item {
+  background: hotpink;
+  block-size: 200px;
+  inline-size: 100%;
+  position: static;
+}
+
+.blue {
+  background: cadetblue;
+  position: fixed;
+  top: 0;
+}

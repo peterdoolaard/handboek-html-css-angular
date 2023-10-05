@@ -1,16 +1,20 @@
 .nav-main {
+  align-items: center;
   background-color: hsl(0 0% 98%);
   border-block-start: 2px solid hsl(300deg 40% 90%);
+  display: flex;
   margin-block-end: 2rem;
-  max-inline-size: 100%;
+  inline-size: 100%;
   position: relative;
 }
 
-.fixed {
+.__fixed {
   background: hsl(300deg 40% 35%);
+  background: linear-gradient(to bottom, hsl(300deg 40% 35%) 20px, hsl(300deg 40% 35%) 70px, hsl(0 0% 100% / 0.5) 70px, transparent);
   color: white;
+  padding-block: 1em 4em;
   position: fixed;
-  top: 0;
+  top: -2px;
   z-index: 10;
 }
 
@@ -18,7 +22,7 @@
   display: flex;
   list-style-type: none;
   overflow-x: auto;
-  margin-block: 0 1em;
+  margin-block: 0;
   padding: 0.25em 0;
   /*scrollbar-color: hsl(300deg 40% 35%) hsl(300deg 40% 90%);*/
   scrollbar-color: rgb(0 0 0 / 0) rgb(0 0 0 / 0);
@@ -66,14 +70,14 @@
   }
 }
 
-.nav-main:not(.fixed) a:any-link:hover {
+.nav-main:not(.__fixed) a:any-link:hover {
   color: hsl(300deg 40% 35%);
   text-decoration-line: underline;
   text-decoration-thickness: 0.2em;
   transition: text-decoration-line, text-decoration-thickness ease-in-out 200ms;
 }
 
-.fixed a:any-link {
+.__fixed a:any-link {
   border-block-start: 2px solid hsl(300deg 40% 35%);
   text-decoration-line: none;
   transition: text-decoration-line 400ms ease-in-out 100ms;

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { AppSharedService } from "./services/app-shared.service";
 
 @Component({
   selector: 'app-root',
@@ -6,4 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  constructor(
+    private sharedService: AppSharedService,
+    private mainContent: ElementRef,
+    private renderer: Renderer2
+  ) {
+  }
+
+  ngAfterViewInit() {
+    console.log(this.mainContent.nativeElement.closest('.main-content'));
+
+    this.sharedService.setClassFixed$.subscribe(value => {
+      if (value) {
+        this.renderer.addClass(this.mainContent.nativeElement.querySelector('.main-content'), '__padding-top');
+      }  else {
+        this.renderer.removeClass(this.mainContent.nativeElement.querySelector('.main-content'), '__padding-top');
+      }
+    })
+  }
+
 }

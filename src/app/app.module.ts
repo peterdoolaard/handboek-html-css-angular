@@ -15,6 +15,8 @@ import { VoorbeeldenComponent } from './voorbeelden/voorbeelden.component';
 import { DownloadsComponent } from './downloads/downloads.component';
 import { VoorbeeldComponent } from './components/voorbeeld/voorbeeld/voorbeeld.component';
 import { HoofdstukComponent } from './components/hoofdstuk/hoofdstuk.component';
+import { IntersectionObserverDirective } from './directives/intersection-observer.directive';
+import { TestpageComponent } from './testpage/testpage.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { HoofdstukComponent } from './components/hoofdstuk/hoofdstuk.component';
     NavigationComponent,
     VoorbeeldComponent,
     HoofdstukComponent,
+    IntersectionObserverDirective,
+    TestpageComponent,
   ],
   imports: [
     BrowserModule,
