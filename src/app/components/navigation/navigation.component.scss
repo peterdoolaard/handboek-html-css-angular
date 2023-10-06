@@ -10,9 +10,9 @@
 
 .__fixed {
   background: hsl(300deg 40% 35%);
-  background: linear-gradient(to bottom, hsl(300deg 40% 35%) 20px, hsl(300deg 40% 35%) 70px, hsl(0 0% 100% / 0.5) 70px, transparent);
+  background: linear-gradient(to bottom, hsl(300deg 40% 35%), hsl(300deg 40% 35%) 90px, hsl(0 0% 100% / 1) 90px, transparent);
   color: white;
-  padding-block: 1em 4em;
+  padding-block: 0.75em 6em;
   position: fixed;
   top: -2px;
   z-index: 10;
