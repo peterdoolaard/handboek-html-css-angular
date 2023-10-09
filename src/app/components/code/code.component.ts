@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AppSharedService } from "../../services/app-shared.service";
-import { Subscription } from "rxjs";
+import { from, mergeMap, Observable, toArray } from "rxjs";
 import { Voorbeeld } from "../../models";
+import { filter } from "rxjs/operators";
 
 
 @Component({
@@ -9,9 +10,9 @@ import { Voorbeeld } from "../../models";
   templateUrl: './code.component.html',
   styleUrls: ['./code.component.scss']
 })
-export class CodeComponent {
+export class CodeComponent implements OnInit {
   voorbeelden: Voorbeeld[] = [];
-  subs = new Subscription();
+  currentChapter: number = 1;
 
   constructor(
     private sharedService: AppSharedService,
@@ -19,20 +20,13 @@ export class CodeComponent {
   }
 
   ngOnInit() {
-
-    this.subs.add(
-      this.sharedService.getVoorbeelden().subscribe(voorbeelden => {
-          this.voorbeelden = voorbeelden;
-          console.log(this.voorbeelden);
-        }
-      )
-    );
+    this.sharedService.getVoorbeelden()
+      .pipe(
+        mergeMap((voorbeelden: Voorbeeld[]): Observable<Voorbeeld> => from(voorbeelden)),
+      filter((item: Voorbeeld) => item.hoofdstukNummer === this.currentChapter),
+        toArray()
+      ).subscribe((value: Voorbeeld[]) => this.voorbeelden = value)
   }
-
-  ngOnDestroy() {
-    this.subs.unsubscribe();
-  }
-
 
 
   onPaste() {
