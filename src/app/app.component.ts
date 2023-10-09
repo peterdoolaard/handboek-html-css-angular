@@ -16,8 +16,6 @@ export class AppComponent {
   }
 
   ngAfterViewInit() {
-    console.log(this.mainContent.nativeElement.closest('.main-content'));
-
     this.sharedService.setClassFixed$.subscribe(value => {
       if (value) {
         this.renderer.addClass(this.mainContent.nativeElement.querySelector('.main-content'), '__padding-top');

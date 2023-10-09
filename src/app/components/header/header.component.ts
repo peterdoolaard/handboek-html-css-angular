@@ -19,7 +19,6 @@ export class HeaderComponent {
     const element = document.querySelector('h1') as Element;
     const intersectionObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        console.log(entry)
         if (entry.isIntersecting) {
           entry.target.classList.add('blue');
           this.sharedService.navIsFixed(false);
@@ -29,7 +28,6 @@ export class HeaderComponent {
         }
       })
     }, {threshold: 0});
-    console.log(element);
     intersectionObserver.observe(element);
   }
 

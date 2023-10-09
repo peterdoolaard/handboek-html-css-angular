@@ -25,7 +25,6 @@ export const fromIntersectionObserver = (
             subject$.next({ entry, observer });
           }
           if (!isIntersecting(entry)) {
-            console.log('niet intersecting')
           }
         });
       },

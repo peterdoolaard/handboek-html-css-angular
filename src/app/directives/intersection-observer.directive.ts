@@ -16,13 +16,10 @@ export class IntersectionObserverDirective implements OnInit, OnDestroy {
 
     const intersectionObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
-        console.log('entry',entry)
         if (entry.isIntersecting) {
-          console.log(this.elementRef);
           this.renderer.addClass(this.elementRef.nativeElement, 'blue')
         }
         if (!entry.isIntersecting) {
-          console.log(this.elementRef);
           this.renderer.removeClass(this.elementRef.nativeElement, 'blue')
         }
       })

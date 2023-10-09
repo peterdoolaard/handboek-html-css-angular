@@ -1,29 +1,34 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AppSharedService } from "src/app/services/app-shared.service";
+import { Subscription } from "rxjs";
+import { Hoofdstuk } from "../../models";
 
-interface Hoofdstuk {
-  nummer: number;
-  titel: string;
-  links: Link[];
-  voorbeelden: Voorbeeld[];
-}
-
-interface Link {
-  titel: string;
-  url: string;
-}
-
-interface Voorbeeld {
-  nummer: number;
-  titel: string;
-  codeHtml: string;
-  codeCss: string;
-}
 
 @Component({
   selector: 'app-hoofdstuk',
   templateUrl: './hoofdstuk.component.html',
   styleUrls: ['./hoofdstuk.component.scss']
 })
-export class HoofdstukComponent {
+export class HoofdstukComponent implements OnInit, OnDestroy {
+  hoofdstukken: Hoofdstuk[] = [];
+  subs: Subscription = new Subscription();
+
+  constructor(
+    private sharedService: AppSharedService,
+  ) {
+  }
+
+  ngOnInit() {
+    this.subs.add(
+      this.sharedService.getHoofdstukken().subscribe((hoofdstukken) => {
+          this.hoofdstukken = hoofdstukken;
+        }
+      )
+    );
+  }
+
+  ngOnDestroy() {
+    this.subs.unsubscribe()
+  }
 
 }

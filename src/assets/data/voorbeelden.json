@@ -1,0 +1,44 @@
+[
+  {
+    "hoofdstukNummer": 1,
+    "codeNummer": 1,
+    "codeTitel": "Kale HTML",
+    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 1,
+    "codeNummer": 2,
+    "codeTitel": "HTML met CSS",
+    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "codeCss": "h1 {color: hsl(0 0% 15%);font-family: serif;font-weight: 500;} p {color: hsl(0 0% 5%);font-family: sans-serif;font-weight: 400;}"
+  },
+  {
+    "hoofdstukNummer": 2,
+    "codeNummer": 1,
+    "codeTitel": "Kale HTML",
+    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 2,
+    "codeNummer": 2,
+    "codeTitel": "HTML met CSS",
+    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "codeCss": "h1 {color: hsl(0 0% 15%);font-family: serif;font-weight: 500;} p {color: hsl(0 0% 5%);font-family: sans-serif;font-weight: 400;}"
+  },
+  {
+    "hoofdstukNummer": 4,
+    "codeNummer": 1,
+    "codeTitel": "Kale HTML",
+    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 6,
+    "codeNummer": 1,
+    "codeTitel": "HTML met CSS",
+    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "codeCss": "h1 {color: hsl(0 0% 15%);font-family: serif;font-weight: 500;} p {color: hsl(0 0% 5%);font-family: sans-serif;font-weight: 400;}"
+  }
+]
