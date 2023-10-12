@@ -19,6 +19,7 @@ import { HoofdstukComponent } from './components/hoofdstuk/hoofdstuk.component';
 import { IntersectionObserverDirective } from './directives/intersection-observer.directive';
 import { TestpageComponent } from './testpage/testpage.component';
 import { LinksComponent } from './components/links/links.component';
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -41,7 +42,9 @@ import { LinksComponent } from './components/links/links.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -13,11 +13,10 @@ export class NavigationComponent implements OnInit {
     private sharedService: AppSharedService,
     private navMain: ElementRef,
     private renderer: Renderer2
-  ) {
-  }
+  ) {}
 
   ngOnInit() {
-    this.sharedService.setClassFixed$.subscribe(value => {
+    this.sharedService.classFixed$.subscribe(value => {
       if (value) {
         this.renderer.addClass(this.navMain.nativeElement.firstElementChild, '__fixed');
       }  else {
@@ -25,5 +24,4 @@ export class NavigationComponent implements OnInit {
       }
     })
   }
-
 }

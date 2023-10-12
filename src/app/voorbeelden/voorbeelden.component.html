@@ -1,23 +1,50 @@
-<div class="inleiding"  id="main-content">
+<div class="inleiding" id="main-content">
   <h2 class="inleiding-kop">Introductie</h2>
-  <p>Deze pagina geeft toegang tot voorbeelden uit het boek. De voorbeelden bestaan meestal uit korte stukjes HTML, CSS of beide. Schakel de bewerkmodus in en pas de code aan. Het resultaat ziet u direct in de weergave boven de code. U kunt code veranderen, verwijderen en toevoegen, maar u kunt niet  plakken.</p>
+  <p>Deze pagina geeft toegang tot voorbeelden uit het boek. De voorbeelden bestaan meestal uit korte stukjes HTML, CSS of beide. Schakel de bewerkmodus in en pas de code aan. Het resultaat ziet u direct in de weergave boven de code. U kunt code veranderen, verwijderen en toevoegen, maar u kunt niet plakken.</p>
   <p>Met de kopieerknop maakt u op elk gewenst moment een kopie van de code naar het klembord voor gebruik in uw editor.</p>
   <h3 class="inleiding-subkop">Links uit het boek</h3>
   <p>U vindt hier ook alle links uit het boek, verzameld per hoofdstuk en in dezelfde volgorde als in het boek.</p>
   <h3 class="inleiding-subkop">Complete pagina's</h3>
   <p>Sommige technieken staan op een eigen pagina. Dat zijn:</p>
   <ul role="list">
-    <li><a class="link-text" href="form-aanmelden.php">Een compleet aanmeldingsformulier met verwerking op de server</a></li>
+    <li><a class="link-text" href="form-aanmelden.php">Een compleet aanmeldingsformulier met verwerking op de server</a>
+    </li>
     <li><a class="link-text" href="nos_voorbeeld.html">CSS Grid Layout (voorbeeld voorpagina nos.nl)</a>. De complete
-      <a class="link-text" href="https://github.com/peterdoolaard/nos-grid-voorbeeld">code voor deze pagina</a> kunt u downloaden van GitHub.</li>
+      <a class="link-text" href="https://github.com/peterdoolaard/nos-grid-voorbeeld">code voor deze pagina</a> kunt u downloaden van GitHub.
+    </li>
   </ul>
   <h3 class="inleiding-subkop">Fouten en verbeteringen</h3>
-  <p><span class="errata">Op pagina 227</span> staat bij oplossing 2 dat de specificiteit 21 is. Dat is fout. De juiste waarde is 11. Een attribuutselector en een klasse tellen ieder voor 10 en een element voor 1. Ook bij oplossing 3 is de uitkomst niet 21 maar 11.</p>
-  <p><span class="errata">In de voorbeelden 8.1 en 8.2</span> zat een fout waardoor deze voorbeelden niet het goede resultaat lieten zien. Die fout is hersteld, waardoor spelen met de cascade layers nu wel het bedoelde resultaat geeft.</p>
+  <p>
+    <span class="errata">Op pagina 227</span>
+    staat bij oplossing 2 dat de specificiteit 21 is. Dat is fout. De juiste waarde is 11. Een attribuutselector en een klasse tellen ieder voor 10 en een element voor 1. Ook bij oplossing 3 is de uitkomst niet 21 maar 11.
+  </p>
+  <p>
+    <span class="errata">In de voorbeelden 8.1 en 8.2</span>
+    zat een fout waardoor deze voorbeelden niet het goede resultaat lieten zien. Die fout is hersteld, waardoor spelen met de cascade layers nu wel het bedoelde resultaat geeft.
+  </p>
   <h3 class="inleiding-subkop">Contact</h3>
-  <p>Voor vragen of bij problemen mailt u <a class="link-text" href="mailto:handboek@peterdoolaard.nl">handboek@peterdoolaard.nl</a></p>
+  <p>Voor vragen of bij problemen mailt u
+    <a class="link-text" href="mailto:handboek@peterdoolaard.nl">handboek@peterdoolaard.nl</a></p>
 </div>
 
- <app-hoofdstuk />
+<form>
+  <div [formGroup]="formGroup">
+    <label>Kies een hoofdstuk
+      <select
+        formControlName="selectedHoofdstuk"
+        (change)="onChange()"
+      >
+        <option
+          *ngFor="let hoofdstuk of hoofdstukken"
+          [ngValue]="hoofdstuk.hoofdstukNummer"
+        >
+          Hoofdstuk {{ hoofdstuk.hoofdstukNummer }} - {{ hoofdstuk.hoofdstukTitel }}
+        </option>
+      </select>
+    </label>
+  </div>
+</form>
 
-
+<app-hoofdstuk
+  [hoofdstuk]="currentChapter"
+/>

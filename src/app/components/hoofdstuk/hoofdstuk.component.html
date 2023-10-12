@@ -1,9 +1,9 @@
-<ng-container *ngFor="let hoofdstuk of hoofdstukken">
+<ng-container>
   <div class="chapter-wrapper">
-    <h2 [id]="'hoofdstuk' + hoofdstuk.hoofdstukNummer" class="chapter-title">
-      <span class="chapter-title__number">{{ hoofdstuk.hoofdstukNummer }}</span>
+    <h2 [id]="'hoofdstuk'" class="chapter-title">
+      <span class="chapter-title__number">{{ hoofdstuk?.hoofdstukNummer }}</span>
       <span
-        class="chapter-title__text">{{ hoofdstuk.hoofdstukTitel }}</span>
+        class="chapter-title__text">{{ hoofdstuk?.hoofdstukTitel }}</span>
     </h2>
     <div class="chapter-main-1">
       <app-code />

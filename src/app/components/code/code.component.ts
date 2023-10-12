@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppSharedService } from "../../services/app-shared.service";
-import { from, mergeMap, Observable, toArray } from "rxjs";
 import { Voorbeeld } from "../../models";
-import { filter } from "rxjs/operators";
 
 
 @Component({
@@ -12,7 +10,7 @@ import { filter } from "rxjs/operators";
 })
 export class CodeComponent implements OnInit {
   voorbeelden: Voorbeeld[] = [];
-  currentChapter: number = 1;
+  currentChapter: number = 1; // observable komt uit keuzelijst hoofdstukken
 
   constructor(
     private sharedService: AppSharedService,
@@ -21,11 +19,6 @@ export class CodeComponent implements OnInit {
 
   ngOnInit() {
     this.sharedService.getVoorbeelden()
-      .pipe(
-        mergeMap((voorbeelden: Voorbeeld[]): Observable<Voorbeeld> => from(voorbeelden)),
-      filter((item: Voorbeeld) => item.hoofdstukNummer === this.currentChapter),
-        toArray()
-      ).subscribe((value: Voorbeeld[]) => this.voorbeelden = value)
   }
 
 
