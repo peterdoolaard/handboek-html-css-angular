@@ -7,7 +7,7 @@ import { Chapter } from "../../models";
   styleUrls: ['./hoofdstuk.component.scss']
 })
 export class HoofdstukComponent {
-  @Input() hoofdstuk: Chapter | undefined | null = undefined;
+  @Input() chapter: Chapter | undefined;
 
   constructor() {}
 

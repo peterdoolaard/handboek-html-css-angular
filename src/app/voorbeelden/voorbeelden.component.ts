@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from "@angular/forms";
 
 import { Chapter } from "../models";
@@ -10,9 +10,9 @@ import { map, Observable } from "rxjs";
   templateUrl: './voorbeelden.component.html',
   styleUrls: ['./voorbeelden.component.scss']
 })
-export class VoorbeeldenComponent implements OnInit, OnDestroy {
-  chapters$: Observable<Chapter[] | undefined> | undefined;
-  currentChapter$: Observable<Chapter | undefined> | undefined;
+export class VoorbeeldenComponent implements OnInit {
+  chapters$!: Observable<Chapter[]>;
+  currentChapter!: Chapter | undefined;
 
   formGroup = new FormGroup({
     selectedHoofdstuk: new FormControl(1, {nonNullable: true})
@@ -28,14 +28,15 @@ export class VoorbeeldenComponent implements OnInit, OnDestroy {
   }
 
   findChapter() {
-    return this.currentChapter$ = this.chapters$?.pipe(
+    this.chapters$?.pipe(
       map(chapters => {
-        return chapters ? chapters.find(chapter => chapter.hoofdstukNummer === this.formGroup.controls.selectedHoofdstuk.value) : undefined;
+        return chapters ? chapters.find(chapter => chapter.hoofdstukNummer === this.formGroup.controls.selectedHoofdstuk.value): undefined;
       })
-    )
+    ).subscribe(chapter => {
+        this.currentChapter = chapter;
+        this.sharedService.updateCurrentChapter(this.currentChapter)
+    })
+
   }
 
-
-  ngOnDestroy() {
-  }
 }
