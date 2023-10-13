@@ -1,8 +1,8 @@
-// import { Hoofdstuk, Link, Code, Voorbeeld } from './voorbeeld.component'
+// import { Chapter, Link, Code, CodeExample } from './voorbeeld.component'
 
 export class Utils {
-  // static splitData(voorbeelden: Voorbeeld) {
-    // const hoofdstukken: Hoofdstuk[] = [];
+  // static splitData(voorbeelden: CodeExample) {
+    // const hoofdstukken: Chapter[] = [];
     // const links: Link[] = [];
     // const codes: Code[] = [];
 

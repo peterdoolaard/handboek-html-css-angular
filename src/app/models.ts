@@ -1,4 +1,4 @@
-export interface Hoofdstuk {
+export interface Chapter {
   hoofdstukNummer: number;
   hoofdstukTitel: string;
 }
@@ -9,7 +9,7 @@ export interface Link {
   url: string;
 }
 
-export interface Voorbeeld {
+export interface CodeExample {
   hoofdstukNummer: number;
   codeNummer: number;
   codeTitel: string;

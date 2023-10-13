@@ -32,13 +32,13 @@
     <label>Kies een hoofdstuk
       <select
         formControlName="selectedHoofdstuk"
-        (change)="onChange()"
+        (change)="findChapter()"
       >
         <option
-          *ngFor="let hoofdstuk of hoofdstukken"
+          *ngFor="let hoofdstuk of chapters$ | async"
           [ngValue]="hoofdstuk.hoofdstukNummer"
         >
-          Hoofdstuk {{ hoofdstuk.hoofdstukNummer }} - {{ hoofdstuk.hoofdstukTitel }}
+          Chapter {{ hoofdstuk.hoofdstukNummer }} - {{ hoofdstuk.hoofdstukTitel }}
         </option>
       </select>
     </label>
@@ -46,5 +46,5 @@
 </form>
 
 <app-hoofdstuk
-  [hoofdstuk]="currentChapter"
+  [hoofdstuk]="currentChapter$ | async"
 />

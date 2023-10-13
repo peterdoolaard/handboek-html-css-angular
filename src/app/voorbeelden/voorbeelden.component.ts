@@ -1,9 +1,9 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from "@angular/forms";
 
-import { Hoofdstuk, Voorbeeld } from "../models";
+import { Chapter } from "../models";
 import { AppSharedService } from "../services/app-shared.service";
-import { Subscription } from "rxjs";
+import { map, Observable } from "rxjs";
 
 @Component({
   selector: 'app-voorbeelden',
@@ -11,10 +11,8 @@ import { Subscription } from "rxjs";
   styleUrls: ['./voorbeelden.component.scss']
 })
 export class VoorbeeldenComponent implements OnInit, OnDestroy {
-  sub = new Subscription()
-  voorbeelden: Voorbeeld[] = [];
-  hoofdstukken: Hoofdstuk[] = [];
-  currentChapter: Hoofdstuk | undefined;
+  chapters$: Observable<Chapter[] | undefined> | undefined;
+  currentChapter$: Observable<Chapter | undefined> | undefined;
 
   formGroup = new FormGroup({
     selectedHoofdstuk: new FormControl(1, {nonNullable: true})
@@ -25,33 +23,19 @@ export class VoorbeeldenComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
-    this.sub.add(
-      this.sharedService.getVoorbeelden()
-        .subscribe((value: Voorbeeld[]) => this.voorbeelden = value)
-    );
-
-    this.sub.add(
-      this.sharedService.getHoofdstukken().subscribe((hoofdstukken) => {
-        this.hoofdstukken = hoofdstukken;
-        this.currentChapter = this.hoofdstukken.find((hoofdstuk: Hoofdstuk) => hoofdstuk.hoofdstukNummer === 1);
-      })
-    );
-
-    this.sub.add(
-      this.sharedService.currentChapter$.subscribe(value => {
-        this.currentChapter = value;
-      })
-    );
+      this.chapters$ = this.sharedService.loadAllChapters();
+      this.findChapter();
   }
 
-  onChange() {
-    this.currentChapter = this.hoofdstukken.find((hoofdstuk: Hoofdstuk) =>
-        hoofdstuk.hoofdstukNummer == this.formGroup.controls.selectedHoofdstuk.value
-    );
-    this.sharedService.setCurrentChapter(this.currentChapter);
+  findChapter() {
+    return this.currentChapter$ = this.chapters$?.pipe(
+      map(chapters => {
+        return chapters ? chapters.find(chapter => chapter.hoofdstukNummer === this.formGroup.controls.selectedHoofdstuk.value) : undefined;
+      })
+    )
   }
+
 
   ngOnDestroy() {
-    this.sub.unsubscribe();
   }
 }

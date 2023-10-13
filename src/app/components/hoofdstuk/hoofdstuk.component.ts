@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Hoofdstuk } from "../../models";
+import { Chapter } from "../../models";
 
 @Component({
   selector: 'app-hoofdstuk',
@@ -7,8 +7,9 @@ import { Hoofdstuk } from "../../models";
   styleUrls: ['./hoofdstuk.component.scss']
 })
 export class HoofdstukComponent {
-  @Input() hoofdstuk: Hoofdstuk | undefined = undefined;
+  @Input() hoofdstuk: Chapter | undefined | null = undefined;
 
   constructor() {}
 
 }
+
