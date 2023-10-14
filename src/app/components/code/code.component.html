@@ -4,18 +4,22 @@
       <figure class="figure-container" spellcheck="false">
         <div class="figure-container__inner"> <!-- custom element -->
           <div class="example">
-            <style class="example-styles"></style>
-            <h3 class="example-title">{{ example?.hoofdstukNummer }}.{{ example?.codeNummer }} &mdash; {{ example?.codeTitel }}</h3>
-            <div class="example-code"></div>
+            <style>{{ example.codeCss }}</style>
+            <h3 class="example-title">{{ example.hoofdstukNummer }}.{{ example.codeNummer }} &mdash; {{ example.codeTitel }}</h3>
+            <div
+              class="example-code"
+              [innerHTML]="example.codeHtml"
+            ></div>
           </div>
           <div class="code-wrapper">
-        <pre class="language-html">
-          <button class="btn-copy-code" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
-          <code (paste)="onPaste()" class="example-html"></code>
-        </pre>
+            <pre class="language-html">
+<code class="example-html language-html" [innerHTML]="example.codeHtml | escapeMarkup"></code>
+              <button class="btn-copy-code" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
+              <code (paste)="onPaste()" class="example-html"></code>
+            </pre>
             <pre class="language-css">
           <button class="btn-copy-code" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
-          <code class="example-css"></code>
+<code class="example-css" [innerHTML]="example.codeCss | escapeMarkup"></code>
         </pre>
           </div>
           <div class="actions">
@@ -37,5 +41,11 @@
 </ng-container>
 
 <ng-template #geenVoorbeelden>
-  <h3 class="example-title">Er zijn geen voorbeelden beschikbaar</h3>
+  <figure class="figure-container" spellcheck="false">
+    <div class="figure-container__inner"> <!-- custom element -->
+      <div class="example">
+        <h3 class="example-title">Er zijn geen voorbeelden beschikbaar</h3>
+      </div>
+    </div>
+  </figure>
 </ng-template>

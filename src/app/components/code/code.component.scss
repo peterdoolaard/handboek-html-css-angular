@@ -1,0 +1,180 @@
+// Reset alle globale CSS
+:host {
+  all: initial;
+}
+
+/* zorg ervoor dat tekst in elk voorbeeld het initiële lettertype krijgt */
+.figure-container {
+  font-family: initial;
+}
+
+/* alleen het label zorg ervoor dat elk voorbeeld het initiële lettertype gebruikt */
+.figure-container :is(.code-edit__label, .button-reset-code) {
+  font-family: SourceSans3, sans-serif;
+}
+
+a:any-link, button, [type="button"] {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.screen-reader-text:not(:focus):not(:active) {
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.figure-container {
+  margin: 1rem 1rem 3rem 0;
+}
+
+.figure-container__inner {
+  box-shadow: var(--box-shadow-sharp);
+  margin-block-end: 0.5rem;
+  padding: 1rem;
+}
+
+.example-title {
+  background: hsl(300deg 40% 90%);
+  font-family: var(--font-sans), sans-serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-block: -1rem 2rem;
+  margin-inline: -1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.example-html {
+  white-space: pre-wrap!important;
+}
+
+.code-wrapper pre {
+  position: relative;
+  overflow-x: auto;
+}
+
+.btn-copy-code {
+  -webkit-appearance: none;
+  background: url('/assets/icons/icon-duplicate.svg') no-repeat, hsl(0 0% 100% / 0);
+  background-size: contain;
+  block-size: 2.5rem;
+  border: none;
+  cursor: pointer;
+  inline-size: 2.5rem;
+  position: absolute;
+  right: 0.25rem;
+  top: 0.25rem;
+  transition: transform ease-in-out 250ms;
+}
+
+.btn-copy-code-click {
+  transform: scale(0.75);
+}
+
+div.alert {
+  animation: fade 250ms ease-in forwards;
+  box-shadow: var(--box-shadow-sharp);
+  opacity: 0;
+  padding: 0.5rem .75rem;
+  position: absolute;
+  right: 3.5rem;
+  top: 0.25rem;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+div.success {
+  background: hsl(0 0% 90%);
+}
+
+div.failed {
+  background: hsl(0 0% 90%);
+}
+
+.actions {
+  display: flex;
+  column-gap: 1em;
+}
+
+.code-edit__label {
+  align-items: center;
+  border-radius: 1px;
+  display: flex;
+  font-family: SourceSans3 sans-serif;
+  inline-size: 8em;
+  position: relative;
+}
+
+.code-edit__slider {
+  background: hsl(300deg 0% 55%);
+  block-size: 1.25em;
+  border-radius: 0.6em;
+  inline-size: 3em;
+  position: absolute;
+  left: 4.5em;
+}
+
+.code-edit__thumb {
+  background: hsl(300deg 0% 85%);
+  block-size: 1.7em;
+  border-radius: 50%;
+  inline-size: 1.7em;
+  position: absolute;
+  left: 4.4em;
+  margin-block-start: -0.2em;
+  transition: all 200ms ease-in-out;
+}
+
+input:checked ~ .code-edit__thumb {
+  background: hsl(300deg 40% 35%);
+  left: 5.9em;
+}
+
+input:checked + .code-edit__slider {
+  background: hsl(300deg 40% 85%);
+}
+
+.code-edit__label > input {
+  opacity: 0;
+}
+
+.code-edit__label:focus-within {
+  outline: 2px solid blue;
+  outline-color: -webkit-focus-ring-color;
+  outline-color: -moz-mac-focusring;
+  outline-offset: 6px;
+}
+
+.btn-reset-code {
+  background: hsl(300deg 40% 85%);
+  border: none;
+  box-shadow: none;
+  border-radius: 0.25em;
+  color: inherit;
+  font-size: inherit;
+  opacity: 0;
+  padding: 0.25em 0.5em;
+  transition: all 200ms ease-in-out;
+}
+
+.btn-reset-code:hover {
+  background: hsl(300deg 40% 35%);
+  color: white;
+}
+
+.btn-reset-code:active {
+  box-shadow: inset var(--box-shadow-sharp) ;
+  transform: scale(0.95);
+}
