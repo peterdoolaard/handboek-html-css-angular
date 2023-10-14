@@ -4,23 +4,26 @@
       <figure class="figure-container" spellcheck="false">
         <div class="figure-container__inner"> <!-- custom element -->
           <div class="example">
-            <style>{{ example.codeCss }}</style>
+            <style #exampleStyle></style>
             <h3 class="example-title">{{ example.hoofdstukNummer }}.{{ example.codeNummer }} &mdash; {{ example.codeTitel }}</h3>
             <div
-              class="example-code"
+              #exampleView
               [innerHTML]="example.codeHtml"
-            ></div>
+            >
+            </div>
           </div>
-          <div class="code-wrapper">
+          <div #codeWrapper class="code-wrapper">
             <pre class="language-html">
-<code class="example-html language-html" [innerHTML]="example.codeHtml | escapeMarkup"></code>
+              <code #exampleHtml [innerHTML]="example.codeHtml | escapeMarkup" class="example-html language-html" contenteditable="true"></code>
               <button class="btn-copy-code" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
               <code (paste)="onPaste()" class="example-html"></code>
             </pre>
             <pre class="language-css">
-          <button class="btn-copy-code" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
-<code class="example-css" [innerHTML]="example.codeCss | escapeMarkup"></code>
-        </pre>
+              <button class="btn-copy-code" type="button">
+                <span class="screen-reader-text">Kopieer de code</span>
+              </button>
+              <code #exampleCss [innerHTML]="example.codeCss | escapeMarkup" class="example-css"></code>
+            </pre>
           </div>
           <div class="actions">
             <label class="code-edit__label">Bewerken
@@ -28,7 +31,7 @@
               <span class="code-edit__thumb"></span>
               <input type="checkbox">
             </label>
-            <button class="btn-reset-code" type="button">Herstellen</button>
+            <button #btnReset class="btn-reset-code" type="button">Herstellen</button>
           </div>
         </div>
         <figcaption>

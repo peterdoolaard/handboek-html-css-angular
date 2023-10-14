@@ -3,7 +3,7 @@
     "hoofdstukNummer": 1,
     "codeNummer": 1,
     "codeTitel": "Kale HTML",
-    "codeHtml": "<article>\n  <h1>De functie van HTML</h1>\n  <p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p>\n</article>",
+    "codeHtml": "<article>\n\t<h1>De functie van HTML</h1>\n\t<p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p>\n</article>",
     "codeCss": ""
   },
   {
