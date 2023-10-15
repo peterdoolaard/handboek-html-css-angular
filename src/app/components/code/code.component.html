@@ -1,10 +1,10 @@
 <ng-container *ngIf="(codeExamples$ | async) as examples">
   <ng-container *ngIf="examples.length > 0; else geenVoorbeelden">
-    <ng-container *ngFor="let example of examples">
-      <figure class="figure-container" spellcheck="false">
+    <ng-container >
+      <figure *ngFor="let example of examples"
+        class="figure-container" spellcheck="false">
         <div class="figure-container__inner"> <!-- custom element -->
-          <div class="example">
-            <style #exampleStyle></style>
+          <div class="example" #exampleViewContainer>
             <h3 class="example-title">{{ example.hoofdstukNummer }}.{{ example.codeNummer }} &mdash; {{ example.codeTitel }}</h3>
             <div
               #exampleView

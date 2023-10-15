@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild, Renderer2 } from '@angular/core';
 import { combineLatest, Observable, of, switchMap, tap } from "rxjs";
 
 import { AppSharedService } from "../../services/app-shared.service";
@@ -17,6 +17,7 @@ export class CodeComponent implements OnInit {
   @ViewChild('exampleView') divExampleView!: ElementRef;
   @ViewChild('exampleHtml') exampleHtml!: ElementRef;
   @ViewChild('exampleCss') exampleCss!: ElementRef;
+  @ViewChild('exampleViewContainer') exampleViewContainer!: ElementRef;
   @ViewChild('exampleStyle') exampleStyle!: ElementRef;
 
   codeExamples$: Observable<CodeExample[]> | undefined;
@@ -32,13 +33,16 @@ export class CodeComponent implements OnInit {
   constructor(
     private sharedService: AppSharedService,
     private highlightService: HighlightService,
+    private renderer: Renderer2
   ) {
   }
 
-  // Bewerkingen op de codevoorbeelden
-  // zijn pas mogelijk nadat de observable klaar is
+  // Bewerkingen op de codevoorbeelden zijn pas
+  // mogelijk nadat de observable waarde heeft gestuurd
   // Plaats bewerkingen in de tap() timeout() callback
   ngOnInit() {
+    this.sharedService.currentChapter$.subscribe(val => console.log(val.hoofdstukNummer))
+
     this.codeExamples$ = combineLatest([
       this.sharedService.currentChapter$,
       this.sharedService.loadCodeExamples()
@@ -49,11 +53,12 @@ export class CodeComponent implements OnInit {
         );
         return of(filteredExamples);
       }),
-      tap(x => {
-        x;
+      tap(codeExample => {
+        console.log(codeExample);
         setTimeout(() => {
           this.highlightService.highlightAll();
           this.observeCodeWrapper.observe(this.divCodeWrapper.nativeElement, this.config);
+          this.createStyleElement(codeExample[1].codeCss);
         }, 0)
       })
     );
@@ -69,6 +74,15 @@ export class CodeComponent implements OnInit {
         this.exampleStyle.nativeElement.innerHTML = this.exampleCss.nativeElement.textContent;
       }
     })
+  }
+
+  createStyleElement(css:string) {
+    console.log('create style' + css)
+    const styleElement = this.renderer.createElement('style');
+    const styleCss = this.renderer.createText(css);
+    // const ref = '#exampleStyle';
+    this.renderer.appendChild(styleElement, styleCss);
+    this.renderer.appendChild(this.exampleViewContainer.nativeElement, styleElement);
   }
 
   onPaste() {
