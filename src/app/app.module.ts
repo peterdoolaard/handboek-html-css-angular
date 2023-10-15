@@ -20,6 +20,8 @@ import { IntersectionObserverDirective } from './directives/intersection-observe
 import { TestpageComponent } from './testpage/testpage.component';
 import { LinksComponent } from './components/links/links.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HighlightService } from "./services/highlight.service";
+import { EscapeMarkupPipe } from './pipes/escape-markup.pipe';
 
 @NgModule({
   declarations: [
@@ -38,6 +40,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     IntersectionObserverDirective,
     TestpageComponent,
     LinksComponent,
+    EscapeMarkupPipe,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +49,7 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     FormsModule,
     ReactiveFormsModule,
   ],
-  providers: [],
+  providers: [HighlightService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
