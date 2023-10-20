@@ -1,27 +1,11 @@
-# HandboekHtmlCssAngular
+# Handboek Html5 en Css, de Angular-versie
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.2.4.
+De [oorspronkelijke website](https://handboek-html-css.nl) is gebouwd met vanilla HTML, CSS en JavaScript, aangevuld met PrismJS voor codekleuring.
 
-## Development server
+Deze repo bevat dezelfde content, maar nu gebouwd met Angular (en ook weer PrismJS).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Het is work in progress, maar de belangrijkste functionaliteit zit erin: een eigen implementatie van bewerkbare code en instant feedback in de view, zoals bij CodePen.
 
-## Code scaffolding
+![Scherm­afbeelding 2023-10-20 om 20 06 56](https://github.com/peterdoolaard/handboek-html-css-angular/assets/12380954/09459552-2b26-4fc5-8626-bc3ee0384001)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![Scherm­afbeelding 2023-10-20 om 20 07 29](https://github.com/peterdoolaard/handboek-html-css-angular/assets/12380954/b1d91d5c-1951-408c-9ffd-fddadff6a786)
