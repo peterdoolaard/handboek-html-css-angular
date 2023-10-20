@@ -22,6 +22,7 @@ import { LinksComponent } from './components/links/links.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HighlightService } from "./services/highlight.service";
 import { EscapeMarkupPipe } from './pipes/escape-markup.pipe';
+import { CodeExampleViewComponent } from './components/code/code-example-view/code-example-view.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { EscapeMarkupPipe } from './pipes/escape-markup.pipe';
     TestpageComponent,
     LinksComponent,
     EscapeMarkupPipe,
+    CodeExampleViewComponent,
   ],
   imports: [
     BrowserModule,

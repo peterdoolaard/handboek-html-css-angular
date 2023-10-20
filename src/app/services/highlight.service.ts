@@ -35,4 +35,17 @@ export class HighlightService {
 
     }
   }
+
+  highlightAllUnder(element: HTMLElement) {
+    Prism.highlightAllUnder(element)
+    Prism.plugins.NormalizeWhitespace.setDefaults({
+      'remove-trailing': true,
+      'remove-indent': true,
+      'left-trim': true,
+      'right-trim': true,
+      'indent': 0,
+      'remove-initial-line-feed': true,
+      'tabs-to-spaces': 2,
+    });
+  }
 }

@@ -4,17 +4,21 @@
       <figure *ngFor="let example of examples"
         class="figure-container" spellcheck="false">
         <div class="figure-container__inner"> <!-- custom element -->
-          <div class="example">
-            <h3 class="example-title">{{ example.hoofdstukNummer }}.{{ example.codeNummer }} &mdash; {{ example.codeTitel }}</h3>
-            <div
-              #exampleView
-              [innerHTML]="example.codeHtml"
-            >
-            </div>
-          </div>
+          <h3 class="example-title">{{ example.hoofdstukNummer }}.{{ example.codeNummer }} &mdash; {{ example.codeTitel }}</h3>
+          <code-example-view
+            [exampleHtml]="exampleHtml"
+            [exampleCss]="exampleCss"
+            [codeWrapper]="codeWrapper"
+            [toggleEdit]="toggleEdit"
+          ></code-example-view>
           <div #codeWrapper class="code-wrapper">
             <pre class="language-html">
-              <code #exampleHtml [innerHTML]="example.codeHtml | escapeMarkup" class="example-html language-html" contenteditable="true"></code>
+              <code
+                #exampleHtml
+                [innerHTML]="example.codeHtml | escapeMarkup"
+                class="example-html language-html"
+                contenteditable="true"
+              ></code>
               <button class="btn-copy-code" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
               <code (paste)="onPaste()" class="example-html"></code>
             </pre>
@@ -22,14 +26,19 @@
               <button class="btn-copy-code" type="button">
                 <span class="screen-reader-text">Kopieer de code</span>
               </button>
-              <code #exampleCss [innerHTML]="example.codeCss | escapeMarkup" class="example-css"></code>
+              <code
+                #exampleCss
+                [innerHTML]="example.codeCss | escapeMarkup"
+                class="example-css"
+                contenteditable="true"
+              ></code>
             </pre>
           </div>
           <div class="actions">
             <label class="code-edit__label">Bewerken
+              <input type="checkbox" #toggleEdit>
               <span class="code-edit__slider"></span>
               <span class="code-edit__thumb"></span>
-              <input type="checkbox">
             </label>
             <button #btnReset class="btn-reset-code" type="button">Herstellen</button>
           </div>

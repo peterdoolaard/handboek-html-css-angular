@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
 import { combineLatest, Observable, of, switchMap, tap } from "rxjs";
 
 import { AppSharedService } from "../../services/app-shared.service";
@@ -18,9 +18,12 @@ export class CodeComponent implements OnInit {
   @ViewChild('exampleHtml') exampleHtml!: ElementRef;
   @ViewChild('exampleCss') exampleCss!: ElementRef;
   @ViewChild('exampleStyle') exampleStyle!: ElementRef;
+  @ViewChild('toggleEdit') toggleEdit!: ElementRef;
 
   codeExamples$: Observable<CodeExample[]> | undefined;
-  observeCodeWrapper = new MutationObserver(mutations => this.updateView(mutations))
+  checked: boolean = false;
+
+  // observeCodeWrapper = new MutationObserver(mutations => this.updateView(mutations));
   config = {
     attributes: false,
     subtree: true,
@@ -55,26 +58,16 @@ export class CodeComponent implements OnInit {
         console.log(codeExample);
         setTimeout(() => {
           this.highlightService.highlightAll();
-          this.observeCodeWrapper.observe(this.divCodeWrapper.nativeElement, this.config);
+          // this.observeCodeWrapper.observe(this.divCodeWrapper.nativeElement, this.config);
         }, 0)
       })
     );
   }
 
-  updateView(mutations: MutationRecord[]) {
-    mutations.forEach((mutation) => {
-      this.btnReset.nativeElement.style.opacity = '1';
-      if (mutation.target.parentElement?.classList.contains('example-html')) {
-        this.divExampleView.nativeElement.innerHTML = this.exampleHtml.nativeElement.textContent;
-      }
-      if (mutation.target.parentElement?.classList.contains('example-css')) {
-        this.exampleStyle.nativeElement.innerHTML = this.exampleCss.nativeElement.textContent;
-      }
-    })
-  }
 
   onPaste() {
     return
   }
 
+  // protected readonly ElementRef = ElementRef;
 }
