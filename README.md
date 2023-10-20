@@ -1,4 +1,4 @@
-# Handboek Html5 en Css, de Angular-versie
+# Handboek HTML5 en CSS, de Angular-versie
 
 De [oorspronkelijke website](https://handboek-html-css.nl) is gebouwd met vanilla HTML, CSS en JavaScript, aangevuld met PrismJS voor codekleuring.
 
