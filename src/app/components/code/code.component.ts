@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { combineLatest, Observable, of, switchMap, tap } from "rxjs";
 
 import { AppSharedService } from "../../services/app-shared.service";
@@ -23,7 +23,6 @@ export class CodeComponent implements OnInit {
   codeExamples$: Observable<CodeExample[]> | undefined;
   checked: boolean = false;
 
-  // observeCodeWrapper = new MutationObserver(mutations => this.updateView(mutations));
   config = {
     attributes: false,
     subtree: true,
@@ -42,7 +41,7 @@ export class CodeComponent implements OnInit {
   // mogelijk nadat de observable waarde heeft gestuurd
   // Plaats bewerkingen in de tap() timeout() callback
   ngOnInit() {
-    this.sharedService.currentChapter$.subscribe(val => console.log(val.hoofdstukNummer))
+    // this.sharedService.currentChapter$.subscribe(val => console.log(val.hoofdstukNummer))
 
     this.codeExamples$ = combineLatest([
       this.sharedService.currentChapter$,
@@ -55,19 +54,10 @@ export class CodeComponent implements OnInit {
         return of(filteredExamples);
       }),
       tap(codeExample => {
-        console.log(codeExample);
         setTimeout(() => {
           this.highlightService.highlightAll();
-          // this.observeCodeWrapper.observe(this.divCodeWrapper.nativeElement, this.config);
         }, 0)
       })
     );
   }
-
-
-  onPaste() {
-    return
-  }
-
-  // protected readonly ElementRef = ElementRef;
 }

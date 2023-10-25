@@ -6,32 +6,27 @@
         <div class="figure-container__inner"> <!-- custom element -->
           <h3 class="example-title">{{ example.hoofdstukNummer }}.{{ example.codeNummer }} &mdash; {{ example.codeTitel }}</h3>
           <code-example-view
+            [example]="example"
             [exampleHtml]="exampleHtml"
             [exampleCss]="exampleCss"
             [codeWrapper]="codeWrapper"
             [toggleEdit]="toggleEdit"
+            [btnReset]="btnReset"
           ></code-example-view>
           <div #codeWrapper class="code-wrapper">
             <pre class="language-html">
               <code
                 #exampleHtml
-                [innerHTML]="example.codeHtml | escapeMarkup"
-                class="example-html language-html"
-                contenteditable="true"
+                class="example-html"
               ></code>
-              <button class="btn-copy-code" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
-              <code (paste)="onPaste()" class="example-html"></code>
+              <button class="btn-copy-code copy-html" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
             </pre>
             <pre class="language-css">
-              <button class="btn-copy-code" type="button">
-                <span class="screen-reader-text">Kopieer de code</span>
-              </button>
               <code
                 #exampleCss
-                [innerHTML]="example.codeCss | escapeMarkup"
                 class="example-css"
-                contenteditable="true"
               ></code>
+              <button class="btn-copy-code copy-css" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
             </pre>
           </div>
           <div class="actions">
@@ -43,10 +38,6 @@
             <button #btnReset class="btn-reset-code" type="button">Herstellen</button>
           </div>
         </div>
-        <figcaption>
-          <span class="caption-number"></span>
-          <span class="caption-text"></span>
-        </figcaption>
       </figure>
     </ng-container>
   </ng-container>

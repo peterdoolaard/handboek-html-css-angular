@@ -3,7 +3,7 @@
     "hoofdstukNummer": 1,
     "codeNummer": 1,
     "codeTitel": "Kale HTML",
-    "codeHtml": "<article>\n\t<h1>De functie van HTML</h1>\n\t<p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p>\n</article>",
+    "codeHtml": "<article>\n  <h1>De functie van HTML</h1>\n  <p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p>\n</article>",
     "codeCss": ""
   },
   {
@@ -14,38 +14,255 @@
     "codeCss": "h1 {\n  color: hsl(0 0% 15%);\n  font-family: serif;\n  font-weight: 500;\n}\np {\n  color: hsl(0 0% 5%);\n  font-family: sans-serif;\n  font-weight: 400;\n}"
   },
   {
-    "hoofdstukNummer": 1,
+    "hoofdstukNummer": 2,
+    "codeNummer": 1,
+    "codeTitel": "Kale HTML",
+    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 1,
+    "codeTitel": "HTML met CSS",
+    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "codeCss": "h1 {color: hsl(0 0% 15%);font-family: serif;font-weight: 500;} p {color: hsl(0 0% 5%);font-family: sans-serif;font-weight: 400;}"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 2,
+    "codeTitel": "Kale HTML",
+    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
     "codeNummer": 3,
     "codeTitel": "HTML met CSS",
-    "codeHtml": "<article>\n  <h1>De functie van HTML</h1>\n  <p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p>\n</article>",
-    "codeCss": "h1 {\n  color: red;\n  font-family: serif;\n  font-weight: 500;\n}\np {\n  color: hsl(0 0% 5%);\n  font-family: sans-serif;\n  font-weight: 400;\n}"
-  },
-  {
-    "hoofdstukNummer": 2,
-    "codeNummer": 1,
-    "codeTitel": "Kale HTML",
-    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
-    "codeCss": ""
-  },
-  {
-    "hoofdstukNummer": 2,
-    "codeNummer": 2,
-    "codeTitel": "HTML met CSS",
     "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
     "codeCss": "h1 {color: hsl(0 0% 15%);font-family: serif;font-weight: 500;} p {color: hsl(0 0% 5%);font-family: sans-serif;font-weight: 400;}"
   },
   {
-    "hoofdstukNummer": 4,
-    "codeNummer": 1,
-    "codeTitel": "Kale HTML",
-    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
+    "hoofdstukNummer": 3,
+    "codeNummer": 4,
+    "codeTitel": "",
+    "codeHtml": "",
     "codeCss": ""
   },
   {
-    "hoofdstukNummer": 6,
-    "codeNummer": 1,
-    "codeTitel": "HTML met CSS",
-    "codeHtml": "<article><h1>De functie van HTML</h1><p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p></article>",
-    "codeCss": "h1 {color: hsl(0 0% 15%);font-family: serif;font-weight: 500;} p {color: hsl(0 0% 5%);font-family: sans-serif;font-weight: 400;}"
+    "hoofdstukNummer": 3,
+    "codeNummer": 5,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 6,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 7,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 8,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 9,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 10,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 11,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 12,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 13,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 14,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 15,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 16,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 17,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 18,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 19,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 20,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 21,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 22,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
   }
 ]
