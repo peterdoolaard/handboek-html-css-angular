@@ -5,22 +5,50 @@
   },
   {
     "hoofdstukNummer": 2,
-    "hoofdstukTitel": "Webtalen, browsers en editors"
+    "hoofdstukTitel": "De basis van HTML"
   },
   {
     "hoofdstukNummer": 3,
-    "hoofdstukTitel": "Webtalen, browsers en editors"
+    "hoofdstukTitel": "Tekst markeren"
   },
   {
     "hoofdstukNummer": 4,
-    "hoofdstukTitel": "Webtalen, browsers en editors"
+    "hoofdstukTitel": "Koppelingen maken"
   },
   {
     "hoofdstukNummer": 5,
-    "hoofdstukTitel": "Webtalen, browsers en editors"
+    "hoofdstukTitel": "Beeld, geluid en andere externe inhoud"
   },
   {
     "hoofdstukNummer": 6,
-    "hoofdstukTitel": "Webtalen, browsers en editors"
+    "hoofdstukTitel": "Formulieren maken"
+  },
+  {
+    "hoofdstukNummer": 7,
+    "hoofdstukTitel": "Tabellen maken"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "hoofdstukTitel": "De basis van CSS"
+  },
+  {
+    "hoofdstukNummer": 9,
+    "hoofdstukTitel": "Lay-out: boxmodel en weergavemodel"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "hoofdstukTitel": "Lay-outs maken met CSS"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "hoofdstukTitel": "Tekst en typografie"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "hoofdstukTitel": "Kleur, randen en achtergronden"
+  },
+  {
+    "hoofdstukNummer": 13,
+    "hoofdstukTitel": "Overgangen, animaties, attr() en CSS-variabelen"
   }
 ]

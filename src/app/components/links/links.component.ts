@@ -20,7 +20,7 @@ export class LinksComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.sharedService.getLinks()
+      this.sharedService.loadLinks()
         .pipe(
           mergeMap((links: Link[]): Observable<Link> => from(links)),
           filter((item: Link) => item.hoofdstukNummer === this.currentChapter),

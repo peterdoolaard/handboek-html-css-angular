@@ -25,12 +25,12 @@
   <h3 class="inleiding-subkop">Contact</h3>
   <p>Voor vragen of bij problemen mailt u
     <a class="link-text" href="mailto:handboek@peterdoolaard.nl">handboek@peterdoolaard.nl</a></p>
-</div>
 
-<form>
+<form class="form">
   <div [formGroup]="formGroup">
-    <label>Kies een hoofdstuk
+    <label class="form-label">Kies een hoofdstuk
       <select
+        class="form-select"
         formControlName="selectedHoofdstuk"
         (change)="findChapter()"
       >
@@ -38,12 +38,13 @@
           *ngFor="let hoofdstuk of chapters$ | async"
           [ngValue]="hoofdstuk.hoofdstukNummer"
         >
-          Chapter {{ hoofdstuk.hoofdstukNummer }} - {{ hoofdstuk.hoofdstukTitel }}
+          Hoofdstuk {{ hoofdstuk.hoofdstukNummer }} - {{ hoofdstuk.hoofdstukTitel }}
         </option>
       </select>
     </label>
   </div>
 </form>
+</div>
 
 <app-hoofdstuk
   [chapter]="currentChapter"

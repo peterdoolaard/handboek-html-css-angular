@@ -4,7 +4,8 @@
   border-block-start: 2px solid hsl(300deg 40% 90%);
   display: flex;
   margin-block-end: 2rem;
-  inline-size: 100%;
+  //inline-size: 100%;
+  inline-size: var(--navmain-inline-size);
   position: relative;
 }
 

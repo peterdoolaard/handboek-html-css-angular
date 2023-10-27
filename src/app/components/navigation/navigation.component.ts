@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
 import {AppSharedService } from "../../services/app-shared.service";
 
 @Component({
@@ -6,21 +6,22 @@ import {AppSharedService } from "../../services/app-shared.service";
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.scss']
 })
-export class NavigationComponent implements OnInit {
-
+export class NavigationComponent implements AfterViewInit {
+@ViewChild('navMain') navMain: ElementRef | undefined;
 
   constructor(
     private sharedService: AppSharedService,
-    private navMain: ElementRef,
     private renderer: Renderer2
   ) {}
 
-  ngOnInit() {
+  ngAfterViewInit() {
     this.sharedService.classFixed$.subscribe(value => {
-      if (value) {
-        this.renderer.addClass(this.navMain.nativeElement.firstElementChild, '__fixed');
-      }  else {
-        this.renderer.removeClass(this.navMain.nativeElement.firstElementChild, '__fixed');
+      if (this.navMain) {
+        if (value) {
+          this.renderer.addClass(this.navMain.nativeElement, '__fixed');
+        } else {
+          this.renderer.removeClass(this.navMain.nativeElement, '__fixed');
+        }
       }
     })
   }

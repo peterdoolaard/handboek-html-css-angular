@@ -1,0 +1,24 @@
+.form {
+  grid-column: 1 / span 2;
+}
+
+.form-label {
+  font-size: 1.17em;
+
+  @media (min-width: 700px) {
+  align-items: center;
+  column-gap: 2rem;
+  display: grid;
+  grid-template-columns: minmax(min-content, 250px) 1fr;;
+  justify-content: space-between;
+  }
+}
+
+.form-select {
+  font-family: inherit;
+  font-size: 1rem;
+  max-inline-size: 100%;
+  overflow: hidden;
+  padding: 4px 8px;
+  text-overflow: ellipsis;
+}

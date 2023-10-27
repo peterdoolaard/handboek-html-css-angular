@@ -34,9 +34,8 @@ export class VoorbeeldenComponent implements OnInit {
       })
     ).subscribe(chapter => {
         this.currentChapter = chapter;
-        this.sharedService.updateCurrentChapter(this.currentChapter)
+        this.sharedService.updateCurrentChapter(this.currentChapter);
     })
-
   }
 
 }

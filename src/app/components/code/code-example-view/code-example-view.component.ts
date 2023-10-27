@@ -31,7 +31,7 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     subtree: true,
     childList: true,
     characterData: true,
-    characterDataOldValue: true
+    characterDataOldValue: false
   };
 
   constructor(
@@ -45,15 +45,14 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     this.observeCodeExample$ = new MutationObserver(records => {
       records.forEach(record => {
         if (record.target.parentElement) {
+          console.log(record.target.parentElement)
           if (record.target.parentElement.classList.contains('language-html')) {
             this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
           }
           if (record.target.parentElement.classList.contains('language-css')) {
-            console.log('css mutatie')
             this.shadowCodeStyle.innerText = this.exampleCss.innerText;
           }
         }
-        this.btnReset.classList.add('___active');
       })
     });
   }
@@ -68,6 +67,7 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
         this.codeWrapper.addEventListener('keydown', this.reAssignEnterKey);
         this.exampleHtml.setAttribute('contenteditable', 'true');
         this.exampleCss.setAttribute('contenteditable', 'true');
+        this.btnReset.classList.add('___active');
         // volgende 2 regels verwijderen alle spans van de codekleuring met Prismjs
         this.exampleHtml.textContent = this.exampleHtml.textContent;
         this.exampleCss.textContent = this.exampleCss.textContent;
@@ -76,6 +76,8 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
         this.exampleHtml.removeAttribute('contenteditable');
         this.exampleCss.removeAttribute('contenteditable');
         this.highlightService.highlightAllUnder(this.codeWrapper);
+        this.btnReset.classList.remove('___active');
+
       }
     });
 
@@ -96,7 +98,7 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
 
     this.exampleHtml.innerHTML = this.escape(this.example.codeHtml);
     if (this.example.codeCss === '') {
-      this.exampleCss.innerHTML = '/* Geen CSS beschikbaar */\n/* Typ hier je eigen CSS */';
+      this.exampleCss.innerHTML = '/* Geen CSS beschikbaar */\n/* In de bewerkmodus kun hier losgaan met je eigen CSS */';
     } else {
       this.exampleCss.innerHTML = this.escape(this.example.codeCss);
     }
@@ -107,7 +109,6 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
   reset() {
     this.btnReset.classList.remove('___active');
     this.exampleHtml.innerHTML = this.escape(this.example.codeHtml);
-
     this.exampleCss.innerHTML = this.escape(this.example.codeCss);
     this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
     if (this.example.codeCss === '') {

@@ -21,28 +21,16 @@ export class CodeComponent implements OnInit {
   @ViewChild('toggleEdit') toggleEdit!: ElementRef;
 
   codeExamples$: Observable<CodeExample[]> | undefined;
-  checked: boolean = false;
-
-  config = {
-    attributes: false,
-    subtree: true,
-    childList: false,
-    characterData: true,
-    characterDataOldValue: false
-  };
 
   constructor(
     private sharedService: AppSharedService,
     private highlightService: HighlightService,
-  ) {
-  }
+  ) { }
 
   // Bewerkingen op de codevoorbeelden zijn pas
   // mogelijk nadat de observable waarde heeft gestuurd
   // Plaats bewerkingen in de tap() timeout() callback
   ngOnInit() {
-    // this.sharedService.currentChapter$.subscribe(val => console.log(val.hoofdstukNummer))
-
     this.codeExamples$ = combineLatest([
       this.sharedService.currentChapter$,
       this.sharedService.loadCodeExamples()

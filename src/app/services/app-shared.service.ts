@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable, shareReplay, tap } from "rxjs";
+import { BehaviorSubject, Observable, shareReplay } from "rxjs";
 import { HttpClient } from "@angular/common/http";
 import { Chapter, CodeExample, Link } from "../models";
 
@@ -8,7 +8,7 @@ import { Chapter, CodeExample, Link } from "../models";
 })
 export class AppSharedService {
 
-  constructor(
+    constructor(
     private http: HttpClient,
   ) {}
 
@@ -23,11 +23,9 @@ export class AppSharedService {
     new BehaviorSubject<Chapter>( {hoofdstukNummer: 1, hoofdstukTitel: 'Webtalen, browsers en editors'});
   currentChapter$ = this.currentChapter$$.asObservable();
 
-
   updateCurrentChapter(currentChapter: Chapter | undefined) {
     if (currentChapter) {
       this.currentChapter$$.next(currentChapter)
-      this.currentChapter$.pipe(tap(val => console.log(val)))
     }
   }
 
@@ -43,9 +41,8 @@ export class AppSharedService {
     )
   }
 
-  getLinks() {
-    return this.http.get<Link[]>('/assets/data/links.json');
+  loadLinks() {
+    return this.http.get<Link[]>('assets/data/links.json');
   }
-
 
 }
