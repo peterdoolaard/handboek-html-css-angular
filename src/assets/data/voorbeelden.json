@@ -24,7 +24,7 @@
     "hoofdstukNummer": 3,
     "codeNummer": 1,
     "codeTitel": "Alineatekst markeren",
-    "codeHtml": "<p>Om in een webpagina een nieuwe alinea te beginnen, wordt de tekst in het element &lt;p&gt; geplaatst.</p>\n<p>De stylesheet van de browser voegt witruimte tussen de alinea's toe.</p>\n<p>Meerdere regeleinden en tabs in de broncode \n  \n  \nworden door de browser genegeerd. Er wordt gewoon één alinea van gemaakt.</p>",
+    "codeHtml": "<p>Om in een webpagina een nieuwe alinea te beginnen, wordt de tekst in het element <code>p</code> geplaatst.</p>\n<p>De stylesheet van de browser voegt witruimte tussen de alinea's toe.</p>\n<p>Meerdere regeleinden en tabs in de broncode \n  \n  \nworden door de browser genegeerd. Er wordt gewoon één alinea van gemaakt.</p>",
     "codeCss": ""
   },
   {
@@ -171,8 +171,8 @@
     "hoofdstukNummer": 3,
     "codeNummer": 22,
     "codeTitel": "Definitielijst",
-    "codeHtml": "<h2>Handboek HTML 5 en CSS</h2>\n<dl> \n\t<dt>ISBN</dt>\n\t<dd>978-94-6356-264-5</dd>\n\t<dt>NUR</dt>\n\t<dd>994</dd>\n\t<dt>Trefwoorden</dt>\n\t<dd>Webdesign</dd>\n\t<dd>Internet</dd>\n</dl>\n<h2>Veelgestelde vragen</h2>\n<dl>\n  <dt>Hoe markeer ik een kop?</dt>\n  <dd>Met de elementen &lt;h1&gt; tot &lt;h6&gt;.</dd>\n  <dt>Hoe markeer ik een alinea?</dt>\n  <dd>Met het element &lt;p&gt;.</dd>\n  <dt>Hoe markeer ik een FAQ?</dt>\n  <dd>Met de elementen &lt;dl&gt;, &lt;dt&gt; en &lt;dd&gt;.</dd>\n</dl>\n<h2>Lijst van afkortingen</h2>\n<dl>\n  <dt><dfn>HTML</dfn></dt>\n  <dd>Hypertext Markup Language</dd>\n  <dt><dfn>CSS</dfn></dt>\n  <dd>Cascading Style Sheets</dd>\n</dl>",
-    "codeCss": "dt {\n        font-weight: 500;\n      }"
+    "codeHtml": "<h2>Handboek HTML 5 en CSS</h2>\n<dl> \n\t<dt>ISBN</dt>\n\t<dd>978-94-6356-264-5</dd>\n\t<dt>NUR</dt>\n\t<dd>994</dd>\n\t<dt>Trefwoorden</dt>\n\t<dd>Webdesign</dd>\n\t<dd>Internet</dd>\n</dl>\n<h2>Veelgestelde vragen</h2>\n<dl>\n  <dt>Hoe markeer ik een kop?</dt>\n  <dd>Met de elementen <code>h1</code> tot <code>h6</code>.</dd>\n  <dt>Hoe markeer ik een alinea?</dt>\n  <dd>Met het element <code>p</code>.</dd>\n  <dt>Hoe markeer ik een FAQ?</dt>\n  <dd>Met de elementen <code>dl</code>, <code>dt</code> en <code>dd</code>.</dd>\n</dl>\n<h2>Lijst van afkortingen</h2>\n<dl>\n  <dt><dfn>HTML</dfn></dt>\n  <dd>Hypertext Markup Language</dd>\n  <dt><dfn>CSS</dfn></dt>\n  <dd>Cascading Style Sheets</dd>\n</dl>",
+    "codeCss": "dt {\n        font-weight: 600;\n      }"
   },
   {
     "hoofdstukNummer": 4,
@@ -191,41 +191,41 @@
   {
     "hoofdstukNummer": 4,
     "codeNummer": 3,
-    "codeTitel": "Bladwijzer",
-    "codeHtml": "<p>De bovenkant van deze pagina heeft een bladwijzer met de naam <code>id=\"topofthepage\"</code>.</p>\n<p>Met <a href=\"#topofthepage\">deze link</a> navigeert u omhoog. Met de knop <strong>Terug</strong> brengt de browser u terug naar dit punt.</p>",
+    "codeTitel": "Link naar een grote foto",
+    "codeHtml": "<a href=\"/assets/voorbeelden/ballonnen_groot.webp\">\n  <img src=\"/assets/voorbeelden/ballonnen_klein.webp\" alt=\"Heteluchtballonnen boven een meer\">\n</a>",
+    "codeCss": "img {\n        block-size: 120px;\n        aspect-ratio: 300/199;\n      }"
+  },
+  {
+    "hoofdstukNummer": 4,
+    "codeNummer": 4,
+    "codeTitel": "E-maillink",
+    "codeHtml": "<a href=\"mailto:reacties@handboek-html-css.nl?Subject=Vraag over hyperlinks\" rel=\"author\">Mail de auteur.</a>",
     "codeCss": ""
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 3,
-    "codeTitel": "",
-    "codeHtml": "",
+    "hoofdstukNummer": 4,
+    "codeNummer": 5,
+    "codeTitel": "Telefoonlink",
+    "codeHtml": "<a href=\"tel:+31612345678\">Bel 06-12345678</a>",
     "codeCss": ""
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 3,
-    "codeTitel": "",
-    "codeHtml": "",
+    "hoofdstukNummer": 4,
+    "codeNummer": 6,
+    "codeTitel": "Link naar pdf",
+    "codeHtml": "<p>Lees de <a href=\"/assets/pdf/hoofdstuk4.pdf\">pdf van hoofdstuk 4</a>. (Of <a href=\"/assets/pdf/hoofdstuk4.pdf\" download=\"hoofdstuk 4\">download de pdf</a>.)</p>",
     "codeCss": ""
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 3,
-    "codeTitel": "",
-    "codeHtml": "",
-    "codeCss": ""
+    "hoofdstukNummer": 4,
+    "codeNummer": 7,
+    "codeTitel": "Klikbare kaart, korte linktekst",
+    "codeHtml": "<article class=\"clickable\" lang=\"nl\">\n  <h2><a href=\"https://example.com\">Eenvoudige klikbare kaart</a></h2>\n  <p>Maak een artikel of lijstitem en geef de het <code>position: relative</code>. Maak van de kop een link.</p>\n  <p>Geef de link een pseudo-element <code>::after</code> (<code>::before</code> kan ook) en geef dat <code>position: absolute</code>. Stel alle zijden in op 0 zodat het de container bedekt. </p>\n  <p>Nu is het hele blok klikbaar, terwijl de toegankelijke tekst alleen bestaat uit de kop. Ook staat alleen de kop in de tabvolgorde. </p>\n  <p>Nadeel: de tekst is alleen te selecteren door de hele kaart te selecteren.</p>\n</article>",
+    "codeCss": ".clickable {\n  border-radius: 0.25rem;\n  border: 1px solid hsl(0 0% 0% / 0.2);\n  max-width: 60ch;\n  padding: 0.5rem;\n  position: relative;\n  transition: box-shadow 150ms ease-out;\n}\n.clickable:hover,\n.clickable:focus-within {\n  box-shadow: 1px 1px 4px 2px hsl(0 0% 0% / 0.2);\n}\n.clickable a::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n}\n\na:any-link {\n  text-decoration: none;\n  color: inherit;\n}"
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 3,
-    "codeTitel": "",
-    "codeHtml": "",
-    "codeCss": ""
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 3,
+    "hoofdstukNummer": 5,
+    "codeNummer": 1,
     "codeTitel": "",
     "codeHtml": "",
     "codeCss": ""

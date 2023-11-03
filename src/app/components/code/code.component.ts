@@ -19,7 +19,6 @@ export class CodeComponent implements OnInit {
   @ViewChild('exampleCss') exampleCss!: ElementRef;
   @ViewChild('exampleStyle') exampleStyle!: ElementRef;
   @ViewChild('toggleEdit') toggleEdit!: ElementRef;
-  @ViewChild('popOver') popOver!: ElementRef
 
   codeExamples$: Observable<CodeExample[]> | undefined;
 

@@ -54,10 +54,15 @@ a:any-link, button, [type="button"] {
   position: relative;
 }
 
-.code-wrapper pre {
+.code-wrapper pre[class*="language-"] {
   min-block-size: 3.5rem;
+  padding: 1em 3em 1em 1em;
   position: relative;
   overflow-x: hidden;
+
+  code {
+    padding-inline-end: 1rem;
+  }
 
   code:focus-visible {
     outline: none;
