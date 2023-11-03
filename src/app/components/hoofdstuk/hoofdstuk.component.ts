@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { Chapter } from "../../models";
+import { AppSharedService } from "../../services/app-shared.service";
 
 @Component({
   selector: 'app-hoofdstuk',
@@ -7,9 +8,23 @@ import { Chapter } from "../../models";
   styleUrls: ['./hoofdstuk.component.scss']
 })
 export class HoofdstukComponent {
-  @Input() chapter: Chapter | undefined;
+  hoofdstuk: Chapter | undefined;
 
-  constructor() {}
+  @ViewChild('chapterWrapper') chapterWrapper!: ElementRef
 
+  constructor(
+    private sharedService: AppSharedService
+  ) {
+    this.sharedService.currentChapter$.subscribe(chapter => {
+      this.hoofdstuk = chapter;
+      if (this.hoofdstuk.hoofdstukNummer !== 1) {
+        const y = this.chapterWrapper.nativeElement.getBoundingClientRect().top - 170 + window.scrollY;
+        window.scroll({
+          top: y,
+          behavior: "smooth"
+        })
+      }
+    });
+  }
 }
 

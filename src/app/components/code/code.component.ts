@@ -19,6 +19,7 @@ export class CodeComponent implements OnInit {
   @ViewChild('exampleCss') exampleCss!: ElementRef;
   @ViewChild('exampleStyle') exampleStyle!: ElementRef;
   @ViewChild('toggleEdit') toggleEdit!: ElementRef;
+  @ViewChild('popOver') popOver!: ElementRef
 
   codeExamples$: Observable<CodeExample[]> | undefined;
 
@@ -30,6 +31,7 @@ export class CodeComponent implements OnInit {
   // Bewerkingen op de codevoorbeelden zijn pas
   // mogelijk nadat de observable waarde heeft gestuurd
   // Plaats bewerkingen in de tap() timeout() callback
+  ;
   ngOnInit() {
     this.codeExamples$ = combineLatest([
       this.sharedService.currentChapter$,
@@ -41,11 +43,19 @@ export class CodeComponent implements OnInit {
         );
         return of(filteredExamples);
       }),
-      tap(codeExample => {
+      tap(() => {
         setTimeout(() => {
           this.highlightService.highlightAll();
         }, 0)
       })
     );
   }
+
+  copyCode(event: any) {
+    let selection = event.target.previousSibling.textContent
+    navigator.clipboard.writeText(selection).then(
+      () => console.log('copied\n ' + selection),
+      (error) => console.log(error)
+    )
+  };
 }

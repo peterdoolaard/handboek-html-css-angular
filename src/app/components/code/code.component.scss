@@ -50,10 +50,14 @@ a:any-link, button, [type="button"] {
   white-space: pre-wrap!important;
 }
 
+.code-wrapper {
+  position: relative;
+}
+
 .code-wrapper pre {
   min-block-size: 3.5rem;
   position: relative;
-  overflow-x: auto;
+  overflow-x: hidden;
 
   code:focus-visible {
     outline: none;
@@ -79,9 +83,10 @@ a:any-link, button, [type="button"] {
   transform: scale(0.75);
 }
 
-div.alert {
+.alert {
   animation: fade 250ms ease-in forwards;
   box-shadow: var(--box-shadow-sharp);
+  display: none;
   opacity: 0;
   padding: 0.5rem .75rem;
   position: absolute;
@@ -101,12 +106,14 @@ div.alert {
   }
 }
 
-div.success {
-  background: hsl(0 0% 90%);
+.__success {
+  background: hsl(90 50% 90% / 1);
+  display: block;
 }
 
-div.failed {
-  background: hsl(0 0% 90%);
+.__failed {
+  background: hsl(0 50% 90%);
+  display: block;
 }
 
 .actions {
@@ -119,8 +126,17 @@ div.failed {
   border-radius: 1px;
   display: flex;
   font-family: SourceSans3 sans-serif;
-  inline-size: 8em;
+  inline-size: 220px;
   position: relative;
+
+  input {
+    display: inline-block;
+    margin-inline-start: 2rem;
+
+    &:focus-visible {
+      outline: 1px solid blue;
+    }
+  }
 }
 
 .code-edit__slider {
@@ -129,7 +145,7 @@ div.failed {
   border-radius: 0.6em;
   inline-size: 3em;
   position: absolute;
-  left: 4.5em;
+  right: 0;
 }
 
 .code-edit__thumb {
@@ -138,14 +154,13 @@ div.failed {
   border-radius: 50%;
   inline-size: 1.7em;
   position: absolute;
-  left: 4.4em;
-  margin-block-start: -0.2em;
+  right: 1.4em;
   transition: all 200ms ease-in-out;
 }
 
 input:checked ~ .code-edit__thumb {
   background: hsl(300deg 40% 35%);
-  left: 5.9em;
+  right: 0;
 }
 
 input:checked + .code-edit__slider {
@@ -170,13 +185,9 @@ input:checked + .code-edit__slider {
   border-radius: 0.25em;
   color: inherit;
   font-size: inherit;
-  opacity: 0;
+  margin-inline-start: 1rem;
   padding: 0.25em 0.5em;
   transition: all 200ms ease-in-out;
-
-  &.___active {
-    opacity: 1;
-  }
 }
 
 .btn-reset-code:hover {

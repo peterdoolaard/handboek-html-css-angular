@@ -19,23 +19,40 @@
                 #exampleHtml
                 class="example-html"
               ></code>
-              <button class="btn-copy-code copy-html" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
+              <button
+                class="btn-copy-code copy-html"
+                type="button"
+                (click)="copyCode($event)"
+              >
+                <span class="screen-reader-text">Kopieer de code</span>
+              </button>
             </pre>
             <pre class="language-css">
               <code
                 #exampleCss
                 class="example-css"
               ></code>
-              <button class="btn-copy-code copy-css" type="button"><span class="screen-reader-text">Kopieer de code</span></button>
+              <button
+                class="btn-copy-code copy-css"
+                type="button"
+                (click)="copyCode($event)"
+              >
+                <span class="screen-reader-text">Kopieer de code</span>
+              </button>
             </pre>
+            <div class="alert" #popOver>
+              <p>Code is gekopieerd</p>
+            </div>
           </div>
           <div class="actions">
-            <label class="code-edit__label">Bewerken
+            <label class="code-edit__label">Bewerken&nbsp;
+              <span *ngIf="!toggleEdit.checked">inschakelen</span>
+              <span *ngIf="toggleEdit.checked">uitschakelen</span>
               <input type="checkbox" #toggleEdit>
               <span class="code-edit__slider"></span>
               <span class="code-edit__thumb"></span>
             </label>
-            <button #btnReset class="btn-reset-code" type="button">Herstellen</button>
+            <button #btnReset class="btn-reset-code" type="button" hidden>Code herstellen</button>
           </div>
         </div>
       </figure>

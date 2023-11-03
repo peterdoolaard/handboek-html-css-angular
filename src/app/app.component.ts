@@ -31,9 +31,7 @@ export class AppComponent implements AfterViewInit {
 
   resizeFixedNav(entries: ResizeObserverEntry[]) {
     entries.map(entry => {
-      console.log(entry);
       const navMain: HTMLElement | null = entry.target.querySelector('.nav-main');
-      const root: HTMLElement | null = document.querySelector(':root')
       if(navMain) {
         document.documentElement.style.setProperty('--nav-main-inline-size', entry.borderBoxSize[0].inlineSize + 'px')
         navMain.style.inlineSize = entry.borderBoxSize[0].inlineSize + 'px';
