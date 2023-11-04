@@ -17,7 +17,6 @@ import { DownloadsComponent } from './downloads/downloads.component';
 import { CodeComponent } from './components/code/code.component';
 import { HoofdstukComponent } from './components/hoofdstuk/hoofdstuk.component';
 import { IntersectionObserverDirective } from './directives/intersection-observer.directive';
-import { TestpageComponent } from './testpage/testpage.component';
 import { LinksComponent } from './components/links/links.component';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { HighlightService } from "./services/highlight.service";
@@ -39,7 +38,6 @@ import { CodeExampleViewComponent } from './components/code/code-example-view/co
     CodeComponent,
     HoofdstukComponent,
     IntersectionObserverDirective,
-    TestpageComponent,
     LinksComponent,
     EscapeMarkupPipe,
     CodeExampleViewComponent,
