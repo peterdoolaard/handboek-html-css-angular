@@ -3,12 +3,15 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from "./home/home.component";
 import { VoorbeeldenComponent } from "./voorbeelden/voorbeelden.component";
 import { DownloadsComponent } from "./downloads/downloads.component";
+import { HoofdstukComponent } from './components/hoofdstuk/hoofdstuk.component';
 
 const routes: Routes = [
-  { path: 'voorbeelden', title: 'Voorbeelden | Handboek HTML5 en CSS', component: VoorbeeldenComponent },
+  { path: 'voorbeelden', component: VoorbeeldenComponent, children: [
+      { path: 'hoofdstuk/:hoofdstukNummer', component: HoofdstukComponent, data: {title: 'Voorbeelden | Handboek HTML5 en CSS' } }
+    ] },
   { path: 'downloads', title: 'Downloads | Handboek HTML5 en CSS', component: DownloadsComponent },
   { path: '', title: 'Home | Handboek HTML5 en CSS', component: HomeComponent, pathMatch: "full"},
-  { path: '**', title: 'Home | Handboek HTML5 en CSS', redirectTo: '' },
+  { path: '**', redirectTo: '' }
 
 ];
 

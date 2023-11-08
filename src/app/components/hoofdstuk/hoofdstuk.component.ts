@@ -13,11 +13,11 @@ export class HoofdstukComponent {
   @ViewChild('chapterWrapper') chapterWrapper!: ElementRef
 
   constructor(
-    private sharedService: AppSharedService
+    private sharedService: AppSharedService,
   ) {
     this.sharedService.currentChapter$.subscribe(chapter => {
       this.hoofdstuk = chapter;
-      if (this.hoofdstuk.hoofdstukNummer !== 1) {
+      if ((this.hoofdstuk.hoofdstukNummer !== 1) && this.chapterWrapper ) {
         const y = this.chapterWrapper.nativeElement.getBoundingClientRect().top - 170 + window.scrollY;
         window.scroll({
           top: y,

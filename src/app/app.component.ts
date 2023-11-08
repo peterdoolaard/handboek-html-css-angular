@@ -12,9 +12,8 @@ export class AppComponent implements AfterViewInit {
   constructor(
     private sharedService: AppSharedService,
     private elementRef: ElementRef,
-    private renderer: Renderer2
-  ) {
-  }
+    private renderer: Renderer2,
+  ) {}
 
   ngAfterViewInit() {
     this.sharedService.classFixed$.subscribe(value => {
