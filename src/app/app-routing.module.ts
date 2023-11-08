@@ -7,9 +7,9 @@ import { HoofdstukComponent } from './components/hoofdstuk/hoofdstuk.component';
 
 const routes: Routes = [
   { path: 'voorbeelden', component: VoorbeeldenComponent, children: [
-      { path: 'hoofdstuk/:hoofdstukNummer', component: HoofdstukComponent, data: {title: 'Voorbeelden | Handboek HTML5 en CSS' } }
+      { path: 'hoofdstuk/:hoofdstukNummer', component: HoofdstukComponent }
     ] },
-  { path: 'downloads', title: 'Downloads | Handboek HTML5 en CSS', component: DownloadsComponent },
+  { path: 'downloads', component: DownloadsComponent },
   { path: '', title: 'Home | Handboek HTML5 en CSS', component: HomeComponent, pathMatch: "full"},
   { path: '**', redirectTo: '' }
 
