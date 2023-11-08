@@ -1,0 +1,268 @@
+[
+  {
+    "hoofdstukNummer": 1,
+    "codeNummer": 1,
+    "codeTitel": "Kale HTML",
+    "codeHtml": "<article>\n  <h1>De functie van HTML</h1>\n  <p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p>\n</article>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 1,
+    "codeNummer": 2,
+    "codeTitel": "HTML met CSS",
+    "codeHtml": "<article>\n  <h1>De functie van HTML</h1>\n  <p>HTML staat voor Hypertext Markup Language. Met HTML worden de <i>structuur</i> van de pagina en de <i>betekenis</i> van de elementen in die pagina aangegeven.</p>\n</article>",
+    "codeCss": "h1 {\n  color: hsl(0 0% 15%);\n  font-family: serif;\n  font-weight: 500;\n}\np {\n  color: hsl(0 0% 5%);\n  font-family: sans-serif;\n  font-weight: 400;\n}"
+  },
+  {
+    "hoofdstukNummer": 2,
+    "codeNummer": 1,
+    "codeTitel": "Lege tag",
+    "codeHtml": "<img class=\"img-zonnebloem\" src=\"/assets/voorbeelden/zonnebloem.jpg\" height=\"640\" width=\"960\" alt=\"Zonnebloemenen in bloei.\" loading=\"lazy\">",
+    "codeCss": ".img-zonnebloem {\n        aspect-ratio: 3/2;\n        block-size: auto;\n        inline-size: 100%;\n      }"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 1,
+    "codeTitel": "Alineatekst markeren",
+    "codeHtml": "<p>Om in een webpagina een nieuwe alinea te beginnen, wordt de tekst in het element <code>p</code> geplaatst.</p>\n<p>De stylesheet van de browser voegt witruimte tussen de alinea's toe.</p>\n<p>Meerdere regeleinden en tabs in de broncode \n  \n  \nworden door de browser genegeerd. Er wordt gewoon één alinea van gemaakt.</p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 2,
+    "codeTitel": "Regeleinden",
+    "codeHtml": "<p>Dikke huisjesslak,<br>\nook jij beklimt de Fuji<br>\n– maar langzaam, langzaam.<br>\n<cite>Issa (1763 – 1828)</cite></p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "Woordafbreking",
+    "codeHtml": "<p>(Maak het venster smaller om het effect te kunnen zien.) Een fobie voor lange woorden heet hippo<wbr>potomonstroses<wbr>quippedalio<wbr>fobie.</p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 4,
+    "codeTitel": "Het element em",
+    "codeHtml": "<p>De <em>kat</em> krabt de krullen van de trap.</p>\n        <p>De kat krabt de krullen van de <em>trap</em>.</p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 5,
+    "codeTitel": "Het element strong",
+    "codeHtml": "<h1>Hoofdstuk 3: <strong>Aan de slag met HTML</strong></h1>\n        <p><strong>Let op.</strong> Vergeet niet het element af te sluiten.</p>\n        <p><strong>Waarschuwing!</strong> Deze route kan gevaarlijk zijn. <strong>Houd rechts!</strong></p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 6,
+    "codeTitel": "Aanvullende informatie",
+    "codeHtml": "<p><small>Op al onze leveringen zijn de algemene voorwaarden van toepassing.</small></p>\n        <p>Deze bezemkast kost 450.000 euro <small>exclusief overdrachtsbelasting</small></p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 7,
+    "codeTitel": "Ongeldige informatie",
+    "codeHtml": "<p>Browsers te koop. <s>Nu slechts 5 euro.</s> Gratis af te halen.</p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 8,
+    "codeTitel": "Verwijzing",
+    "codeHtml": "<p>We hebben de film <cite>No time to die</cite> gezien.</p>\n      <p>Hier staat: <q cite=\"https://www.trainjedraak.nl\">Alleen in de openlucht proberen.</q></p>\n      <p>In de folder <cite>Ideeën voor kinderfeestjes</cite> staat: \n      <q cite=\"http://www.trainjedraak.nl\">Alleen in de openlucht proberen.</q></p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 9,
+    "codeTitel": "Afkortingen en definities",
+    "codeHtml": "<p>We hebben het over <abbr title=\"Hypertext Markup Language\">HTML</abbr>.</p>\n<p>We hebben het over <dfn><abbr title=\"Hypertext Markup Language\">HTML</abbr></dfn>.</p>\n<p>We hebben het over <dfn title=\"Hypertext Markup Language\">HTML</dfn>.</p>\n<p>We hebben het over <dfn id=\"abbr-html\"><abbr title=\"Hypertext Markup Language\">HTML</abbr></dfn>.</p>\n<p>Deze regel verwijst terug naar de voorgaande over <a href=\"#abbr-html\"><abbr title=\"Hypertext Markup Language\">HTML</abbr></a>, ...</p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 10,
+    "codeTitel": "Programmacode",
+    "codeHtml": "<p>Wijs de waarde toe aan a: <code>var a = 10;</code></p>\n<pre><code>start() {\n  go\n  end\n}</code></pre>\n<p>U ziet de melding <samp>Klik op Start om te stoppen</samp>.</p>\n<p>Typ <kbd>console.log('Hello, world');</kbd>.</p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 11,
+    "codeTitel": "Subscript en superscript",
+    "codeHtml": "<p>Jij verdient dus geld als H<sub>2</sub>O</p>\n<p>De uitkomst van 10<sup>4</sup> is 10000</p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 12,
+    "codeTitel": "De inline container <span>",
+    "codeHtml": "<p>Een RGB-kleur bestaat uit <span class=\"rood\">rood</span>, <span class=\"groen\">groen</span> en <span class=\"blauw\">blauw</span>.</p>",
+    "codeCss": ".rood { color: red; }\n        .groen { color: green; }\n        .blauw { color: blue; }"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 13,
+    "codeTitel": "Toegevoegd of verwijderd",
+    "codeHtml": "<h2>Een lay-out maken</h2>\n<p><del>HTML-tabellen zijn het ideale hulpmiddel om een webpagina vorm te geven.</del></p>\n<p><ins>De lay-out van een webpagina bepaalt u met CSS.</ins></p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 14,
+    "codeTitel": "Citaten",
+    "codeHtml": "<blockquote cite=\"<https://nl.wikiquote.org/wiki/Asterix\">Rare jongens, die Romeinen.</blockquote>\n      <p>Obelix in <cite>De ronde van Gallia</cite></p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 15,
+    "codeTitel": "Geordende lijst",
+    "codeHtml": "<p>Volg deze stappen:</p>\n<ol>\n  <li>Klik op Start.</li>\n  <li>Klik op Doorgaan.</li>\n  <li>Klik op Voltooien.</li>\n  <li>Klik op OK.</li>\n</ol>\n<p>Als het misgaat doet u het volgende:</p>\n<ol start=\"5\">\n  <li>Klik op Probeer opnieuw.</li>\n  <li>Klik op Herstel fabrieksinstellingen.</li>\n  <li>Klik op OK.</li>\n</ol> ",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 16,
+    "codeTitel": "Geordende lijst",
+    "codeHtml": "<ol type=\"I\">\n  <li>Stroomvoorziening <!-- item niet afsluiten, de volgende lijst hoort bij dit onderwerp -->\n    <ol type=\"1\">\n      <li>Kabel <!-- item niet afsluiten, de volgende lijst hoort bij dit onderwerp -->\n        <ol type=\"a\">\n          <li>Apparaataansluiting</li>\n          <li>Lichtnetaansluiting</li>\n        </ol> <!-- einde letterlijst -->\n      </li> <!-- einde item Kabel -->\n      <li>Aan-uitschakelaar</li>\n    </ol> <!-- einde nummerlijst -->\n  </li> <!-- einde item Stroomvoorziening -->\n  <li>Toetsenbord <!-- vervolg Romeinse lijst; de volgende lijst hoort bij dit onderwerp -->\n    <ol>\n      <li>Aansluiting</li>\n    </ol>\n  </li> <!-- einde item toetsenbord -->\n</ol> <!-- einde Romeinse lijst -->",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 17,
+    "codeTitel": "Ongeordende lijst",
+    "codeHtml": "<ul>\n  <li>voorwiel\n    <ul>\n      <li>trommelrem</li>\n      <li>naafdynamo</li>\n    </ul>\n  </li>\n  <li>achterwiel</li>\n  <li>stuur</li>\n  <li>trappers</li>\n</ul>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 18,
+    "codeTitel": "Ongeordende lijst",
+    "codeHtml": "<nav>\n  <ul>\n    <li><a href=\"index.html\">Home</a></li>\n    <li><a href=\"producten.html\">Producten</a></li>\n    <li><a href=\"diensten.html\">Diensten</a></li>\n    <li><a href=\"service.html\">Klantenservice</a></li>\n  </ul>\n</nav>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 19,
+    "codeTitel": "Kop boven een lijst",
+    "codeHtml": "<h2>Recept voor stamppot boerenkool</h2>\n<h3>Ingrediënten</h3>\n<ul>\n  <li>boerenkool</li>\n  <li>aardappelen</li>\n</ul>\n<h3>Bereiding</h3>\n  <ol>\n    <li>Schil de aardappelen.</li>\n    <li>Snij de boerenkool fijn.</li>\n</ol>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 20,
+    "codeTitel": "Lijst als illustratie",
+    "codeHtml": "<figure>\n  <figcaption>Kenmerken van onze fietsen</figcaption>\n  <ul>\n    <li>voorwiel\n      <ul>\n        <li>trommelrem</li>\n        <li>naafdynamo</li>\n      </ul>\n    </li>\n    <li>achterwiel</li>\n    <li>stuur</li>\n    <li>trappers</li>\n  </ul>\n</figure>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 21,
+    "codeTitel": "Illustratie met bijschrift",
+    "codeHtml": "<figure>\n  <figcaption>Chips, van veld naar zak</figcaption>\n  <figure> \n    <img src=\"/assets/voorbeelden/aardappelveld.jpg\" alt=\"Aardappels op het veld.\" loading=\"lazy\">\n    <figcaption>De aardappels staan op het veld.</figcaption>\n  </figure>\n  <figure> \n    <img src=\"/assets/voorbeelden/fabriek.jpg\" alt=\"Aardappels in de fabriek.\" loading=\"lazy\">\n    <figcaption>De aardappels worden verwerkt in de fabriek.</figcaption>\n  </figure>\n  <figure> \n    <img src=\"/assets/voorbeelden/chips.jpg\" alt=\"Chips in zakken.\" loading=\"lazy\">\n    <figcaption>De zakken chips staan klaar voor de consument.</figcaption>\n  </figure>\n</figure>",
+    "codeCss": "img {\n        inline-size: 100%;\n        max-inline-size: 400px;\n        block-size: auto;\n      }\n      figure {\n        margin: 0;\n      }\n      figcaption {\n        margin-block-end: 1em\n      }"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 22,
+    "codeTitel": "Definitielijst",
+    "codeHtml": "<h2>Handboek HTML 5 en CSS</h2>\n<dl> \n\t<dt>ISBN</dt>\n\t<dd>978-94-6356-264-5</dd>\n\t<dt>NUR</dt>\n\t<dd>994</dd>\n\t<dt>Trefwoorden</dt>\n\t<dd>Webdesign</dd>\n\t<dd>Internet</dd>\n</dl>\n<h2>Veelgestelde vragen</h2>\n<dl>\n  <dt>Hoe markeer ik een kop?</dt>\n  <dd>Met de elementen <code>h1</code> tot <code>h6</code>.</dd>\n  <dt>Hoe markeer ik een alinea?</dt>\n  <dd>Met het element <code>p</code>.</dd>\n  <dt>Hoe markeer ik een FAQ?</dt>\n  <dd>Met de elementen <code>dl</code>, <code>dt</code> en <code>dd</code>.</dd>\n</dl>\n<h2>Lijst van afkortingen</h2>\n<dl>\n  <dt><dfn>HTML</dfn></dt>\n  <dd>Hypertext Markup Language</dd>\n  <dt><dfn>CSS</dfn></dt>\n  <dd>Cascading Style Sheets</dd>\n</dl>",
+    "codeCss": "dt {\n        font-weight: 600;\n      }"
+  },
+  {
+    "hoofdstukNummer": 4,
+    "codeNummer": 1,
+    "codeTitel": "Toegankelijke linktekst",
+    "codeHtml": "<a href=\"#\" aria-label=\"Voormalige Britse politicus Clegg wordt rechterhand Zuckerberg bij Meta\">\n    <h3>Voormalige Britse politicus Clegg wordt rechterhand Zuckerberg bij Meta</h3>\n    <p>In zijn nieuwe functie ... </p>\n    <img src=\"\" alt=\"\">\n</a>\n<a href=\"#\" aria-labelledby=\"id1\">\n    <h3 id=\"id1\">Voormalige Britse politicus Clegg wordt rechterhand Zuckerberg bij Meta</h3>\n    <p>In zijn nieuwe functie ... </p>\n    <img src=\"\" alt=\"\">\n</a>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 4,
+    "codeNummer": 2,
+    "codeTitel": "Downloadlink",
+    "codeHtml": "<div>\n  <a href=\"/assets/voorbeelden/zonnebloem.jpg\" download>\n    <img src=\"/assets/voorbeelden/zonnebloem.jpg\" alt=\"Zonnebloemen in bloei\" loading=\"lazy\">\n    <span>Download een zonnebloem!</span>\n  </a>\n</div>",
+    "codeCss": "a {\n        display: flex;\n        column-gap: 1em;\n      }\n      img {\n        block-size: 120px;\n        inline-size: auto;\n      }"
+  },
+  {
+    "hoofdstukNummer": 4,
+    "codeNummer": 3,
+    "codeTitel": "Link naar een grote foto",
+    "codeHtml": "<a href=\"/assets/voorbeelden/ballonnen_groot.webp\">\n  <img src=\"/assets/voorbeelden/ballonnen_klein.webp\" alt=\"Heteluchtballonnen boven een meer\">\n</a>",
+    "codeCss": "img {\n        block-size: 120px;\n        aspect-ratio: 300/199;\n      }"
+  },
+  {
+    "hoofdstukNummer": 4,
+    "codeNummer": 4,
+    "codeTitel": "E-maillink",
+    "codeHtml": "<a href=\"mailto:reacties@handboek-html-css.nl?Subject=Vraag over hyperlinks\" rel=\"author\">Mail de auteur.</a>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 4,
+    "codeNummer": 5,
+    "codeTitel": "Telefoonlink",
+    "codeHtml": "<a href=\"tel:+31612345678\">Bel 06-12345678</a>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 4,
+    "codeNummer": 6,
+    "codeTitel": "Link naar pdf",
+    "codeHtml": "<p>Lees de <a href=\"/assets/pdf/hoofdstuk4.pdf\">pdf van hoofdstuk 4</a>. (Of <a href=\"/assets/pdf/hoofdstuk4.pdf\" download=\"hoofdstuk 4\">download de pdf</a>.)</p>",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 4,
+    "codeNummer": 7,
+    "codeTitel": "Klikbare kaart, korte linktekst",
+    "codeHtml": "<article class=\"clickable\" lang=\"nl\">\n  <h2><a href=\"https://example.com\">Eenvoudige klikbare kaart</a></h2>\n  <p>Maak een artikel of lijstitem en geef de het <code>position: relative</code>. Maak van de kop een link.</p>\n  <p>Geef de link een pseudo-element <code>::after</code> (<code>::before</code> kan ook) en geef dat <code>position: absolute</code>. Stel alle zijden in op 0 zodat het de container bedekt. </p>\n  <p>Nu is het hele blok klikbaar, terwijl de toegankelijke tekst alleen bestaat uit de kop. Ook staat alleen de kop in de tabvolgorde. </p>\n  <p>Nadeel: de tekst is alleen te selecteren door de hele kaart te selecteren.</p>\n</article>",
+    "codeCss": ".clickable {\n  border-radius: 0.25rem;\n  border: 1px solid hsl(0 0% 0% / 0.2);\n  max-width: 60ch;\n  padding: 0.5rem;\n  position: relative;\n  transition: box-shadow 150ms ease-out;\n}\n.clickable:hover,\n.clickable:focus-within {\n  box-shadow: 1px 1px 4px 2px hsl(0 0% 0% / 0.2);\n}\n.clickable a::after {\n  content: \"\";\n  position: absolute;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0;\n}\n\na:any-link {\n  text-decoration: none;\n  color: inherit;\n}"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 1,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  },
+  {
+    "hoofdstukNummer": 3,
+    "codeNummer": 3,
+    "codeTitel": "",
+    "codeHtml": "",
+    "codeCss": ""
+  }
+]
