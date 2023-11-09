@@ -9,7 +9,7 @@
     {
       "files": ["**/*.css", "**/*.scss", "**/*.html"],
       "options": {
-        "singleQuote": true
+        "singleQuote": false
       }
     }
   ],
