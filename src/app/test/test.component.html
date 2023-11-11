@@ -1,0 +1,20 @@
+<h3>Testcomponent</h3>
+<ng-container *ngIf='(myHtml$ | async) as myHtml'>
+  <h4>Haal 1 bestand op</h4>
+  <p [innerHTML]="myHtml"></p>
+</ng-container>
+
+<ng-container *ngIf='(examples$ | async) as examples'>
+  <h4>Alle voorbeelden</h4>
+  <p *ngFor='let example of examples'>
+    {{ example.codeTitel }}
+  </p>
+</ng-container>
+
+<ng-container *ngIf='(filteredExamples$ | async) as filteredExamples'>
+  <h4>Voorbeelden uit hoofdstuk 2</h4>
+  <ng-container *ngFor='let example of filteredExamples'>
+    <h5>{{ example.codeTitel }}</h5>
+    <div [innerHTML]="example.codeHtml"></div>
+  </ng-container>
+</ng-container>

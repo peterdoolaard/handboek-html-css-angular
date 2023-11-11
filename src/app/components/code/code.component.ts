@@ -1,10 +1,9 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
-import { combineLatest, Observable, of, switchMap, tap } from "rxjs";
+import { combineLatest, Observable, of, switchMap, tap } from 'rxjs';
 
-import { AppSharedService } from "../../services/app-shared.service";
-import { HighlightService } from "../../services/highlight.service";
-import { CodeExample } from "../../models";
-
+import { AppSharedService } from '../../services/app-shared.service';
+import { HighlightService } from '../../services/highlight.service';
+import { CodeExample } from '../../models';
 
 @Component({
   selector: 'app-code',
@@ -25,36 +24,32 @@ export class CodeComponent implements OnInit {
   constructor(
     private sharedService: AppSharedService,
     private highlightService: HighlightService,
-  ) { }
+  ) {}
 
   // Bewerkingen op de codevoorbeelden zijn pas
   // mogelijk nadat de observable waarde heeft gestuurd
   // Plaats bewerkingen in de tap() timeout() callback
-  ;
   ngOnInit() {
-    this.codeExamples$ = combineLatest([
-      this.sharedService.currentChapter$,
-      this.sharedService.loadCodeExamples()
-    ]).pipe(
+    this.codeExamples$ = combineLatest([this.sharedService.currentChapter$, this.sharedService.getExamples()]).pipe(
       switchMap(([currentChapter, examples]) => {
         const filteredExamples = examples.filter(
-          (example) => example.hoofdstukNummer === currentChapter.hoofdstukNummer
+          (example) => example.hoofdstukNummer === currentChapter.hoofdstukNummer,
         );
         return of(filteredExamples);
       }),
       tap(() => {
         setTimeout(() => {
           this.highlightService.highlightAll();
-        }, 0)
-      })
+        }, 0);
+      }),
     );
   }
 
   copyCode(event: any) {
-    let selection = event.target.previousSibling.textContent
+    let selection = event.target.previousSibling.textContent;
     navigator.clipboard.writeText(selection).then(
       () => console.log('copied\n ' + selection),
-      (error) => console.log(error)
-    )
-  };
+      (error) => console.log(error),
+    );
+  }
 }

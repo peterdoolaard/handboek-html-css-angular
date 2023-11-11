@@ -1,14 +1,14 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewEncapsulation } from '@angular/core';
-import { fromEvent, Observable } from "rxjs";
-import { HighlightService } from "../../../services/highlight.service";
-import { CodeExample } from "../../../models";
-
+import { fromEvent, Observable } from 'rxjs';
+import { HighlightService } from '../../../services/highlight.service';
+import { CodeExample } from '../../../models';
+import { AppSharedService } from '../../../services/app-shared.service';
 
 @Component({
   selector: 'code-example-view',
   templateUrl: './code-example-view.component.html',
   styleUrls: ['./code-example-view.component.scss'],
-  encapsulation: ViewEncapsulation.ShadowDom
+  encapsulation: ViewEncapsulation.ShadowDom,
 })
 export class CodeExampleViewComponent implements OnInit, AfterViewInit {
   @Input() example!: CodeExample;
@@ -27,8 +27,6 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
   observeCodeExample$!: MutationObserver;
   observerToggleEdit$!: Observable<Event>;
   observeBtnReset$!: Observable<Event>;
-  observeBtnCopyHtml$!: Observable<Event>;
-  observeBtnCopyCss$!: Observable<Event>;
 
   config = {
     attributes: false,
@@ -40,9 +38,9 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
 
   constructor(
     private elementRef: ElementRef,
-    private highlightService: HighlightService
-  ) {
-  }
+    private highlightService: HighlightService,
+    private sharedService: AppSharedService,
+  ) {}
 
   ngOnInit() {
     this.init();
@@ -52,10 +50,10 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     this.observerToggleEdit$ = fromEvent(this.toggleEdit, 'change');
     this.observeBtnReset$ = fromEvent(this.btnReset, 'click');
 
-    this.observeCodeExample$ = new MutationObserver(records => {
-      records.forEach(record => {
+    this.observeCodeExample$ = new MutationObserver((records) => {
+      records.forEach((record) => {
         if (record.target.parentElement) {
-          console.log(record.target.parentElement)
+          console.log(record.target.parentElement);
           if (record.target.parentElement?.classList.contains('example-html')) {
             this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
             this.btnReset.removeAttribute('hidden');
@@ -65,7 +63,7 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
             this.btnReset.removeAttribute('hidden');
           }
         }
-      })
+      });
     });
 
     // 1. Bewerken in/uitschakelen
@@ -80,7 +78,7 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
         setTimeout(() => {
           this.observeCodeExample$.observe(this.exampleHtml, this.config);
           this.observeCodeExample$.observe(this.exampleCss, this.config);
-        }, 100)
+        }, 100);
         this.codeWrapper.addEventListener('keydown', this.reAssignEnterKey);
         this.exampleHtml.setAttribute('contenteditable', 'true');
         this.exampleCss.setAttribute('contenteditable', 'true');
@@ -103,7 +101,6 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     });
 
     this.codeWrapper.addEventListener('paste', this.sanitizePaste);
-
   }
 
   init() {
@@ -111,15 +108,21 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     this.shadowCodeHtml = this.elementRef.nativeElement.shadowRoot.querySelector('div');
     this.shadowCodeStyle = this.shadowRootElement.appendChild(document.createElement('style'));
 
-    this.exampleHtml.innerHTML = this.escape(this.example.codeHtml);
-    if (this.example.codeCss === '') {
-      this.exampleCss.innerHTML =
-        '/* Geen CSS beschikbaar */\n/* In de bewerkmodus kunt u hier eigen CSS-regels typen */';
-    } else {
-      this.exampleCss.innerHTML = this.escape(this.example.codeCss);
-    }
-    this.shadowCodeStyle.innerHTML = this.exampleCss.innerText;
-    this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
+    this.sharedService.getCode(this.example.codeHtml).subscribe((html) => {
+      this.exampleHtml.innerHTML = this.escape(html);
+      this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
+      this.highlightService.highlightAllUnder(this.codeWrapper);
+    });
+    this.sharedService.getCode(this.example.codeCss).subscribe((css) => {
+      if (css.length < 1) {
+        this.exampleCss.innerHTML =
+          '/* Geen CSS beschikbaar */\n/* In de bewerkmodus kunt u hier eigen CSS-regels typen */';
+      } else {
+        this.exampleCss.innerHTML = css;
+      }
+      this.shadowCodeStyle.innerHTML = this.exampleCss.innerText;
+      this.highlightService.highlightAllUnder(this.codeWrapper);
+    });
   }
 
   reset() {
@@ -128,7 +131,8 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
     this.shadowCodeStyle.innerHTML = this.exampleCss.innerText;
     if (this.example.codeCss === '') {
-      this.exampleCss.innerHTML = '/* Geen CSS beschikbaar */\n/* In de bewerkmodus kunt u hier eigen CSS-regels typen */';
+      this.exampleCss.innerHTML =
+        '/* Geen CSS beschikbaar */\n/* In de bewerkmodus kunt u hier eigen CSS-regels typen */';
       this.shadowCodeStyle.innerHTML = this.exampleCss.innerText;
     } else {
       this.shadowCodeStyle.innerHTML = this.exampleCss.innerText;
@@ -137,7 +141,7 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     this.highlightService.highlightAllUnder(this.codeWrapper);
     setTimeout(() => {
       this.btnReset.setAttribute('hidden', '');
-    }, 100)
+    }, 100);
   }
 
   escape(value: string) {
@@ -149,7 +153,7 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
       event.preventDefault();
       document.execCommand('insertLineBreak');
     }
-  };
+  }
 
   // copyCode(event: Event)  {
   // };
@@ -158,14 +162,14 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     event.preventDefault();
     if (event.clipboardData) {
       let data = event.clipboardData.getData('text/plain');
-      console.log('data ' + data)
+      console.log('data ' + data);
       event.clipboardData.setData('text/plain', data);
       let selection = window.getSelection();
-      console.log('selection' + selection)
+      console.log('selection' + selection);
 
       if (selection) {
         if (!selection.rangeCount) return;
-        console.log(selection.rangeCount)
+        console.log(selection.rangeCount);
         selection.getRangeAt(0).insertNode(document.createTextNode(data));
         selection.collapseToEnd();
       }
