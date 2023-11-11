@@ -1,0 +1,8 @@
+a {
+  display: flex;
+  column-gap: 1em;
+}
+img {
+  block-size: 120px;
+  inline-size: auto;
+}

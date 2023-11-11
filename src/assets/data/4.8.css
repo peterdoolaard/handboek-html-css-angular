@@ -1,0 +1,25 @@
+.clickable {
+  border-radius: 0.25rem;
+  border: 1px solid hsl(0 0% 0% / 0.2);
+  max-width: 60ch;
+  padding: 0.5rem;
+  position: relative;
+  transition: box-shadow 150ms ease-out;
+}
+.clickable:hover,
+.clickable:focus-within {
+  box-shadow: 1px 1px 4px 2px hsl(0 0% 0% / 0.2);
+}
+.clickable a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+a:any-link {
+  text-decoration: none;
+  color: inherit;
+}

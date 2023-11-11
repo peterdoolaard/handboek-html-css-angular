@@ -30,281 +30,204 @@
   {
     "hoofdstukNummer": 3,
     "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
+    "codeTitel": "Regeleinden",
     "codeHtml": "/assets/data/3.2.html",
     "codeCss": "/assets/data/3.2.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 3,
+    "codeTitel": "Woordafbreking",
+    "codeHtml": "/assets/data/3.3.html",
+    "codeCss": "/assets/data/3.3.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 4,
+    "codeTitel": "Het element em",
+    "codeHtml": "/assets/data/3.4.html",
+    "codeCss": "/assets/data/3.4.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 5,
+    "codeTitel": "Het element strong",
+    "codeHtml": "/assets/data/3.5.html",
+    "codeCss": "/assets/data/3.5.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 6,
+    "codeTitel": "Aanvullende informatie",
+    "codeHtml": "/assets/data/3.6.html",
+    "codeCss": "/assets/data/3.6.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 7,
+    "codeTitel": "Ongeldige informatie",
+    "codeHtml": "/assets/data/3.7.html",
+    "codeCss": "/assets/data/3.7.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 8,
+    "codeTitel": "Verwijzing",
+    "codeHtml": "/assets/data/3.8.html",
+    "codeCss": "/assets/data/3.8.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 9,
+    "codeTitel": "Afkortingen en definities",
+    "codeHtml": "/assets/data/3.9.html",
+    "codeCss": "/assets/data/3.9.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 10,
+    "codeTitel": "Programmacode",
+    "codeHtml": "/assets/data/3.10.html",
+    "codeCss": "/assets/data/3.10.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 11,
+    "codeTitel": "Subscript en superscript",
+    "codeHtml": "/assets/data/3.11.html",
+    "codeCss": "/assets/data/3.11.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 12,
+    "codeTitel": "De inline container <span>",
+    "codeHtml": "/assets/data/3.12.html",
+    "codeCss": "/assets/data/3.12.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 13,
+    "codeTitel": "Toegevoegd of verwijderd",
+    "codeHtml": "/assets/data/3.13.html",
+    "codeCss": "/assets/data/3.13.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 14,
+    "codeTitel": "Citaten",
+    "codeHtml": "/assets/data/3.14.html",
+    "codeCss": "/assets/data/3.14.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 15,
+    "codeTitel": "Geordende lijst",
+    "codeHtml": "/assets/data/3.15.html",
+    "codeCss": "/assets/data/3.15.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 16,
+    "codeTitel": "Geordende lijst",
+    "codeHtml": "/assets/data/3.16.html",
+    "codeCss": "/assets/data/3.16.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 17,
+    "codeTitel": "Ongeordende lijst",
+    "codeHtml": "/assets/data/3.17.html",
+    "codeCss": "/assets/data/3.17.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 18,
+    "codeTitel": "Ongeordende lijst",
+    "codeHtml": "/assets/data/3.18.html",
+    "codeCss": "/assets/data/3.18.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 19,
+    "codeTitel": "Kop boven een lijst",
+    "codeHtml": "/assets/data/3.19.html",
+    "codeCss": "/assets/data/3.19.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 20,
+    "codeTitel": "Lijst als illustratie",
+    "codeHtml": "/assets/data/3.20.html",
+    "codeCss": "/assets/data/3.20.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 21,
+    "codeTitel": "Illustratie met bijschrift",
+    "codeHtml": "/assets/data/3.21.html",
+    "codeCss": "/assets/data/3.21.css"
   },
   {
     "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeNummer": 22,
+    "codeTitel": "Definitielijst",
+    "codeHtml": "/assets/data/3.22.html",
+    "codeCss": "/assets/data/3.22.css"
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "hoofdstukNummer": 4,
+    "codeNummer": 1,
+    "codeTitel": "Toegankelijke linktekst",
+    "codeHtml": "/assets/data/4.1.html",
+    "codeCss": "/assets/data/4.1.css"
   },
   {
-    "hoofdstukNummer": 3,
+    "hoofdstukNummer": 4,
     "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "codeTitel": "Downloadlink",
+    "codeHtml": "/assets/data/4.2.html",
+    "codeCss": "/assets/data/4.2.css"
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "hoofdstukNummer": 4,
+    "codeNummer": 3,
+    "codeTitel": "Bladwijzer",
+    "codeHtml": "/assets/data/4.3.html",
+    "codeCss": "/assets/data/4.3.css"
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "hoofdstukNummer": 4,
+    "codeNummer": 4,
+    "codeTitel": "Link naar een grote foto",
+    "codeHtml": "/assets/data/4.4.html",
+    "codeCss": "/assets/data/4.4.css"
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "hoofdstukNummer": 4,
+    "codeNummer": 5,
+    "codeTitel": "E-maillink",
+    "codeHtml": "/assets/data/4.5.html",
+    "codeCss": "/assets/data/4.5.css"
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "hoofdstukNummer": 4,
+    "codeNummer": 6,
+    "codeTitel": "Telefoonlink",
+    "codeHtml": "/assets/data/4.6.html",
+    "codeCss": "/assets/data/4.6.css"
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "hoofdstukNummer": 4,
+    "codeNummer": 7,
+    "codeTitel": "Link naar pdf",
+    "codeHtml": "/assets/data/4.7.html",
+    "codeCss": "/assets/data/4.7.css"
   },
   {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
-  },
-  {
-    "hoofdstukNummer": 3,
-    "codeNummer": 2,
-    "codeTitel": "Titel 3.1",
-    "codeHtml": "/assets/data/3.2.html",
-    "codeCss": "/assets/data/3.2.css"
+    "hoofdstukNummer": 4,
+    "codeNummer": 8,
+    "codeTitel": "Klikbare kaart, korte linktekst",
+    "codeHtml": "/assets/data/4.8.html",
+    "codeCss": "/assets/data/4.8.css"
   }
 ]

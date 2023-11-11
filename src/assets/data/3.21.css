@@ -1,0 +1,11 @@
+img {
+  inline-size: 100%;
+  max-inline-size: 400px;
+  block-size: auto;
+}
+figure {
+  margin: 0;
+}
+figcaption {
+  margin-block-end: 1em
+}
