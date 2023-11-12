@@ -229,5 +229,68 @@
     "codeTitel": "Klikbare kaart, korte linktekst",
     "codeHtml": "/assets/data/4.8.html",
     "codeCss": "/assets/data/4.8.css"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 1,
+    "codeTitel": "SVG-afbeelding",
+    "codeHtml": "/assets/data/5.1.html",
+    "codeCss": "/assets/data/5.1.css"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 2,
+    "codeTitel": "Usemap",
+    "codeHtml": "/assets/data/5.2.html",
+    "codeCss": "/assets/data/5.2.css"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 3,
+    "codeTitel": "Srcset dpi",
+    "codeHtml": "/assets/data/5.3.html",
+    "codeCss": "/assets/data/5.3.css"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 4,
+    "codeTitel": "Srcset en sizes",
+    "codeHtml": "/assets/data/5.4.html",
+    "codeCss": "/assets/data/5.4.css"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 5,
+    "codeTitel": "Picture",
+    "codeHtml": "/assets/data/5.5.html",
+    "codeCss": "/assets/data/5.5.css"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 6,
+    "codeTitel": "Resolutie en afmeting",
+    "codeHtml": "/assets/data/5.6.html",
+    "codeCss": "/assets/data/5.6.css"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 7,
+    "codeTitel": "Browser bestandsformaat laten kiezen",
+    "codeHtml": "/assets/data/5.7.html",
+    "codeCss": "/assets/data/5.7.css"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 8,
+    "codeTitel": "Video aanbieden",
+    "codeHtml": "/assets/data/5.8.html",
+    "codeCss": "/assets/data/5.8.css"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "codeNummer": 9,
+    "codeTitel": "Video met ondertitels",
+    "codeHtml": "/assets/data/5.9.html",
+    "codeCss": "/assets/data/5.9.css"
   }
 ]

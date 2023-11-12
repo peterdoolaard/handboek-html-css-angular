@@ -1,0 +1,5 @@
+video {
+  block-size: auto;
+  max-block-size: 600px;
+  inline-size: 100%;
+}
