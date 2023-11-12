@@ -53,7 +53,6 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     this.observeCodeExample$ = new MutationObserver((records) => {
       records.forEach((record) => {
         if (record.target.parentElement) {
-          console.log(record.target.parentElement);
           if (record.target.parentElement?.classList.contains('example-html')) {
             this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
             this.btnReset.removeAttribute('hidden');
@@ -126,19 +125,22 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
   }
 
   reset() {
-    this.exampleHtml.innerHTML = this.escape(this.example.codeHtml);
-    this.exampleCss.innerHTML = this.escape(this.example.codeCss);
-    this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
-    this.shadowCodeStyle.innerHTML = this.exampleCss.innerText;
-    if (this.example.codeCss === '') {
-      this.exampleCss.innerHTML =
-        '/* Geen CSS beschikbaar */\n/* In de bewerkmodus kunt u hier eigen CSS-regels typen */';
+    this.sharedService.getCode(this.example.codeHtml).subscribe((html) => {
+      this.exampleHtml.innerHTML = this.escape(html);
+      this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
+      this.highlightService.highlightAllUnder(this.codeWrapper);
+    });
+    this.sharedService.getCode(this.example.codeCss).subscribe((css) => {
+      if (css.length < 1) {
+        this.exampleCss.innerHTML =
+          '/* Geen CSS beschikbaar */\n/* In de bewerkmodus kunt u hier eigen CSS-regels typen */';
+      } else {
+        this.exampleCss.innerHTML = css;
+      }
       this.shadowCodeStyle.innerHTML = this.exampleCss.innerText;
-    } else {
-      this.shadowCodeStyle.innerHTML = this.exampleCss.innerText;
-    }
-    this.toggleEdit.checked = false;
-    this.highlightService.highlightAllUnder(this.codeWrapper);
+      this.highlightService.highlightAllUnder(this.codeWrapper);
+      this.toggleEdit.checked = false;
+    });
     setTimeout(() => {
       this.btnReset.setAttribute('hidden', '');
     }, 100);
