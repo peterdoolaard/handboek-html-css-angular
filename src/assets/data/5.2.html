@@ -1,6 +1,8 @@
+<p><strong>Een image map is niet responsive.</strong> De klikgebieden kloppen alleen als de afbeelding de afmetingen heeft waarop de coördinaten zijn ingesteld.</p>
+<p>De coördinaten zijn CSS-pixels. Als een afbeelding responsive is en de weergave wordt verkleind, is de afbeelding bijvoorbeeld nog maar 360 pixels breed. Dan klopt er van de coördinaten helemaal niets meer.</p>
 <img src="/assets/voorbeelden/usemap.png" usemap="#vormen" alt="Een vierkant, een cirkel en een driehoek." loading="lazy">
 <map name="vormen">
-  <area shape="rect" coords="30,25, 225,225" href="/">
-  <area shape="circle" coords="360,120,100" href="/">
-  <area shape="poly" coords="450,225, 650,225, 550,25" href="/">
+  <area shape="rect" coords="30,25, 225,225" alt="Vierkant" href="#">
+  <area shape="circle" coords="360,120,100" alt="Cirkel" href="#">
+  <area shape="poly" coords="450,225, 650,225, 550,25" alt="Driehoek" href="#">
 </map>

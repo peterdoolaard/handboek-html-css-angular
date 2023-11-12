@@ -3,6 +3,7 @@ import { fromEvent, Observable } from 'rxjs';
 import { HighlightService } from '../../../services/highlight.service';
 import { CodeExample } from '../../../models';
 import { AppSharedService } from '../../../services/app-shared.service';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'code-example-view',
@@ -28,6 +29,8 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
   observerToggleEdit$!: Observable<Event>;
   observeBtnReset$!: Observable<Event>;
 
+  dangerousHtml: SafeHtml = '';
+
   config = {
     attributes: false,
     characterDataOldValue: false,
@@ -40,6 +43,7 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     private elementRef: ElementRef,
     private highlightService: HighlightService,
     private sharedService: AppSharedService,
+    private sanitizer: DomSanitizer,
   ) {}
 
   ngOnInit() {
@@ -108,6 +112,11 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     this.shadowCodeStyle = this.shadowRootElement.appendChild(document.createElement('style'));
 
     this.sharedService.getCode(this.example.codeHtml).subscribe((html) => {
+      // Workaround for Angular not displaying SVG's in innerHTML in the component.
+      // If the code includes the string 'svg' then dangerousHtml gets rendered through [innerHtml] in the template
+      if (this.exampleHtml.innerHTML.includes('svg', 1)) {
+        this.dangerousHtml = this.sanitizer.bypassSecurityTrustHtml(this.exampleHtml.innerHTML);
+      }
       this.exampleHtml.innerHTML = this.escape(html);
       this.shadowCodeHtml.innerHTML = this.exampleHtml.innerText;
       this.highlightService.highlightAllUnder(this.codeWrapper);

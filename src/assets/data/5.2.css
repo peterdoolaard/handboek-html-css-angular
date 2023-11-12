@@ -1,5 +1,6 @@
 img {
+  block-size: auto;
   display: inline-block;
   inline-size: 100%;
-  block-size: auto;
+  max-inline-size: 684px;
 }
