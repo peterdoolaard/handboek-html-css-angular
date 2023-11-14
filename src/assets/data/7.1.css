@@ -1,0 +1,31 @@
+table {
+  border-collapse: collapse; /* voegt de randen samen tot 1 rand */
+  box-shadow: 0 1px 1px hsl(0 0% 0% / 0.25),
+  0 2px 2px hsl(0 0% 0% / 0.20),
+  0 4px 4px hsl(0 0% 0% / 0.15),
+  0 8px 8px hsl(0 0% 0% / 0.10),
+  0 16px 16px hsl(0 0% 0% / 0.05);
+  margin: 2rem 0;
+  padding: 1rem;
+  inline-size: auto;
+}
+
+colgroup > col {
+  background: #eeeeee;
+}
+
+colgroup > col:last-child {
+  background: #cccccc;
+}
+
+/*hier staat: selecteer elk element td of th dat niet leeg is*/
+:is(td, th):not(:empty) {
+  border: 1px solid black;
+  padding: 4px;
+  text-align: center;
+}
+
+div.responsive-table {
+  inline-size: 100%;
+  overflow-x: auto;
+}

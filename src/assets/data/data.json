@@ -292,5 +292,33 @@
     "codeTitel": "Video met ondertitels",
     "codeHtml": "/assets/data/5.9.html",
     "codeCss": "/assets/data/5.9.css"
+  },
+  {
+    "hoofdstukNummer": 6,
+    "codeNummer": 1,
+    "codeTitel": "Aanmeldingsformulier met verwerking op de server",
+    "codeHtml": "/assets/data/6.1.html",
+    "codeCss": "/assets/data/6.1.css"
+  },
+  {
+    "hoofdstukNummer": 7,
+    "codeNummer": 1,
+    "codeTitel": "Tabel met kolomgroepen",
+    "codeHtml": "/assets/data/7.1.html",
+    "codeCss": "/assets/data/7.1.css"
+  },
+  {
+    "hoofdstukNummer": 7,
+    "codeNummer": 2,
+    "codeTitel": "Tabel met lege hoekcel",
+    "codeHtml": "/assets/data/7.2.html",
+    "codeCss": "/assets/data/7.2.css"
+  },
+  {
+    "hoofdstukNummer": 7,
+    "codeNummer": 3,
+    "codeTitel": "Tabel met verkoopresultaten",
+    "codeHtml": "/assets/data/7.3.html",
+    "codeCss": "/assets/data/7.3.css"
   }
 ]
