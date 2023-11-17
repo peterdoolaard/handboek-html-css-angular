@@ -1,0 +1,8 @@
+input:invalid {
+  border-color: red;
+}
+
+label:has(input:invalid)::after {
+  color: red;
+  content: 'Alleen kleine letters';
+}

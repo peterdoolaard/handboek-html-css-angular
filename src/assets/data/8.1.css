@@ -1,0 +1,7 @@
+label::after {
+  content: 'Schakel mij in  😢';
+}
+
+label:has(input:checked)::after {
+  content: 'Dankjewel! 🥳';
+}

@@ -320,5 +320,68 @@
     "codeTitel": "Tabel met verkoopresultaten",
     "codeHtml": "/assets/data/7.3.html",
     "codeCss": "/assets/data/7.3.css"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "codeNummer": 1,
+    "codeTitel": "Selectors combineren",
+    "codeHtml": "/assets/data/8.1.html",
+    "codeCss": "/assets/data/8.1.css"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "codeNummer": 2,
+    "codeTitel": "Foutmelding bij invoerelement",
+    "codeHtml": "/assets/data/8.2.html",
+    "codeCss": "/assets/data/8.2.css"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "codeNummer": 3,
+    "codeTitel": "Vloeiende tekstgrootte",
+    "codeHtml": "/assets/data/8.3.html",
+    "codeCss": "/assets/data/8.3.css"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "codeNummer": 4,
+    "codeTitel": "Cascade layers, volgorde telt",
+    "codeHtml": "/assets/data/8.4.html",
+    "codeCss": "/assets/data/8.4.css"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "codeNummer": 5,
+    "codeTitel": "Cascade layers, regels buiten een laag gaan voor",
+    "codeHtml": "/assets/data/8.5.html",
+    "codeCss": "/assets/data/8.5.css"
+  },
+  {
+    "hoofdstukNummer": 9,
+    "codeNummer": 1,
+    "codeTitel": "Het boxmodel en collapsing margins",
+    "codeHtml": "/assets/data/9.1.html",
+    "codeCss": "/assets/data/9.1.css"
+  },
+  {
+    "hoofdstukNummer": 9,
+    "codeNummer": 2,
+    "codeTitel": "Box-sizing",
+    "codeHtml": "/assets/data/9.2.html",
+    "codeCss": "/assets/data/9.2.css"
+  },
+  {
+    "hoofdstukNummer": 9,
+    "codeNummer": 3,
+    "codeTitel": "Typen ingebouwde randen",
+    "codeHtml": "/assets/data/9.3.html",
+    "codeCss": "/assets/data/9.3.css"
+  },
+  {
+    "hoofdstukNummer": 9,
+    "codeNummer": 4,
+    "codeTitel": "Overflow",
+    "codeHtml": "/assets/data/9.4.html",
+    "codeCss": "/assets/data/9.4.css"
   }
 ]

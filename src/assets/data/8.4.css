@@ -1,0 +1,17 @@
+@layer reset, base, theme;
+
+@layer reset {
+  p a {
+    color: green;
+  }
+}
+@layer base {
+  a[href] {
+    color: indianred;
+  }
+}
+@layer theme {
+  a {
+    color: deepskyblue;
+  }
+}

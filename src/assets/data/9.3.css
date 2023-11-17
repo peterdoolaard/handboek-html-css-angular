@@ -1,0 +1,54 @@
+.grid {
+  display: grid;
+  grid-template-columns: 350px 350px;
+  grid-auto-rows: 60px;
+  grid-gap: 1em;
+}
+
+.grid > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-width: 8px;
+  border-color: black;
+}
+
+.grid > div:nth-child(1) {
+  border-style: dashed;
+}
+
+.grid > div:nth-child(2) {
+  border: 8px dotted black;
+}
+
+.grid > div:nth-child(3) {
+  border: 8px double black;
+}
+
+.grid > div:nth-child(4) {
+  border: 8px groove black;
+}
+
+.grid > div:nth-child(5) {
+  border: 8px ridge black;
+}
+
+.grid > div:nth-child(6) {
+  border: 8px solid black;
+}
+
+.grid > div:nth-child(7) {
+  border: 8px inset black;
+}
+
+.grid > div:nth-child(8) {
+  border: 8px outset black;
+}
+
+.grid > div:nth-child(9) {
+  border-style: dashed dotted;
+}
+
+.grid > div:nth-child(10) {
+  border-style: dashed dotted solid;
+}

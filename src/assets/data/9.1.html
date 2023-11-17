@@ -1,0 +1,35 @@
+<div class="no-collapsing-margins">
+  <div class="outer-box">
+    <div class="margin-box">
+      <p>marge</p>
+      <p>marge (margin)</p>
+      <div class="border-box">
+        <p>rand</p>
+        <p>rand (border)</p>
+        <div class="padding-box">
+          <p>opvulling</p>
+          <p>opvulling (padding)</p>
+          <div class="content-box">
+            <p>hoogte<br>(height)</p>
+            <p>inhoud (content)</p>
+            <p>breedte (width)</p>
+          </div>
+          <p>opvulling (padding)</p>
+          <p>opvulling</p>
+        </div>
+        <p>rand (border)</p>
+        <p>rand</p>
+      </div>
+      <p>marge (margin)</p>
+      <p>marge</p>
+    </div>
+  </div>
+
+  <div class="buitenkant">
+    <p class="voorbeeld">Dit is de content van het element
+      <code>p</code>. De padding krijgt dezelfde achtergrondkleur als de content. De rand is hier lichtbruin. De marge is altijd transparant. Daar ziet u dus de (achtergrond)kleur van het onderliggende element. Dat is de bruine achtergrondkleur van de <code>div</code> met de klasse <code>.buitenkant</code>.
+    </p>
+  </div>
+</div>
+  <p><strong>Opmerking.</strong> Om beide voorbeelden staat een <code>div</code> met de klasse <code>.no-collapsing-margins</code> (zie ook het boek). Die zorgt er met <code>display: grid</code> voor dat de marges van de twee gekleurde blokken niet worden samengevouwen (<i>collapsing margins</i>). Aan de bovenkant van het boxmodel gebeurt hetzelfde. Daarom ziet u nu zo'n brede, witte rand aan de bovenkant. Schakelt u in de CSS of de DevTools de regel
+    <code>display: grid</code> uit, dan ziet u dat de marges aan de boven- en onderkant van de tekstalinea verdwijnen. Aan de bovenkant blijft alleen de grotere marge over rondom de boxmodelweergave. Bij collapsing margins blijft de grootste marge behouden. Aan de onderkant wordt de marge samengevoegd met die van deze opmerking. </p>

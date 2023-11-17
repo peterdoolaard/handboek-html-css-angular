@@ -62,7 +62,7 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
             this.btnReset.removeAttribute('hidden');
           }
           if (record.target.parentElement?.classList.contains('example-css')) {
-            this.shadowCodeStyle.innerText = this.exampleCss.innerText;
+            this.shadowCodeStyle.innerHTML = this.exampleCss.innerText;
             this.btnReset.removeAttribute('hidden');
           }
         }
