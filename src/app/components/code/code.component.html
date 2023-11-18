@@ -23,6 +23,8 @@
                 class="btn-copy-code copy-html"
                 type="button"
                 (click)="copyCode($event)"
+                (pointerdown)="addEffect($event)"
+                (pointerup)="removeEffect($event)"
               >
                 <span class="screen-reader-text">Kopieer de code</span>
               </button>
@@ -36,6 +38,8 @@
                 class="btn-copy-code copy-css"
                 type="button"
                 (click)="copyCode($event)"
+                (pointerdown)="addEffect($event)"
+                (pointerup)="removeEffect($event)"
               >
                 <span class="screen-reader-text">Kopieer de code</span>
               </button>

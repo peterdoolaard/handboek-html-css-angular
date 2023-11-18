@@ -21,16 +21,24 @@ export class AppSharedService {
     hoofdstukTitel: 'Webtalen, browsers en editors',
   });
   currentChapter$ = this.currentChapter$$.asObservable();
-
   updateCurrentChapter(currentChapter: Chapter | undefined) {
     if (currentChapter) {
       this.currentChapter$$.next(currentChapter);
     }
   }
 
-  loadCodeExamples() {
-    return this.http.get<CodeExample[]>('assets/data/voorbeelden.json').pipe(shareReplay());
+  private notification$$ = new BehaviorSubject<boolean>(false);
+  notification$ = this.notification$$.asObservable();
+  notificationOn() {
+    this.notification$$.next(true);
   }
+  notificationOff() {
+    this.notification$$.next(false);
+  }
+
+  // loadCodeExamples() {
+  //   return this.http.get<CodeExample[]>('assets/data/voorbeelden.json').pipe(shareReplay());
+  // }
 
   loadAllChapters() {
     return this.http.get<Chapter[]>('assets/data/hoofdstukken.json').pipe(shareReplay());
@@ -49,7 +57,6 @@ export class AppSharedService {
   }
 
   handleError(error: HttpErrorResponse) {
-    console.log(error.status);
     return throwError(() => new Error('Something bad happened; please try again later.'));
   }
 }

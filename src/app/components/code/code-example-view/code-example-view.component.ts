@@ -173,14 +173,10 @@ export class CodeExampleViewComponent implements OnInit, AfterViewInit {
     event.preventDefault();
     if (event.clipboardData) {
       let data = event.clipboardData.getData('text/plain');
-      console.log('data ' + data);
       event.clipboardData.setData('text/plain', data);
       let selection = window.getSelection();
-      console.log('selection' + selection);
-
       if (selection) {
         if (!selection.rangeCount) return;
-        console.log(selection.rangeCount);
         selection.getRangeAt(0).insertNode(document.createTextNode(data));
         selection.collapseToEnd();
       }

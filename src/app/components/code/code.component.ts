@@ -20,6 +20,7 @@ export class CodeComponent implements OnInit {
   @ViewChild('toggleEdit') toggleEdit!: ElementRef;
 
   codeExamples$: Observable<CodeExample[]> | undefined;
+  notificationIsShown: boolean = false;
 
   constructor(
     private sharedService: AppSharedService,
@@ -30,6 +31,9 @@ export class CodeComponent implements OnInit {
   // mogelijk nadat de observable waarde heeft gestuurd
   // Plaats bewerkingen in de tap() timeout() callback
   ngOnInit() {
+    // Deze observable voorkomt dubbele kopieeracties
+    this.sharedService.notification$.subscribe((isShown) => (this.notificationIsShown = isShown));
+
     this.codeExamples$ = combineLatest([this.sharedService.currentChapter$, this.sharedService.getExamples()]).pipe(
       switchMap(([currentChapter, examples]) => {
         const filteredExamples = examples.filter(
@@ -45,11 +49,58 @@ export class CodeComponent implements OnInit {
     );
   }
 
+  // Maak de custom alert voor kopiëren naar klembord
+  createAlertElm(textNode: string, className: string[]): HTMLDivElement {
+    this.sharedService.notificationOn();
+    const alertElm: HTMLDivElement = document.createElement('div');
+    const alertElmContent: Text = document.createTextNode(textNode);
+    alertElm.classList.add(...className);
+    alertElm.setAttribute('tabIndex', '-1');
+    alertElm.appendChild(alertElmContent);
+    return alertElm;
+  }
+
+  // Verwijder een element na een gegeven wachttijd
+  removeElm(parent: HTMLElement, child: HTMLElement, delay: number) {
+    setTimeout(() => {
+      this.sharedService.notificationOff();
+      parent.removeChild(child);
+    }, delay);
+  }
+
   copyCode(event: any) {
-    let selection = event.target.previousSibling.textContent;
-    navigator.clipboard.writeText(selection).then(
-      () => console.log('copied\n ' + selection),
-      (error) => console.log(error),
-    );
+    if (!this.notificationIsShown) {
+      let selection = event.target.previousSibling.textContent;
+      navigator.clipboard.writeText(selection).then(
+        () => {
+          let parent = event.target.parentElement;
+          parent.appendChild(this.createAlertElm('Code gekopieerd\nnaar klembord', ['alert', '__success']));
+          let alertElm = parent.querySelector('div.alert');
+          if (alertElm) {
+            alertElm.focus();
+          }
+          this.removeElm(parent, alertElm, 1000);
+        },
+        (error) => {
+          let parent = event.target.parentElement;
+          parent.appendChild(this.createAlertElm(`Kopiëren is niet gelukt.\n ${error}`, ['alert', '__failed']));
+          let alertElm = parent.querySelector('div.alert');
+          if (alertElm) {
+            alertElm.focus();
+          }
+          this.removeElm(parent, alertElm, 1000);
+        },
+      );
+    }
+  }
+
+  addEffect(event: any) {
+    if (!this.notificationIsShown) {
+      event.target.classList.add('btn-copy-code-click');
+    }
+  }
+
+  removeEffect(event: any) {
+    event.target.classList.remove('btn-copy-code-click');
   }
 }

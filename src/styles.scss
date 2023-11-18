@@ -126,3 +126,35 @@ a:any-link {
   font-weight: bold;
 }
 
+.alert {
+  animation: fade 250ms ease-in forwards;
+  box-shadow: var(--box-shadow-sharp);
+  display: none;
+  opacity: 0;
+  padding: 0.5rem .75rem;
+  position: absolute;
+  right: 3.5rem;
+  top: 0.25rem;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.__success {
+  background: hsl(90 50% 90% / 1);
+  display: block;
+}
+
+.__failed {
+  background: hsl(0 50% 90%);
+  display: block;
+}
