@@ -9,6 +9,7 @@ import { Chapter, CodeExample, Link } from '../models';
 export class AppSharedService {
   constructor(private http: HttpClient) {}
 
+  // Houdt bij of de navigatie static of fixed is
   private classFixed$$ = new BehaviorSubject(false);
   classFixed$: Observable<boolean> = this.classFixed$$.asObservable();
 
@@ -16,6 +17,7 @@ export class AppSharedService {
     this.classFixed$$.next(value);
   }
 
+  // Houdt bij wat het actieve hoofdstuk is in de pagina Voorbeelden
   private currentChapter$$ = new BehaviorSubject<Chapter>({
     hoofdstukNummer: 1,
     hoofdstukTitel: 'Webtalen, browsers en editors',
@@ -27,6 +29,7 @@ export class AppSharedService {
     }
   }
 
+  // Houdt bij of er een notificatie (voor kopiëren) wordt getoond
   private notification$$ = new BehaviorSubject<boolean>(false);
   notification$ = this.notification$$.asObservable();
   notificationOn() {
