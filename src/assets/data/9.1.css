@@ -1,5 +1,6 @@
 .no-collapsing-margins {
   display: grid;
+  overflow: auto;
 }
 
 .voorbeeld {

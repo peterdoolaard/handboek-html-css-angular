@@ -27,7 +27,7 @@ a:any-link, button, [type="button"] {
 }
 
 .figure-container {
-  margin: 1rem 1rem 3rem 0;
+  margin: 1rem 0 3rem;
 }
 
 .figure-container__inner {
@@ -81,7 +81,8 @@ a:any-link, button, [type="button"] {
   position: absolute;
   right: 0.25rem;
   top: 0.25rem;
-  transition: transform ease-in-out 250ms;
+  transform: scale(1);
+  transition: all ease-in-out 250ms;
 }
 
 .btn-copy-code-click {

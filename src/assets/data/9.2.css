@@ -1,6 +1,7 @@
 .container-grid {
-  position: relative;
   height: 650px;
+  overflow: auto;
+  position: relative;
 }
 
 .grid {

@@ -127,7 +127,7 @@ a:any-link {
 }
 
 .alert {
-  animation: fade 250ms ease-in forwards;
+  animation: fade-in-out 1000ms ease-in-out;
   box-shadow: var(--box-shadow-sharp);
   display: none;
   opacity: 0;
@@ -137,15 +137,18 @@ a:any-link {
   top: 0.25rem;
 }
 
-@keyframes fade {
+@keyframes fade-in-out {
   0% {
     opacity: 0
   }
   50% {
     opacity: 1;
   }
-  100% {
+  75% {
     opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
