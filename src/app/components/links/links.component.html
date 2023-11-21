@@ -1,5 +1,6 @@
+<h3>Links in dit hoofdstuk</h3>
 <ul class="links-list">
   <li *ngFor="let link of links">
-    <a [href]="link.url">{{ link.titel }}</a>
+    <a class="link-text" [href]="link.url">{{ link.titel }}</a>
   </li>
 </ul>

@@ -10,53 +10,203 @@
     "url": "https://html.spec.whatwg.org/multipage/"
   },
   {
+    "hoofdstukNummer": 1,
+    "titel": "Overzicht van Web-API's",
+    "url": "https://www.w3.org/TR/?tag=webapi"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Webstandaarden bij WHATWG",
+    "url": "https://spec.whatwg.org"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Google Chrome",
+    "url": "https://www.google.com/chrome"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Chrome Canary",
+    "url": "https://www.google.com/intl/nl/chrome/canary/"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Extensies voor Chrome",
+    "url": "https://chrome.google.com/webstore/category/extensions"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Microsoft Edge",
+    "url": "https://www.microsoft.com/nl-nl/edge"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Testversies van Edge",
+    "url": "https://www.microsoftedgeinsider.com/en-us/download"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Mozilla Firefox",
+    "url": "https://www.mozilla.org/nl/firefox/new/"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Add-ons voor Firefox",
+    "url": "https://addons.mozilla.org/nl/firefox"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Firefox Developer Edition",
+    "url": "https://www.mozilla.org/nl/firefox/developer/"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Safari Technology Preview",
+    "url": "https://developer.apple.com/safari/download/"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Lijst van code-editors",
+    "url": "https://en.wikipedia.org/wiki/List_of_HTML_editors"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Brackets",
+    "url": "https://brackets.io"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Atom",
+    "url": "https://atom.io"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Sublime",
+    "url": "https://www.sublimetext.com"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Visual Studio Code",
+    "url": "https://code.visualstudio.com"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Extensies voor VS Code",
+    "url": "https://marketplace.visualstudio.com/VSCode"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Webstorm",
+    "url": "https://www.jetbrains.com/webstorm"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Dreamweaver",
+    "url": "https://www.adobe.com/nl/products/dreamweaver.html"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Electron",
+    "url": "https://electronjs.org"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "HTML-validator",
+    "url": "https://validator.w3.org"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "CSS-validator",
+    "url": "https://jigsaw.w3.org/css-validator/"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Can I use",
+    "url": "https://caniuse.com "
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Online naslag voor alle webtechnologieën",
+    "url": "https://developer.mozilla.org/en-US/"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Lesplatform van Google",
+    "url": "https://web.dev/about/"
+  },
+  {
+    "hoofdstukNummer": 1,
+    "titel": "Documentatie Chrome DevTools",
+    "url": "https://developer.chrome.com/docs/devtools/"
+  },
+  {
     "hoofdstukNummer": 2,
-    "titel": "Webstandaarden en concepten",
-    "url": "https://www.w3.org/TR/"
+    "titel": "",
+    "url": ""
   },
   {
-    "hoofdstukNummer":21,
-    "titel": "HTML The living standard",
-    "url": "https://html.spec.whatwg.org/multipage/"
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
   },
   {
-    "hoofdstukNummer": 3,
-    "titel": "Webstandaarden en concepten",
-    "url": "https://www.w3.org/TR/"
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
   },
   {
-    "hoofdstukNummer": 4,
-    "titel": "HTML The living standard",
-    "url": "https://html.spec.whatwg.org/multipage/"
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
   },
   {
-    "hoofdstukNummer": 4,
-    "titel": "Webstandaarden en concepten",
-    "url": "https://www.w3.org/TR/"
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
   },
   {
-    "hoofdstukNummer": 5,
-    "titel": "HTML The living standard",
-    "url": "https://html.spec.whatwg.org/multipage/"
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
   },
   {
-    "hoofdstukNummer": 5,
-    "titel": "Webstandaarden en concepten",
-    "url": "https://www.w3.org/TR/"
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
   },
   {
-    "hoofdstukNummer": 6,
-    "titel": "HTML The living standard",
-    "url": "https://html.spec.whatwg.org/multipage/"
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
   },
   {
-    "hoofdstukNummer": 6,
-    "titel": "Webstandaarden en concepten",
-    "url": "https://www.w3.org/TR/"
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
   },
   {
-    "hoofdstukNummer": 6,
-    "titel": "HTML The living standard",
-    "url": "https://html.spec.whatwg.org/multipage/"
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 2,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 9,
+    "titel": "Display: Contents Is Not a CSS Reset",
+    "url": "https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html"
   }
 ]
