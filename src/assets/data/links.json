@@ -226,36 +226,101 @@
   },
   {
     "hoofdstukNummer": 3,
+    "titel": "Voorbeelden van meerdere koppen h1 op een pagina",
+    "url": "https://html5doctor.com/computer-says-no-to-html5-document-outline/"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "titel": "Download NVDA-schermleessoftware",
+    "url": "https://www.nvaccess.org/about-nvda/"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "titel": "Spaces vs. Tabs: A 20-Year Debate Reignited by Google’s Golang",
+    "url": "https://thenewstack.io/spaces-vs-tabs-a-20-year-debate-and-now-this-what-the-hell-is-wrong-with-go/"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "titel": "Tabs versus Spaces. Fragment uit Silicon Valley (HBO).",
+    "url": "https://www.youtube.com/watch?v=SsoOG6ZeyUI"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "titel": "Browserondersteuning van de CSS-eigenschap hyphens",
+    "url": "https://caniuse.com/?search=hyphens"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "titel": "Voorbeelden van blockquote",
+    "url": "https://html.spec.whatwg.org/#the-blockquote-element"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "titel": "Het contentmodel van het element ul",
+    "url": "https://html.spec.whatwg.org/multipage/grouping-content.html#the-ul-element"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "titel": "Naslag voor bijzondere tekens in HTML-tekst",
+    "url": "https://dev.w3.org/html5/html-author/charref"
+  },
+  {
+    "hoofdstukNummer": 3,
+    "titel": "Dummytekstgenerator",
+    "url": "https://lipsum.com"
+  },
+  {
+    "hoofdstukNummer": 4,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 3,
+    "hoofdstukNummer": 4,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 3,
+    "hoofdstukNummer": 4,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 3,
+    "hoofdstukNummer": 4,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 3,
+    "hoofdstukNummer": 4,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 3,
+    "hoofdstukNummer": 4,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 3,
+    "hoofdstukNummer": 4,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 4,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 4,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 4,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 4,
     "titel": "",
     "url": ""
   },
