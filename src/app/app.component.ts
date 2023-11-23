@@ -1,13 +1,14 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import { AppSharedService } from "./services/app-shared.service";
+import { AppSharedService } from './services/app-shared.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements AfterViewInit {
-@ViewChild('pageWrapper') pageWrapper!: ElementRef;
+  @ViewChild('pageWrapper') pageWrapper!: ElementRef;
+  @ViewChild('toTop') toTop!: ElementRef;
 
   constructor(
     private sharedService: AppSharedService,
@@ -16,26 +17,27 @@ export class AppComponent implements AfterViewInit {
   ) {}
 
   ngAfterViewInit() {
-    this.sharedService.classFixed$.subscribe(value => {
+    this.sharedService.classFixed$.subscribe((value) => {
       if (value) {
         this.renderer.addClass(this.elementRef.nativeElement.querySelector('.main-content'), '__padding-top');
-      }  else {
+        this.renderer.addClass(this.toTop.nativeElement, '__show');
+      } else {
         this.renderer.removeClass(this.elementRef.nativeElement.querySelector('.main-content'), '__padding-top');
+        this.renderer.removeClass(this.toTop.nativeElement, '__show');
       }
-    })
+    });
 
     const observeFixedNav = new ResizeObserver(this.resizeFixedNav);
     observeFixedNav.observe(this.pageWrapper.nativeElement);
   }
 
   resizeFixedNav(entries: ResizeObserverEntry[]) {
-    entries.map(entry => {
+    entries.map((entry) => {
       const navMain: HTMLElement | null = entry.target.querySelector('.nav-main');
-      if(navMain) {
-        document.documentElement.style.setProperty('--nav-main-inline-size', entry.borderBoxSize[0].inlineSize + 'px')
+      if (navMain) {
+        document.documentElement.style.setProperty('--nav-main-inline-size', entry.borderBoxSize[0].inlineSize + 'px');
         navMain.style.inlineSize = entry.borderBoxSize[0].inlineSize + 'px';
       }
-
 
       // Alternatieve methode om geen inline style te hoeven maken
       // Meer onderzoek nodig
@@ -46,7 +48,11 @@ export class AppComponent implements AfterViewInit {
       //       sheets[i].replaceSync(`:root { --nav-main-inline-size: ${entry.borderBoxSize[0].inlineSize}px`)
       //   }
       // }
+    });
+  }
 
-    })
+  scrollToTop(event: MouseEvent) {
+    event.preventDefault();
+    document.documentElement.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
   }
 }
