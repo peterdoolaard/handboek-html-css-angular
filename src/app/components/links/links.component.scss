@@ -13,4 +13,8 @@ h3 {
   a:any-link {
     color: inherit;
   }
+
+  li + li {
+    margin-block-start: 0.5em;
+  }
 }

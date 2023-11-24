@@ -1,30 +1,34 @@
 import { Component, OnInit } from '@angular/core';
-import { AppSharedService } from "../../services/app-shared.service";
-import { Link } from "../../models";
-import { from, mergeMap, Observable, toArray } from "rxjs";
-import { filter } from "rxjs/operators";
+import { AppSharedService } from '../../services/app-shared.service';
+import { Link } from '../../models';
+import { combineLatest, Observable, of, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-links',
   templateUrl: './links.component.html',
-  styleUrls: ['./links.component.scss']
+  styleUrls: ['./links.component.scss'],
 })
 export class LinksComponent implements OnInit {
-  links: Link[] = [];
+  links$!: Observable<Link[]>;
   currentChapter: number = 1;
 
-
-  constructor(
-    private sharedService: AppSharedService,
-  ) {
-  }
+  constructor(private sharedService: AppSharedService) {}
 
   ngOnInit() {
-      this.sharedService.loadLinks()
-        .pipe(
-          mergeMap((links: Link[]): Observable<Link> => from(links)),
-          filter((item: Link) => item.hoofdstukNummer === this.currentChapter),
-          toArray()
-        ).subscribe((value: Link[]) => this.links = value)
+    this.links$ = combineLatest([this.sharedService.currentChapter$, this.sharedService.loadLinks()]).pipe(
+      switchMap(([currentChapter, links]) => {
+        const filteredLinks = links.filter((link) => link.hoofdstukNummer === currentChapter.hoofdstukNummer);
+        return of(filteredLinks);
+      }),
+    );
   }
+
+  //   this.codeExamples$ = combineLatest([this.sharedService.currentChapter$, this.sharedService.getExamples()]).pipe(
+  //     switchMap(([currentChapter, examples]) => {
+  //       const filteredExamples = examples.filter(
+  //         (example) => example.hoofdstukNummer === currentChapter.hoofdstukNummer,
+  //       );
+  //       return of(filteredExamples);
+  //     }),
+  // }
 }

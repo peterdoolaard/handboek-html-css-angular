@@ -271,56 +271,131 @@
   },
   {
     "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "titel": "Typen links op whatwg.org",
+    "url": "https://html.spec.whatwg.org/multipage/links.html#linkTypes"
   },
   {
     "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "titel": "Voorbeeld van een klikbare kaart",
+    "url": "https://codepen.io/dool/pen/VwMLRJW"
   },
   {
     "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "titel": "Informatie van de overheid over digitale toegankelijkheid",
+    "url": "https://www.digitoegankelijk.nl"
   },
   {
     "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "titel": "How to Favicon in 2023: Six files that fit most needs.",
+    "url": "https://evilmartians.com/chronicles/how-to-favicon-in-2021-six-files-that-fit-most-needs"
   },
   {
     "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "titel": "Link types: preload",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content"
   },
   {
     "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "titel": "Link types",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types"
   },
   {
-    "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "hoofdstukNummer": 5,
+    "titel": "Uitleg over SVG op MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/SVG"
   },
   {
-    "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "hoofdstukNummer": 5,
+    "titel": "Nog meer uitleg over SVG op CSS Tricks",
+    "url": "https://css-tricks.com/using-svg/"
   },
   {
-    "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "hoofdstukNummer": 5,
+    "titel": "Gratis foto's op Unsplash",
+    "url": "https://unsplash.com"
   },
   {
-    "hoofdstukNummer": 4,
-    "titel": "",
-    "url": ""
+    "hoofdstukNummer": 5,
+    "titel": "Gratis foto's op Pixabay",
+    "url": "https://pixabay.com"
   },
   {
-    "hoofdstukNummer": 4,
+    "hoofdstukNummer": 5,
+    "titel": "Paint.net. Beeldbewerkingssoftware met ondersteuning van WebP en AVIF",
+    "url": "https://www.getpaint.net"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Plug-in voor WebP in Photoshop",
+    "url": "https://telegraphics.com.au/sw/product/WebPFormat#webpformat"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Sketch, software voor grafisch ontwerp met WebP-ondersteuning",
+    "url": "https://www.sketchapp.com"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Uitleg over converteren naar WebP",
+    "url": "https://developers.google.com/speed/webp"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Browserondersteuning voor AVIF",
+    "url": "https://caniuse.com/avif"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Converteren naar AVIF op avif.io",
+    "url": "https://avif.io"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Converteren naar AVIF op squoosh.app",
+    "url": "https://squoosh.app"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Artikel over responsive images op MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Uitleg over het gebruik van het attribuut alt",
+    "url": "https://www.w3.org/WAI/tutorials/images/"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Overzicht van attributen van het element iframe",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Conversiesoftware voor video: Freemake Video Converter",
+    "url": "https://www.freemake.com"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Conversiesoftware voor video: Handbrake (mp4)",
+    "url": "https://www.handbrake.fr"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Conversiesoftware voor video: FFmpeg (WebM)",
+    "url": "https://www.ffmpeg.org"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "Overzicht van waarden voor video-codecs",
+    "url": "https://www.w3.org/TR/html/semantics-embedded-content.html#the-source-element"
+  },
+  {
+    "hoofdstukNummer": 5,
+    "titel": "WebVTT, de standaard voor ondertiteling van video",
+    "url": "https://w3c.github.io/webvtt/"
+  },
+  {
+    "hoofdstukNummer": 5,
     "titel": "",
     "url": ""
   },
