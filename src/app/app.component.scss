@@ -5,11 +5,11 @@
 .to-top {
   background: transparent;
   block-size: 3em;
+  bottom: 2em;
   display: none;
   inline-size: 3em;
   padding: 0.25em;
   position: fixed;
-  bottom: 2em;
   right: 1em;
   z-index: 1;
 
@@ -17,8 +17,10 @@
     block-size: 100%;
     display: inline-block;
     inline-size: auto;
-    pointer-events: none;
+    pointer-events: auto;
     position: relative;
+  transform: scale(1);
+  transition: all 200ms ease-in-out;
 
     .primary {
       fill: hsl(210deg 100% 42%);
@@ -27,9 +29,14 @@
     .secondary {
       fill: hsl(210 5% 90%);
     }
+
+    &:hover {
+     transform: scale(1.1);
+    }
   }
 
   &.__show {
     display: initial;
   }
+
 }

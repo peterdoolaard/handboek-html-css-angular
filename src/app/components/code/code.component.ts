@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { combineLatest, Observable, of, switchMap, tap } from 'rxjs';
 
 import { AppSharedService } from '../../services/app-shared.service';
@@ -18,6 +18,8 @@ export class CodeComponent implements OnInit {
   @ViewChild('exampleCss') exampleCss!: ElementRef;
   @ViewChild('exampleStyle') exampleStyle!: ElementRef;
   @ViewChild('toggleEdit') toggleEdit!: ElementRef;
+  @ViewChild('figureContainerInner') figureContainerInner!: ElementRef;
+  @ViewChild('toggleCollapsedExpanded') toggleCollapsedExpanded!: ElementRef;
 
   codeExamples$: Observable<CodeExample[]> | undefined;
   notificationIsShown: boolean = false;
@@ -25,6 +27,7 @@ export class CodeComponent implements OnInit {
   constructor(
     private sharedService: AppSharedService,
     private highlightService: HighlightService,
+    private renderer: Renderer2,
   ) {}
 
   // Bewerkingen op de codevoorbeelden zijn pas
@@ -44,6 +47,7 @@ export class CodeComponent implements OnInit {
       tap(() => {
         setTimeout(() => {
           this.highlightService.highlightAll();
+          this.renderer.addClass(this.figureContainerInner.nativeElement, '__expanded');
         }, 0);
       }),
     );
@@ -102,5 +106,17 @@ export class CodeComponent implements OnInit {
 
   removeEffect(event: any) {
     event.target.classList.remove('btn-copy-code-click');
+  }
+
+  downEffect(event: any) {
+    event.target.classList.add('__pressed');
+  }
+
+  upEffect(event: any) {
+    event.target.classList.remove('__pressed');
+  }
+
+  toggleExample(elm: HTMLElement) {
+    elm.classList.toggle('__expanded');
   }
 }

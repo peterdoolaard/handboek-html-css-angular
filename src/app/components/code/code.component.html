@@ -1,17 +1,35 @@
 <ng-container *ngIf="(codeExamples$ | async) as examples">
   <ng-container *ngIf="examples.length > 0; else geenVoorbeelden">
-    <ng-container >
-      <figure *ngFor="let example of examples"
-        class="figure-container" spellcheck="false">
-        <div class="figure-container__inner"> <!-- custom element -->
+    <ng-container>
+      <figure
+        *ngFor="let example of examples"
+        class="figure-container"
+        spellcheck="false"
+      >
+        <header class="figure-header">
           <h3 class="example-title">{{ example.hoofdstukNummer }}.{{ example.codeNummer }} &mdash; {{ example.codeTitel }}</h3>
+          <button
+            #toggleCollapsedExpanded
+            (click)="toggleExample(figureContainerInner)"
+            (pointerdown)="downEffect($event)"
+            (pointerup)="upEffect($event)"
+            class="figure-toggle-button"
+          >
+            <span *ngIf="figureContainerInner.classList.contains('__expanded');else uitVouwen">Invouwen</span>
+            <ng-template #uitVouwen>Uitvouwen</ng-template>
+          </button>
+        </header>
+        <div
+          #figureContainerInner
+          class="figure-container__inner"
+        >
           <code-example-view
-            [example]="example"
-            [exampleHtml]="exampleHtml"
-            [exampleCss]="exampleCss"
-            [codeWrapper]="codeWrapper"
-            [toggleEdit]="toggleEdit"
             [btnReset]="btnReset"
+            [codeWrapper]="codeWrapper"
+            [exampleCss]="exampleCss"
+            [exampleHtml]="exampleHtml"
+            [example]="example"
+            [toggleEdit]="toggleEdit"
           ></code-example-view>
           <div #codeWrapper class="code-wrapper">
             <pre class="language-html">
@@ -20,11 +38,11 @@
                 class="example-html"
               ></code>
               <button
-                class="btn-copy-code copy-html"
-                type="button"
                 (click)="copyCode($event)"
                 (pointerdown)="addEffect($event)"
                 (pointerup)="removeEffect($event)"
+                class="btn-copy-code copy-html"
+                type="button"
               >
                 <span class="screen-reader-text">Kopieer de code</span>
               </button>
@@ -35,11 +53,11 @@
                 class="example-css"
               ></code>
               <button
-                class="btn-copy-code copy-css"
-                type="button"
                 (click)="copyCode($event)"
                 (pointerdown)="addEffect($event)"
                 (pointerup)="removeEffect($event)"
+                class="btn-copy-code copy-css"
+                type="button"
               >
                 <span class="screen-reader-text">Kopieer de code</span>
               </button>
@@ -49,11 +67,11 @@
             <label class="code-edit__label">Bewerken&nbsp;
               <span *ngIf="!toggleEdit.checked">inschakelen</span>
               <span *ngIf="toggleEdit.checked">uitschakelen</span>
-              <input type="checkbox" #toggleEdit>
               <span class="code-edit__slider"></span>
               <span class="code-edit__thumb"></span>
+              <input #toggleEdit type="checkbox">
             </label>
-            <button #btnReset class="btn-reset-code" type="button" hidden>Code herstellen</button>
+            <button #btnReset class="btn-reset-code" hidden type="button">Code herstellen</button>
           </div>
         </div>
       </figure>

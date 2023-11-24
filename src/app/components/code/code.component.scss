@@ -31,19 +31,49 @@ a:any-link, button, [type="button"] {
 }
 
 .figure-container__inner {
+  background: hsl(0, 0%, 98%);
   box-shadow: var(--box-shadow-sharp);
+  display: none;
   margin-block-end: 0.5rem;
   padding: 1rem;
+
+  &.__expanded {
+    display: revert;
+  }
 }
 
-.example-title {
+.figure-header {
   background: hsl(300deg 40% 90%);
+  box-shadow: var(--box-shadow-sharp);
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
+}
+
+.figure-toggle-button {
+  border: none;
+  border-radius: 4px;
+  color: hsl(300, 40%, 35%);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  transform: scale(1);
+  transition: all 200ms ease-in-out;
+
+  &:hover {
+    box-shadow: var(--box-shadow);
+  }
+
+  &.__pressed {
+    transform: scale(0.9);
+  }
+}
+
+
+.example-title {
   font-family: var(--font-sans), sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
-  margin-block: -1rem 2rem;
-  margin-inline: -1rem;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 .example-html {
