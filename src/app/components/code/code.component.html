@@ -16,7 +16,8 @@
             class="figure-toggle-button"
           >
             <span *ngIf="figureContainerInner.classList.contains('__expanded');else uitVouwen">Invouwen</span>
-            <ng-template #uitVouwen>Uitvouwen</ng-template>
+            <ng-template #uitVouwen>
+              <span>Uitvouwen</span></ng-template>
           </button>
         </header>
         <div

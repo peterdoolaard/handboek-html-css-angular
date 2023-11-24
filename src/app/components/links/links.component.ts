@@ -10,7 +10,6 @@ import { combineLatest, Observable, of, switchMap } from 'rxjs';
 })
 export class LinksComponent implements OnInit {
   links$!: Observable<Link[]>;
-  currentChapter: number = 1;
 
   constructor(private sharedService: AppSharedService) {}
 
@@ -22,13 +21,4 @@ export class LinksComponent implements OnInit {
       }),
     );
   }
-
-  //   this.codeExamples$ = combineLatest([this.sharedService.currentChapter$, this.sharedService.getExamples()]).pipe(
-  //     switchMap(([currentChapter, examples]) => {
-  //       const filteredExamples = examples.filter(
-  //         (example) => example.hoofdstukNummer === currentChapter.hoofdstukNummer,
-  //       );
-  //       return of(filteredExamples);
-  //     }),
-  // }
 }

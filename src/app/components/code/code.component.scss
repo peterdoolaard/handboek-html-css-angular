@@ -43,29 +43,49 @@ a:any-link, button, [type="button"] {
 }
 
 .figure-header {
+  align-items: stretch;
   background: hsl(300deg 40% 90%);
   box-shadow: var(--box-shadow-sharp);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   flex-flow: wrap;
   justify-content: space-between;
-  padding: 0.5rem 0.5rem 0.5rem 1rem;
+  padding-inline: 1rem 0.5rem;
+  transition: background-color 200ms ease-in-out;
+
+  h3, button {
+    align-items: center;
+    background: transparent;
+    cursor: pointer;
+    display: grid;
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  button span {
+    justify-self: end;
+   }
+
+  &:has(button:hover) {
+    background: hsl(300deg 40% 80%);
+  }
+
 }
 
 .figure-toggle-button {
   border: none;
-  border-radius: 4px;
   color: hsl(300, 40%, 35%);
   font-family: var(--font-sans);
   font-size: 0.9rem;
-  transform: scale(1);
   transition: all 200ms ease-in-out;
 
   &:hover {
-    box-shadow: var(--box-shadow);
+    background: hsl(300deg 40% 70%);
+    font-weight: bold;
   }
 
   &.__pressed {
-    transform: scale(0.9);
+    //transform: scale(0.9);
   }
 }
 
@@ -74,6 +94,7 @@ a:any-link, button, [type="button"] {
   font-family: var(--font-sans), sans-serif;
   font-size: 1.4rem;
   font-weight: 500;
+  padding-block: 0.5rem;
 }
 
 .example-html {
