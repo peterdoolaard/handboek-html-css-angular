@@ -16,7 +16,7 @@ export class LinksComponent implements OnInit {
   ngOnInit() {
     this.links$ = combineLatest([this.sharedService.currentChapter$, this.sharedService.loadLinks()]).pipe(
       switchMap(([currentChapter, links]) => {
-        const filteredLinks = links.filter((link) => link.hoofdstukNummer === currentChapter.hoofdstukNummer);
+        const filteredLinks = links.filter((link) => link.hoofdstukNummer === currentChapter?.hoofdstukNummer);
         return of(filteredLinks);
       }),
     );

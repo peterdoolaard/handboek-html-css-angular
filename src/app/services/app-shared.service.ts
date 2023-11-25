@@ -18,10 +18,7 @@ export class AppSharedService {
   }
 
   // Houdt bij wat het actieve hoofdstuk is in de pagina Voorbeelden
-  private currentChapter$$ = new BehaviorSubject<Chapter>({
-    hoofdstukNummer: 1,
-    hoofdstukTitel: 'Webtalen, browsers en editors',
-  });
+  private currentChapter$$ = new BehaviorSubject<Chapter | null>(null);
   currentChapter$ = this.currentChapter$$.asObservable();
   updateCurrentChapter(currentChapter: Chapter | undefined) {
     if (currentChapter) {

@@ -40,14 +40,16 @@ export class CodeComponent implements OnInit {
     this.codeExamples$ = combineLatest([this.sharedService.currentChapter$, this.sharedService.getExamples()]).pipe(
       switchMap(([currentChapter, examples]) => {
         const filteredExamples = examples.filter(
-          (example) => example.hoofdstukNummer === currentChapter.hoofdstukNummer,
+          (example) => example.hoofdstukNummer === currentChapter?.hoofdstukNummer,
         );
         return of(filteredExamples);
       }),
       tap(() => {
         setTimeout(() => {
           this.highlightService.highlightAll();
-          this.renderer.addClass(this.figureContainerInner.nativeElement, '__expanded');
+          if (this.figureContainerInner) {
+            this.renderer.addClass(this.figureContainerInner.nativeElement, '__expanded');
+          }
         }, 0);
       }),
     );
