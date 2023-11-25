@@ -396,56 +396,56 @@
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Formspree: dienst voor het maken en verwerken van formulieren",
+    "url": "https://formspree.io"
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Wufoo: dienst voor het maken en verwerken van formulieren",
+    "url": "https://wufoo.com"
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Gratis onlineboek over JavaScript",
+    "url": "https://github.com/getify/You-Dont-Know-JS/tree/1st-ed"
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Perl, programmeertaal voor CGI-scripts",
+    "url": "https://php.net"
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Uitleg over de API Web storage (lokale opslag)",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API"
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Uitleg over reguliere expressies",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions"
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Testhulpmiddel voor reguliere expressies",
+    "url": "https://www.regex101.com\""
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Wet bescherming persoonsgegevens",
+    "url": "https://autoriteitpersoonsgegevens.nl/nl/over-privacy/wetten"
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Lijst van waarden voor het attribuut autocomplete",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/autocomplete"
   },
   {
     "hoofdstukNummer": 6,
-    "titel": "",
-    "url": ""
+    "titel": "Bestanden uploaden via een formulier",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications"
   },
   {
-    "hoofdstukNummer": 6,
+    "hoofdstukNummer": 7,
     "titel": "",
     "url": ""
   },
