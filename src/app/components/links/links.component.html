@@ -1,6 +1,8 @@
-<h3>Links in dit hoofdstuk</h3>
-<ul class="links-list" *ngIf="(links$ | async) as links">
-  <li *ngFor="let link of links">
-    <a class="link-text" [href]="link.url">{{ link.titel }}</a>
-  </li>
-</ul>
+<div class="links-container">
+  <h3>Links in dit hoofdstuk</h3>
+  <ul class="links-list" *ngIf="(links$ | async) as links">
+    <li *ngFor="let link of links">
+      <a class="link-text" [href]="link.url">{{ link.titel }}</a>
+    </li>
+  </ul>
+</div>
