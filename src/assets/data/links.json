@@ -911,32 +911,37 @@
   },
   {
     "hoofdstukNummer": 13,
-    "titel": "",
-    "url": ""
+    "titel": "Understanding The CSS3 transition-timing-function Property",
+    "url": "https://www.smashingmagazine.com/2014/04/understanding-css-timing-functions/"
   },
   {
     "hoofdstukNummer": 13,
-    "titel": "",
-    "url": ""
+    "titel": "Timing functions op MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/single-transition-timing-function"
   },
-
-
-
-
-
-
-
-
-
   {
     "hoofdstukNummer": 13,
-    "titel": "",
-    "url": ""
+    "titel": "Uitgebreide verzameling van animaties met CSS",
+    "url": "https://animate.style"
+  },
+  {
+    "hoofdstukNummer": 13,
+    "titel": "Een geanimeerde weergave van het periodiek systeem van scheikundige elementen",
+    "url": "https://threejs.org/examples/css3d_periodictable.html"
+  },
+  {
+    "hoofdstukNummer": 13,
+    "titel": "Een geanimeerde weergave van ons zonnestelsel",
+    "url": "https://codepen.io/juliangarnier/pen/idhuG"
+  },
+  {
+    "hoofdstukNummer": 13,
+    "titel": "De module CSS Custom Properties for Cascading Variables level 1",
+    "url": "https://www.w3.org/TR/css-variables-1/"
+  },
+  {
+    "hoofdstukNummer": 13,
+    "titel": "Een 'navigatielade' maken met Material",
+    "url": "https://material.io/design/components/navigation-drawer.html#"
   }
-
-
-
-
-
-
 ]
