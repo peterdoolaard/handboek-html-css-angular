@@ -631,73 +631,137 @@
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "De module CSS Box Sizing Level 3",
+    "url": "https://drafts.csswg.org/css-sizing"
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "Een artikel over Intrinsic sizing in CSS",
+    "url": "https://ishadeed.com/article/intrinsic-sizing-in-css/"
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "De module CSS Logical Properties and Values level 1",
+    "url": "https://www.w3.org/TR/css-logical-1/"
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "De waarde fit-content op caniuse.com",
+    "url": "https://caniuse.com/mdn-css_properties_width_fit-content"
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "De CSS-module Box-alignment",
+    "url": "https://www.w3.org/TR/css-align-3/"
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "De eigenschap overflow op caniuse.com",
+    "url": "https://caniuse.com/css-overflow"
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "De module CSS Overscroll Behavior level 1",
+    "url": "https://www.w3.org/TR/css-overscroll-1/"
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "Overscroll op caniuse.com",
+    "url": "https://caniuse.com/?search=overscroll-behaviour"
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "Waarden voor de eigenschap display",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/display#browser_compatibility"
   },
   {
     "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
+    "titel": "De bruikbaarheid van de waarde contents voor de eigenschap display",
+    "url": "https://caniuse.com/css-display-contents"
   },
-  {
-    "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
-  },
-  {
-    "hoofdstukNummer": 9,
-    "titel": "",
-    "url": ""
-  },
-
-
-
-
-
-
   {
     "hoofdstukNummer": 9,
     "titel": "Display: Contents Is Not a CSS Reset",
     "url": "https://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html"
+  },
+  {
+    "hoofdstukNummer": 9,
+    "titel": "How to hide content (a11y)",
+    "url": "https://www.a11yproject.com/posts/how-to-hide-content/"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "",
+    "url": ""
+  },
+
+
+
+
+
+
+
+
+
+  {
+    "hoofdstukNummer": 13,
+    "titel": "",
+    "url": ""
   }
+
+
+
+
+
+
 ]
