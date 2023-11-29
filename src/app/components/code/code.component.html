@@ -68,9 +68,9 @@
             <label class="code-edit__label">Bewerken&nbsp;
               <span *ngIf="!toggleEdit.checked">inschakelen</span>
               <span *ngIf="toggleEdit.checked">uitschakelen</span>
+              <input #toggleEdit type="checkbox">
               <span class="code-edit__slider"></span>
               <span class="code-edit__thumb"></span>
-              <input #toggleEdit type="checkbox">
             </label>
             <button #btnReset class="btn-reset-code" hidden type="button">Code herstellen</button>
           </div>

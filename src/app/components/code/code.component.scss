@@ -44,7 +44,8 @@ a:any-link, button, [type="button"] {
 
 .figure-header {
   align-items: stretch;
-  background: hsl(300deg 40% 90%);
+  background: hsl(300, 42%, 90%);
+  background: oklch(0.91 0.04 325.93);
   box-shadow: var(--box-shadow-sharp);
   display: grid;
   grid-template-columns: 1fr;
@@ -68,6 +69,7 @@ a:any-link, button, [type="button"] {
 
   &:has(button:hover) {
     background: hsl(300deg 40% 80%);
+    background: oklch(0.83 0.07 326.23);
   }
 
 }
@@ -75,13 +77,14 @@ a:any-link, button, [type="button"] {
 .figure-toggle-button {
   border: none;
   color: hsl(300, 40%, 35%);
+  color: oklch(0.46 0.14 327.53);
   font-family: var(--font-sans);
   font-size: 0.9rem;
   transition: all 200ms ease-in-out;
 
   &:hover {
     background: hsl(300deg 40% 70%);
-    font-weight: bold;
+    color: oklch(0.23 0.14 327.53);
   }
 
   &.__pressed {
