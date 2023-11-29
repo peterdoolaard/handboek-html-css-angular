@@ -1,0 +1,24 @@
+.positie {
+  position: relative;
+  left: 75px;
+  top: 150px;
+}
+.flex {
+  border: 2px dashed hsl(140, 70%, 15%);
+  display: flex;
+  margin-block-end: 200px;
+  max-inline-size: max-content;
+}
+.flex > * {
+  align-items: center;
+  background-color: hsl(140, 70%, 70%);
+  block-size: 200px;
+  border: 2px solid hsl(140, 70%, 15%);
+  border-radius: 6px;
+  color: hsl(140, 5%, 5%);
+  display: flex;
+  inline-size: 200px;
+  justify-content: center;
+  margin: 0;
+  padding: 1em;
+}

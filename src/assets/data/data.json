@@ -390,5 +390,40 @@
     "codeTitel": "Overscroll-behavior",
     "codeHtml": "/assets/data/9.5.html",
     "codeCss": "/assets/data/9.5.css"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "codeNummer": 1,
+    "codeTitel": "Positionering",
+    "codeHtml": "/assets/data/10.1.html",
+    "codeCss": "/assets/data/10.1.css"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "codeNummer": 2,
+    "codeTitel": "Position sticky",
+    "codeHtml": "/assets/data/10.2.html",
+    "codeCss": "/assets/data/10.2.css"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "codeNummer": 3,
+    "codeTitel": "Floatende content",
+    "codeHtml": "/assets/data/10.3.html",
+    "codeCss": "/assets/data/10.3.css"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "codeNummer": 4,
+    "codeTitel": "Probleem met float",
+    "codeHtml": "/assets/data/10.4.html",
+    "codeCss": "/assets/data/10.4.css"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "codeNummer": 5,
+    "codeTitel": "Remake nos.nl met CSS Grid Layout",
+    "codeHtml": "/assets/data/10.5.html",
+    "codeCss": "/assets/data/10.5.css"
   }
 ]
