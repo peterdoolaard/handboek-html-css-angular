@@ -785,12 +785,87 @@
     "url": "https://codepen.io/dool/pen/wvpezLY"
   },
   {
-    "hoofdstukNummer": 10,
+    "hoofdstukNummer": 11,
+    "titel": "Overzicht van alle CSS-eigenschappen op MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "WOFF Format 2.0",
+    "url": "https://www.w3.org/TR/WOFF2/"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "Google Fonts",
+    "url": "https://www.google.com/fonts/"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "Adobe Fonts",
+    "url": "https://fonts.adobe.com/fonts"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "Webfont generator op Font Squirrel",
+    "url": "https://www.fontsquirrel.com/tools/webfont-generator"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "Variable fonts guide op MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Fonts/Variable_Fonts_Guide"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "Responsive And Fluid Typography With vh And vw Units",
+    "url": "https://www.smashingmagazine.com/2016/05/fluid-typography/"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "De eigenschap font-size-adjust op caniuse.com",
+    "url": "https://caniuse.com/font-size-adjust"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "De eigenschap font-stretch in de module CSS Font level 3",
+    "url": "https://www.w3.org/TR/css3-fonts/#propdef-font-stretch"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "De eigenschap font-variant op MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "Nog meer font-eigenschappen op MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/font"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "Ondersteuning van de eigenschap text-indent",
+    "url": "https://caniuse.com/?search=text-indent"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "Ondersteuning van de eigenschap hyphens",
+    "url": "https://caniuse.com/css-hyphens"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "De module CSS Lists level 3",
+    "url": "https://www.w3.org/TR/css-lists-3/"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "titel": "De module CSS Counter Styles level 3",
+    "url": "https://www.w3.org/TR/css-counter-styles-3/"
+  },
+  {
+    "hoofdstukNummer": 12,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 10,
+    "hoofdstukNummer": 12,
     "titel": "",
     "url": ""
   },
