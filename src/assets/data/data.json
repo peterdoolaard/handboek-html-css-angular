@@ -383,5 +383,12 @@
     "codeTitel": "Overflow",
     "codeHtml": "/assets/data/9.4.html",
     "codeCss": "/assets/data/9.4.css"
+  },
+  {
+    "hoofdstukNummer": 9,
+    "codeNummer": 5,
+    "codeTitel": "Overscroll-behavior",
+    "codeHtml": "/assets/data/9.5.html",
+    "codeCss": "/assets/data/9.5.css"
   }
 ]

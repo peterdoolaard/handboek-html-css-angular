@@ -1,0 +1,57 @@
+.chat-container {
+  display: flex;
+  flex-flow: wrap;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+.chat {
+  background-color: floralwhite;
+  border: 1px solid mediumpurple;
+  inline-size: 200px;
+}
+
+.chat header {
+  background-color: indigo;
+  color: floralwhite;
+  text-align: center;
+}
+
+.chat h3 {
+  font-family: monospace;
+  margin: 0;
+  padding: 0.5em;
+}
+
+.chat span {
+  display: block;
+}
+
+.chat ul {
+  block-size: 20em;
+  list-style: none;
+  padding: 0 0.5em;
+  overflow: auto;
+  overscroll-behavior: auto;
+}
+
+.chat li {
+  margin: 0.5em 0;
+  padding: 0.5em;
+}
+
+.chat li:nth-child(odd) {
+  background-color: plum;
+}
+
+.chat li:nth-child(even) {
+  background-color: darksalmon;
+}
+
+.chat:nth-of-type(2) ul {
+  overscroll-behavior: contain;
+}
+
+.chat:nth-of-type(3) ul {
+  overscroll-behavior: none;
+}
