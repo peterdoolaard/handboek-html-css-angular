@@ -861,11 +861,61 @@
   },
   {
     "hoofdstukNummer": 12,
+    "titel": "A Guide To Modern CSS Colors With RGB, HSL, HWB, LAB And LCH",
+    "url": "https://www.smashingmagazine.com/2021/11/guide-modern-css-colors/"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "titel": "Uitleg over het datatype &lt;color&gt; op MDN",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "titel": "Hex Color – The Code Side Of Color",
+    "url": "https://www.smashingmagazine.com/2012/10/04/the-code-side-of-color/"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "titel": "De module CSS Color level 4",
+    "url": "https://www.w3.org/TR/css-color-4/"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "titel": "De eigenschap background-position in de module CSS Backgrounds and borders level 3",
+    "url": "https://www.w3.org/TR/css-backgrounds-3/#the-background-position"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "titel": "De eigenschap background-size in de module CSS Backgrounds and borders level 3",
+    "url": "https://www.w3.org/TR/css-backgrounds-3/#the-background-size"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "titel": "Voorbeeld van randafbeeldingen in de module CSS Backgrounds and borders level 3",
+    "url": "https://www.w3.org/TR/css3-background/#border-images"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "titel": "Smoother & sharper shadows with layered box-shadows",
+    "url": "https://tobiasahlin.com/blog/layered-smooth-box-shadows/"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "titel": "Het ontwerpsysteem Material van Google",
+    "url": "https://material.io/guidelines/"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "titel": "De module CSS Masking level 1",
+    "url": "https://www.w3.org/TR/css-masking-1/"
+  },
+  {
+    "hoofdstukNummer": 13,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 12,
+    "hoofdstukNummer": 13,
     "titel": "",
     "url": ""
   },
