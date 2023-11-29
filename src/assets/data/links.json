@@ -691,48 +691,98 @@
   },
   {
     "hoofdstukNummer": 10,
-    "titel": "",
-    "url": ""
+    "titel": "Media queries level 4",
+    "url": "https://www.w3.org/TR/mediaqueries-4/"
   },
   {
     "hoofdstukNummer": 10,
-    "titel": "",
-    "url": ""
+    "titel": "Media queries level 5",
+    "url": "https://www.w3.org/TR/mediaqueries-5/"
   },
   {
     "hoofdstukNummer": 10,
-    "titel": "",
-    "url": ""
+    "titel": "Browser voor ontwikkelaars: Polypane",
+    "url": "https://polypane.app"
   },
   {
     "hoofdstukNummer": 10,
-    "titel": "",
-    "url": ""
+    "titel": "Device Adaptation level 1",
+    "url": "https://www.w3.org/TR/css-device-adapt-1/"
   },
   {
     "hoofdstukNummer": 10,
-    "titel": "",
-    "url": ""
+    "titel": "Positioned Layout level 3",
+    "url": "https://www.w3.org/TR/css-position-3/"
   },
   {
     "hoofdstukNummer": 10,
-    "titel": "",
-    "url": ""
+    "titel": "Logische waarden voor floats op caniuse.com",
+    "url": "https://caniuse.com/mdn-css_properties_float_flow_relative_values"
   },
   {
     "hoofdstukNummer": 10,
-    "titel": "",
-    "url": ""
+    "titel": "Artikel over block formatting context",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Block_formatting_context"
   },
   {
     "hoofdstukNummer": 10,
-    "titel": "",
-    "url": ""
+    "titel": "Fragmentation level 3",
+    "url": "https://www.w3.org/TR/css-break-3/"
   },
   {
     "hoofdstukNummer": 10,
-    "titel": "",
-    "url": ""
+    "titel": "Voorbeeld van multi-column op CodePen",
+    "url": "https://codepen.io/nabilkaz/pen/eqdENj"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "CSS Grid Layout level 1",
+    "url": "https://www.w3.org/TR/css-grid-1/"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "Remake RollingStone.com met CSS Grid",
+    "url": "https://codepen.io/dool/pen/xxZqQBj"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "Remake RollingStone.com met CSS Grid en subgrid",
+    "url": "https://codepen.io/dool/pen/oNbWGXg"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "De waarden safe en unsafe voor uitlijning op de kruisas bij flexbox",
+    "url": "https://caniuse.com/mdn-css_properties_justify-content_flex_context_safe_unsafe"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "Het icon font (pictogrammenlettertype) FontAwesome",
+    "url": "https://fontawesome.com"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "Pictogrammen van Google Fonts",
+    "url": "https://fonts.google.com/icons"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "Box Alignment level 3",
+    "url": "https://www.w3.org/TR/css-align-3/"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "Containment Module Level 3 (container queries)",
+    "url": "https://www.w3.org/TR/css-contain-3/"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "Container queries op caniuse.com",
+    "url": "https://caniuse.com/css-container-queries"
+  },
+  {
+    "hoofdstukNummer": 10,
+    "titel": "Demo van container queries op CodePen",
+    "url": "https://codepen.io/dool/pen/wvpezLY"
   },
   {
     "hoofdstukNummer": 10,
