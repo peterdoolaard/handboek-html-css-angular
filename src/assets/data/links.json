@@ -461,59 +461,238 @@
   },
   {
     "hoofdstukNummer": 8,
+    "titel": "Overzicht van CSS-specificaties",
+    "url": "https://www.w3.org/Style/CSS/current-work"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "5 Methodologies for Architecting CSS",
+    "url": "https://www.danylkoweb.com/Blog/5-methodologies-for-architecting-css-IP"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Methods to Organize CSS",
+    "url": "https://css-tricks.com/methods-organize-css/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Combining the Powers of SEM and BIO for Improving CSS",
+    "url": "https://css-tricks.com/combining-the-powers-of-sem-and-bio-for-improving-css/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "BEM for beginners",
+    "url": "https://www.smashingmagazine.com/2018/06/bem-for-beginners/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "An introduction to Object Oriented CSS (OOCSS)",
+    "url": "https://www.smashingmagazine.com/2011/12/an-introduction-to-object-oriented-css-oocss/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Decoupling HTML from CSS",
+    "url": "https://www.smashingmagazine.com/2012/04/decoupling-html-from-css/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Classes? Where We’re Going, We Don’t Need Classes!",
+    "url": "https://www.smashingmagazine.com/2012/06/classes-where-were-going-we-dont-need-classes/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "De selector :has op caniuse.com",
+    "url": "https://caniuse.com/css-has"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Tailwind, utility first framework",
+    "url": "https://tailwindcss.com/docs/utility-first"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "No, Utility Classes Aren't the Same As Inline Styles",
+    "url": "https://frontstuff.io/no-utility-classes-arent-the-same-as-inline-styles"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "CSS Selectors Module Level 3",
+    "url": "https://www.w3.org/TR/selectors-3/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "CSS Selectors Module Level 4",
+    "url": "https://www.w3.org/TR/selectors-4/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Selectors op Can I Use...",
+    "url": "https://caniuse.com/?search=selectors"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Googles stijlgids voor HTML en CSS",
+    "url": "https://google.github.io/styleguide/htmlcssguide.html"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "GitHubs stijlgids voor CSS",
+    "url": "https://primer.style/css/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Codeerstandaarden van WordPress",
+    "url": "https://developer.wordpress.org/coding-standards/wordpress-coding-standards/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "CSS-stijlgids geschreven door de auteur van normalize.css",
+    "url": "https://github.com/necolas/idiomatic-css"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Lijst van overerfbare eigenschappen in CSS 2.1",
+    "url": "https://www.w3.org/TR/CSS21/propidx.html"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Ondersteuning van cascade layers op caniuse.com",
+    "url": "https://caniuse.com/css-cascade-layers"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "De cascade volgens de specificatie Cascading and Inheritance Level 5",
+    "url": "https://www.w3.org/TR/css-cascade-5/#cascading"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "A Complete Guide to CSS Cascade Layers",
+    "url": "https://www.oddbird.net/2022/02/21/layers-guide/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "The Future of CSS: Cascade Layers (CSS @layer)",
+    "url": "tps://www.bram.us/2021/09/15/the-future-of-css-cascade-layers-css-at-layer/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Getting Started With CSS Cascade Layers",
+    "url": "https://www.smashingmagazine.com/2022/01/introduction-css-cascade-layers/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Verzameling codevoorbeelden op CodePen van CSS Cascade Layers",
+    "url": "https://codepen.io/collection/Bnjmma"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Reset CSS",
+    "url": "https://meyerweb.com/eric/tools/css/reset/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "A modern CSS Reset",
+    "url": "https://piccalil.li/blog/a-modern-css-reset/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "normalize.css",
+    "url": "https://necolas.github.io/normalize.css/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "CSS Values and Units Module Level 3",
+    "url": "https://www.w3.org/TR/css-values-3/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "CSS Values and Units Module Level 4",
+    "url": "https://www.w3.org/TR/css-values-4/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "Use 'rem' for Global Sizing; Use 'em' for Local Sizing",
+    "url": "https://css-tricks.com/rem-global-em-local"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "REM vs EM – The Great Debate",
+    "url": "https://zellwk.com/blog/rem-vs-em/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "PX, EM or REM Media Queries?",
+    "url": "https://zellwk.com/blog/media-query-units/"
+  },
+  {
+    "hoofdstukNummer": 8,
+    "titel": "The Large, Small, and Dynamic Viewports",
+    "url": "https://www.bram.us/2021/07/08/the-large-small-and-dynamic-viewports/"
+  },
+  {
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
   {
-    "hoofdstukNummer": 8,
+    "hoofdstukNummer": 9,
     "titel": "",
     "url": ""
   },
+  {
+    "hoofdstukNummer": 9,
+    "titel": "",
+    "url": ""
+  },
+
+
+
+
 
 
   {
