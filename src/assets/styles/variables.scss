@@ -19,4 +19,7 @@
   @media screen and (min-width: 1024px) {
     --font-size-base: calc(1.1rem + 0.2vw);
   }
+
+  // kolommen voor tekstcontent
+  --grid-columns: 300px 1fr;
 }

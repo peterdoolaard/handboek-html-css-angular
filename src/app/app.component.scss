@@ -19,8 +19,8 @@
     inline-size: auto;
     pointer-events: auto;
     position: relative;
-  transform: scale(1);
-  transition: all 200ms ease-in-out;
+    transform: scale(1);
+    transition: all 200ms ease-in-out;
 
     .primary {
       fill: hsl(210deg 100% 42%);

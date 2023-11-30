@@ -23,7 +23,7 @@ body {
 
 :is(h1, h2, h3) {
   color: hsl(0 0% 15%);
-  font-weight: 500;
+  font-weight: 450;
 }
 
 p {
@@ -56,43 +56,80 @@ a:any-link {
   padding: 0.5rem;
 }
 
-.inleiding {
+.content-wrapper {
+  max-inline-size: 1024px;
   padding-inline-end: 1rem;
-}
 
-@media (min-width: 700px) {
-  .inleiding {
+  @media (min-width: 700px) {
     align-items: baseline;
-    column-gap: 2rem;
+    column-gap: 1rem;
     display: grid;
-    grid-template-columns: minmax(min-content, 250px) 1fr;
-    max-width: 1024px;
+    grid-template-columns: var(--grid-columns);
   }
 }
 
-.inleiding [class*='kop'] {
+:is(h1, h2, h3) {
   grid-column: 1;
   line-height: 1;
 }
 
-.inleiding-subkop {
+h3 {
   margin-block-start: 0.5rem;
 }
 
-.inleiding ul {
+ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.inleiding li {
+li {
   margin-block-end: 0.3rem;
 }
 
-.inleiding > p, ul {
+.content-wrapper > p, ul {
   grid-column: 2;
   margin-block-end: 0.5em;
 }
+
+article {
+
+  grid-column: 1 / -1;
+
+  > * {
+    grid-column: 2;
+  }
+
+  :is(header, h2, h3) {
+    grid-column: 1;
+  }
+
+  ul {
+    list-style-type: disc;
+    padding-inline-start: 1em;
+  }
+
+  time {
+    color: oklch(0.36 0.14 327.53);
+  }
+
+  + article {
+    margin-block-start: 2rem;
+  }
+
+  @media (min-width: 700px) {
+    align-items: baseline;
+    column-gap: 1rem;
+    display: grid;
+    grid-template-columns: var(--grid-columns);
+
+    // Chromium browsers crash on this part. Subgrid is the trigger
+    //@supports(grid-template-columns: subgrid) {
+    //  grid-template-columns: subgrid;
+    //}
+  }
+}
+
 
 :any-link.link-text {
   background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 55%) 5%, transparent 5%, transparent 100%);
@@ -115,10 +152,10 @@ a:any-link {
     background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 60%, transparent 20%, transparent 100%);
   }
   75% {
-    background: linear-gradient(to top,  hsl(300deg 40% 65%), hsl(300deg 40% 65%) 80%, transparent 20%, transparent 100%);
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 80%, transparent 20%, transparent 100%);
   }
   100% {
-    background: linear-gradient(to top,  hsl(300deg 40% 65%), hsl(300deg 40% 65%) 100%);
+    background: linear-gradient(to top, hsl(300deg 40% 65%), hsl(300deg 40% 65%) 100%);
   }
 }
 
