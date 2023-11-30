@@ -3,7 +3,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 
 import { Chapter } from '../models';
 import { AppSharedService } from '../services/app-shared.service';
-import { map, Observable } from 'rxjs';
+import { map, Observable, shareReplay } from 'rxjs';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 
@@ -28,7 +28,7 @@ export class VoorbeeldenComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.chapters$ = this.sharedService.loadAllChapters();
+    this.chapters$ = this.sharedService.loadAllChapters().pipe(shareReplay(1));
     this.findChapter();
     this.location.subscribe((location) => {
       if (location.url?.includes('hoofdstuk')) {

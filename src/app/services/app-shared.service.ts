@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, catchError, Observable, shareReplay, throwError } from 'rxjs';
+import { BehaviorSubject, catchError, Observable, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Chapter, CodeExample, Link } from '../models';
 
@@ -41,7 +41,7 @@ export class AppSharedService {
   // }
 
   loadAllChapters() {
-    return this.http.get<Chapter[]>('assets/data/hoofdstukken.json').pipe(shareReplay());
+    return this.http.get<Chapter[]>('assets/data/hoofdstukken.json');
   }
 
   loadLinks() {
@@ -53,7 +53,7 @@ export class AppSharedService {
   }
 
   getCode(path: string) {
-    return this.http.get(path, { responseType: 'text' }).pipe(shareReplay(), catchError(this.handleError));
+    return this.http.get(path, { responseType: 'text' }).pipe(catchError(this.handleError));
   }
 
   handleError(error: HttpErrorResponse) {
