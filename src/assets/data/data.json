@@ -425,5 +425,12 @@
     "codeTitel": "Remake nos.nl met CSS Grid Layout",
     "codeHtml": "/assets/data/10.5.html",
     "codeCss": "/assets/data/10.5.css"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "codeNummer": 1,
+    "codeTitel": "Responsieve tekst",
+    "codeHtml": "/assets/data/11.1.html",
+    "codeCss": "/assets/data/11.1.css"
   }
 ]

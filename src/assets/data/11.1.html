@@ -1,0 +1,8 @@
+<article>
+  <p>Responsieve tekst met behulp van clamp().</p>
+  <p>De CSS zorgt ervoor dat de tekstgrootte afhankelijk van de schermbreedte ligt tussen 0.875rem en 1.5rem, wat bij een standaardbrowser neerkomt op 14px tot 24px. In dit voorbeeld klopt dat trouwens niet. Dat komt doordat op de
+    <code>:root</code> van de pagina al een responsieve fontgrootte is ingesteld, namelijk: <code>calc(1rem + 0.2vw)</code>. Daardoor loopt de tekstgrootte in dit voorbeeld op tot ruim 34px.</p>
+  <p>Dat is wel op te lossen door in plaats van rem (gebaseerd op de root) de em te gebruiken. Dat is de fontgrootte van de parent,
+    <code>article</code>, en die heeft een fontgrootte van 16px. Dan klopt de berekening wel.</p>
+  <p>Het voordeel van het gebruik van rem in plaats van pixels is dat een bezoeker die zijn browser heeft ingesteld op grotere tekst nog steeds vloeiende tekst ziet, maar wel op basis van zijn gewenste grootte. (Er zullen weinig mensen zijn die hun browser instellen op kleinere tekst, maar ook dan werkt het goed.)</p>
+</article>
