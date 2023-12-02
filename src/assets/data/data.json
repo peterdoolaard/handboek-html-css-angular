@@ -432,5 +432,19 @@
     "codeTitel": "Responsieve tekst",
     "codeHtml": "/assets/data/11.1.html",
     "codeCss": "/assets/data/11.1.css"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "codeNummer": 2,
+    "codeTitel": "Font-weight",
+    "codeHtml": "/assets/data/11.2.html",
+    "codeCss": "/assets/data/11.2.css"
+  },
+  {
+    "hoofdstukNummer": 11,
+    "codeNummer": 3,
+    "codeTitel": "Navigatie met lijst",
+    "codeHtml": "/assets/data/11.3.html",
+    "codeCss": "/assets/data/11.3.css"
   }
 ]

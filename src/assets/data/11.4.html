@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Document</title>
+</head>
+
+<style>
+
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  header {
+    background: whitesmoke;
+    padding: 8px;
+  }
+
+  main {
+    padding: 8px;
+  }
+
+  button {
+    background: transparent center/cover no-repeat url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik0xMjAtMjQwdi04MGg3MjB2ODBIMTIwWm0wLTIwMHYtODBoNzIwdjgwSDEyMFptMC0yMDB2LTgwaDcyMHY4MEgxMjBaIi8+PC9zdmc+);
+    block-size: 2rem;
+    border: none;
+    inline-size: 2rem;
+    position: relative;
+    z-index: 3;
+
+    &[aria-expanded="true"] {
+      background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0yNTYtMjAwLTU2LTU2IDIyNC0yMjQtMjI0LTIyNCA1Ni01NiAyMjQgMjI0IDIyNC0yMjQgNTYgNTYtMjI0IDIyNCAyMjQgMjI0LTU2IDU2LTIyNC0yMjQtMjI0IDIyNFoiLz48L3N2Zz4=);
+    }
+
+    @media(min-width: 768px) {
+      display: none;
+    })
+  }
+
+  [aria-label="Hoofdnavigatie"] {
+    background: wheat;
+    block-size: 100vh;
+    inline-size: 100%;
+    left: 0;
+    padding-block: 1rem;
+    padding-inline: 0.5rem 2rem;
+    position: absolute;
+    transform: translateX(-100vw);
+    transition: transform 200ms ease-in-out;
+    z-index: 2;
+
+    &.__open {
+      transform: translateX(0);
+    }
+
+    @media (min-width: 768px) {
+      block-size: auto;
+      position: static;
+      transform: translateX(0);
+    }
+  }
+
+  ul {
+    display: grid;
+    grid-auto-flow: row;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    row-gap: 1rem;
+
+    & li:hover {
+      color: deeppink;
+      cursor: pointer;
+    }
+
+    @media (min-width: 768px) {
+      grid-auto-flow: column;
+    }
+  }
+
+  .screen-reader-text:not(:focus):not(:active) {
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+</style>
+
+
+<header>
+  <button aria-controls="main-nav" aria-expanded="false" type="button">
+    <span class="screen-reader-text">Navigatie</span>
+  </button>
+  <nav aria-label="Hoofdnavigatie" id="main-nav">
+    <ul role="list">
+      <li><a>Home</a></li>
+      <li><a>Nieuws</a></li>
+      <li><a>Producten</a></li>
+      <li><a>Over ons</a></li>
+      <li><a>Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <p>Dit is een eenvoudig voorbeeld van een navigatiemenu. Het menu zelf is gewoon een ongeordende lijst. Tot 768px staan de opties onder elkaar. In een grotere viewport staan ze naast elkaar. Daar zorgt de media query op de
+    <code>ul</code> voor.</p>
+  <p>Dit type navigatie is wel te bouwen zonder JavaScript, zoals is beschreven in het boek. Maar om het geheel volgens de regels en toegankelijk te bouwen is JavaScript onmisbaar.</p>
+</main>
+
+<!--<div class="backdrop"></div>-->
+
+<script>
+  function toggleMenu() {
+    mainNav.classList.toggle('__open');
+    if (mainNav.classList.contains('__open')) {
+      menuBtn.setAttribute('aria-expanded', 'true');
+    } else {
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+  }
+
+  const menuBtn = document.querySelector('[aria-controls="main-nav"]');
+  const mainNav = document.querySelector('[aria-label="Hoofdnavigatie"]');
+
+  menuBtn.addEventListener('click', toggleMenu);
+  document.addEventListener('keydown', (event) => {
+    if (event.code === 'Escape' && menuBtn.getAttribute('aria-expanded') === 'true') {
+      toggleMenu();
+    }
+  });
+</script>
