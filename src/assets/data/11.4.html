@@ -19,10 +19,28 @@
   header {
     background: whitesmoke;
     padding: 8px;
+
+    & div {
+      align-items: center;
+      column-gap: 2rem;
+      display: flex;
+    }
+
+    & h1 {
+      font-size: 1.25rem;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    @media (min-width: 768px) {
+      display: flex;
+      gap: 3rem;
+      padding: 0 1rem;
+    }
   }
 
   main {
-    padding: 8px;
+    padding: 1rem;
   }
 
   button {
@@ -30,8 +48,6 @@
     block-size: 2rem;
     border: none;
     inline-size: 2rem;
-    position: relative;
-    z-index: 3;
 
     &[aria-expanded="true"] {
       background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Im0yNTYtMjAwLTU2LTU2IDIyNC0yMjQtMjI0LTIyNCA1Ni01NiAyMjQgMjI0IDIyNC0yMjQgNTYgNTYtMjI0IDIyNCAyMjQgMjI0LTU2IDU2LTIyNC0yMjQtMjI0IDIyNFoiLz48L3N2Zz4=);
@@ -42,44 +58,57 @@
     })
   }
 
-  [aria-label="Hoofdnavigatie"] {
+  nav[aria-label="Hoofdnavigatie"] {
     background: wheat;
     block-size: 100vh;
     inline-size: 100%;
     left: 0;
-    padding-block: 1rem;
-    padding-inline: 0.5rem 2rem;
+    padding: 1rem;
     position: absolute;
+    top: 3rem;
     transform: translateX(-100vw);
-    transition: transform 200ms ease-in-out;
-    z-index: 2;
+    transition: all 200ms ease-in-out;
+    visibility: hidden;
+    z-index: 1;
 
     &.__open {
+      position: fixed;
       transform: translateX(0);
+      visibility: visible;
     }
 
     @media (min-width: 768px) {
+      background: whitesmoke;
       block-size: auto;
+      inline-size: auto;
       position: static;
       transform: translateX(0);
-    }
-  }
-
-  ul {
-    display: grid;
-    grid-auto-flow: row;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    row-gap: 1rem;
-
-    & li:hover {
-      color: deeppink;
-      cursor: pointer;
+      visibility: visible;
     }
 
-    @media (min-width: 768px) {
-      grid-auto-flow: column;
+    & ul {
+      display: grid;
+      grid-auto-flow: row;
+      grid-auto-rows: min-content;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 1rem;
+
+      & li:hover {
+        color: deeppink;
+        cursor: pointer;
+      }
+
+      & a:any-link {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      @media (min-width: 768px) {
+        grid-auto-flow: column;
+        grid-auto-columns: max-content;
+      }
     }
   }
 
@@ -95,24 +124,37 @@
 
 
 <header>
-  <button aria-controls="main-nav" aria-expanded="false" type="button">
-    <span class="screen-reader-text">Navigatie</span>
-  </button>
+  <div>
+    <button aria-controls="main-nav" aria-expanded="false" type="button">
+      <span class="screen-reader-text">Navigatie</span>
+    </button>
+    <h1>Navigatievoorbeeld</h1></div>
   <nav aria-label="Hoofdnavigatie" id="main-nav">
     <ul role="list">
-      <li><a>Home</a></li>
-      <li><a>Nieuws</a></li>
-      <li><a>Producten</a></li>
-      <li><a>Over ons</a></li>
-      <li><a>Contact</a></li>
+      <li><a href="">Home</a></li>
+      <li><a href="">Nieuws</a></li>
+      <li><a href="">Producten</a></li>
+      <li><a href="">Over ons</a></li>
+      <li><a href="">Contact</a></li>
     </ul>
   </nav>
 </header>
 
 <main>
-  <p>Dit is een eenvoudig voorbeeld van een navigatiemenu. Het menu zelf is gewoon een ongeordende lijst. Tot 768px staan de opties onder elkaar. In een grotere viewport staan ze naast elkaar. Daar zorgt de media query op de
-    <code>ul</code> voor.</p>
-  <p>Dit type navigatie is wel te bouwen zonder JavaScript, zoals is beschreven in het boek. Maar om het geheel volgens de regels en toegankelijk te bouwen is JavaScript onmisbaar.</p>
+  <p>Dit is een eenvoudig voorbeeld van een navigatiemenu. Het is responsief en toegankelijk voor het toetsenbord en ondersteunende technologie.</p>
+  <p>Dit type navigatie is wel te bouwen met alleen HTML en CSS, dus zonder JavaScript, zoals in het voorbeeld in het boek. Maar daarmee bereik je geen maximale gebruikerservaring en is ook de toegankelijkheid niet optimaal. Daarvoor is JavaScript onmisbaar.</p>
+  <p>Een toelichting.</p>
+  <ul>
+    <li>Er is een header met daarin een button en een nav.</li>
+    <li>De button wordt alleen getoond in een viewport < 768px.</li>
+    <li>Als de viewport > 768px wordt de navigatie altijd getoond als een horizontale rij.</li>
+    <li>De navigatie is standaard verborgen met <code> transform: translateX(-100vw)</code> en met <code>visibility: hidden</code>.</li>
+    <li>De navigatie heeft <code>position: absolute</code> en <code>z-index: 1</code> zodat die boven op de andere inhoud staat.</li>
+    <li>Bij een klik op de button krijgt de nav de klasse <code>.__open</code>, die de navigatie met <code> transform: translateX(0)</code> op zijn oorspronkelijke plek zet.</li>
+    <li>Tegelijk krijgt de knop het attribuut <code>aria-expanded: true</code>. Zo kan een screen-reader aankondigen dat de navigatie is geopend.</li>
+    <li>Als <code>aria-expanded: true</code> krijgt de button een sluitpictogram in plaats van een menupictogram.</li>
+    <li>JavaScript luistert of de gebruiker op de toets Escape drukt. Als dat gebeurt wordt de navigatie gesloten.</li>
+  </ul>
 </main>
 
 <!--<div class="backdrop"></div>-->

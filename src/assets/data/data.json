@@ -446,5 +446,12 @@
     "codeTitel": "Navigatie met lijst",
     "codeHtml": "/assets/data/11.3.html",
     "codeCss": "/assets/data/11.3.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 1,
+    "codeTitel": "Navigatie met lijst",
+    "codeHtml": "/assets/data/12.1.html",
+    "codeCss": "/assets/data/12.1.css"
   }
 ]
