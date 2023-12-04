@@ -42,6 +42,10 @@ export class VoorbeeldenComponent implements OnInit {
             this.sharedService.updateCurrentChapter(this.currentChapter);
             this.formGroup.controls.selectedHoofdstuk.setValue(+hoofdstuk, { emitEvent: false });
           });
+      } else {
+        this.router.navigate(['voorbeelden'], {
+          queryParams: { hoofdstuk: 1 },
+        });
       }
     });
   }
