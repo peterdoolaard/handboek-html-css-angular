@@ -20,9 +20,8 @@
   background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgLTk2MCA5NjAgOTYwIiB3aWR0aD0iMjQiPjxwYXRoIGQ9Ik00ODAtMzQ0IDI0MC01ODRsNTYtNTYgMTg0IDE4NCAxODQtMTg0IDU2IDU2LTI0MCAyNDBaIi8+PC9zdmc+') no-repeat right;
   font-family: inherit;
   font-size: 1rem;
-  max-inline-size: 100%;
-  overflow: hidden;
-  padding: 4px 8px;
-  position: relative;
+  inline-size: 100%;
+  overflow: hidden!important;
+  padding: 4px 24px 4px 8px;
   text-overflow: ellipsis;
 }

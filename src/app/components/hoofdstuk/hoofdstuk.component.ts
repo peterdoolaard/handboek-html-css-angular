@@ -16,7 +16,9 @@ export class HoofdstukComponent {
     this.sharedService.currentChapter$.subscribe((chapter) => {
       this.hoofdstuk = chapter;
       if (this.hoofdstuk?.hoofdstukNummer !== 1 && this.chapterWrapper) {
-        const y = this.chapterWrapper.nativeElement.getBoundingClientRect().top - 170 + window.scrollY;
+        const fontSize = window.getComputedStyle(this.chapterWrapper.nativeElement).fontSize;
+        const y =
+          this.chapterWrapper.nativeElement.getBoundingClientRect().top - parseInt(fontSize) * 9 + window.scrollY;
         window.scroll({
           top: y,
           behavior: 'smooth',

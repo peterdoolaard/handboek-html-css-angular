@@ -29,7 +29,6 @@ export class VoorbeeldenComponent implements OnInit {
     this.chapters$ = this.sharedService.loadAllChapters().pipe(shareReplay(1));
 
     this.route.queryParams.subscribe((json) => {
-      console.log(json);
       const hoofdstuk = json['hoofdstuk'] as string | undefined;
       if (hoofdstuk) {
         this.chapters$
