@@ -1,0 +1,24 @@
+.repeat {
+  inline-size: 100%;
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  margin-block-start: 3em;
+
+  & div {
+    background-color: lightgrey;
+    background-image: url("assets/voorbeelden/schelp_100.png");
+    block-size: 200px;
+    flex: 0 1 200px;
+    inline-size: 200px;
+  }
+
+  & div:nth-child(2) {
+    background-repeat: repeat-x;
+  }
+
+  & div:nth-child(3) {
+    background-repeat: repeat-y;
+  }
+}

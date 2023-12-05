@@ -1,0 +1,27 @@
+.attachment {
+  background-attachment: fixed;
+  background-clip: border-box;
+  background-color: hsl(200deg 75% 50%);
+  background-image: url('assets/voorbeelden/schelp_200.png');
+  background-origin: border-box;
+  background-position: 40% 50%;
+  background-repeat: round;
+  background-size: 10em 10em;
+
+  block-size: 400px;
+  border: 2em solid hsla(50deg 75% 50% / 0.5);
+  inline-size: 80%;
+  max-inline-size: 300px;
+  margin-top: 2rem;
+  overflow: auto;
+  overscroll-behavior: contain;
+  text-align: center;
+
+  & p {
+    background: hwb(0deg 100% 0% / 0.5);
+  }
+}
+
+.scroll-container {
+  block-size: 50vh;
+}
