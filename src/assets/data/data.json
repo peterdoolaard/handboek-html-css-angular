@@ -450,8 +450,15 @@
   {
     "hoofdstukNummer": 12,
     "codeNummer": 1,
-    "codeTitel": "Navigatie met lijst",
+    "codeTitel": "Kleurfuncties: rgba, hsl, hwb, oklab, oklch",
     "codeHtml": "/assets/data/12.1.html",
     "codeCss": "/assets/data/12.1.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 2,
+    "codeTitel": "Het effect van transparantie",
+    "codeHtml": "/assets/data/12.2.html",
+    "codeCss": "/assets/data/12.2.css"
   }
 ]

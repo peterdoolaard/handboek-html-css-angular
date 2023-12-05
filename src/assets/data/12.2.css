@@ -1,0 +1,33 @@
+.transparantie {
+  background-color: hsl(20, 100%, 50%);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 100px;
+  inline-size: 100%;
+  margin-block-start: 2em;
+  place-items: center;
+
+  & span {
+    block-size: 75%;
+    color: black;
+    display: grid;
+    inline-size: 75%;
+    place-items: center;
+
+    &:nth-child(1) {
+      background-color: hsl(0deg 0% 100% / 0.2);
+    }
+
+    &:nth-child(2) {
+      background-color: hsl(0deg 0% 100% / 0.4);
+    }
+
+    &:nth-child(3) {
+      background-color: hsl(0deg 0% 100% / 0.6);
+    }
+
+    &:nth-child(4) {
+      background-color: hsl(0deg 0% 100% / 0.8);
+    }
+  }
+}
