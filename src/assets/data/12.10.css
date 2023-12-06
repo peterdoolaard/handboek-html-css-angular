@@ -1,0 +1,32 @@
+h4 {
+  background: linear-gradient(
+    to right,
+    #f06ca9,
+    #f0608c,
+    #ef3f50,
+    #ed1e24,
+    #f15d22,
+    #f58120,
+    #f78e1e,
+    #f5a31f,
+    #f5bd1e,
+    #f5d01c,
+    #f5de1a,
+    #f5e719,
+    #f5eb17,
+    #e2de25,
+    #b3c436,
+    #6aa341 50%,
+    #078e45,
+    #23bdbd,
+    #462e8d,
+    #8b278a
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-family: fantasy;
+  font-size: 4rem;
+  margin: 0;
+}

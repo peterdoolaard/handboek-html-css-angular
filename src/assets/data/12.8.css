@@ -1,0 +1,20 @@
+div > div:not([class]) {
+  inline-size: 100%;
+  block-size: 25vmin;
+  border: 1px solid black;
+}
+div[class] {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.radial :nth-child(1) {
+  background-image: radial-gradient(circle, white, black);
+}
+.radial :nth-child(2) {
+  background-image: radial-gradient(circle at left, white, black);
+}
+.radial :nth-child(3) {
+  background-image: radial-gradient(farthest-corner circle at right bottom, white, black);
+}

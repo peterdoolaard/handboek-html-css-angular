@@ -488,5 +488,33 @@
     "codeTitel": "Spelen met achtergronden",
     "codeHtml": "/assets/data/12.6.html",
     "codeCss": "/assets/data/12.6.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 7,
+    "codeTitel": "Kleurverloop: lineair",
+    "codeHtml": "/assets/data/12.7.html",
+    "codeCss": "/assets/data/12.7.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 8,
+    "codeTitel": "Kleurverloop: radiaal",
+    "codeHtml": "/assets/data/12.8.html",
+    "codeCss": "/assets/data/12.8.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 9,
+    "codeTitel": "Kleurverloop: repeterend",
+    "codeHtml": "/assets/data/12.9.html",
+    "codeCss": "/assets/data/12.9.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 10,
+    "codeTitel": "Kleurverloop en background-clip",
+    "codeHtml": "/assets/data/12.10.html",
+    "codeCss": "/assets/data/12.10.css"
   }
 ]

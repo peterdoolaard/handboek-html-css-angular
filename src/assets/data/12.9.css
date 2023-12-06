@@ -1,0 +1,25 @@
+div > div:not([class]) {
+  inline-size: 100%;
+  block-size: 25vmin;
+  border: 1px solid black;
+}
+div[class] {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.repeating :nth-child(1) {
+  background-image: repeating-linear-gradient(black, grey, white 50px);
+}
+.repeating :nth-child(2) {
+  background-image: repeating-linear-gradient(black, grey, white 50px, grey 70px);
+}
+.repeating :nth-child(3) {
+  background-image: repeating-linear-gradient(
+    to right,
+    white,
+    white 15px,
+    black 15px,
+    black 25px);
+}

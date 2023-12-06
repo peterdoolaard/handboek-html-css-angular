@@ -1,0 +1,31 @@
+div > div:not([class]) {
+  inline-size: 100%;
+  block-size: 25vmin;
+  border: 1px solid black;
+}
+div[class] {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+}
+
+.linear :nth-child(1) {
+  background-image: linear-gradient(180deg, black, white);
+}
+.linear :nth-child(2) {
+  background-image: linear-gradient(135deg, black, white);
+}
+.linear :nth-child(3) {
+  background-image: linear-gradient(black, grey, white, grey, black);
+}
+.linear :nth-child(4) {
+  background-image: linear-gradient(black, white, grey 50%);
+}
+.linear :nth-child(5) {
+  background-image: linear-gradient(to right, white 33%, black 33%, black 66%, white 66%);
+}
+.linear :nth-child(6) {
+  background-image: linear-gradient(to right, white 15px, black 15px);
+  background-size: 25px 1px; /* 25px is de breedte en 1px de hoogte van het verloop*/
+  background-repeat: repeat;
+}
