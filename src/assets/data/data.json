@@ -481,5 +481,12 @@
     "codeTitel": "Achtergrond ankeren",
     "codeHtml": "/assets/data/12.5.html",
     "codeCss": "/assets/data/12.5.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 6,
+    "codeTitel": "Spelen met achtergronden",
+    "codeHtml": "/assets/data/12.6.html",
+    "codeCss": "/assets/data/12.6.css"
   }
 ]

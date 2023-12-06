@@ -1,0 +1,55 @@
+[class*="laag"],
+figure {
+  background-attachment: fixed;
+  background-position: top center;
+  background-size: cover;
+  block-size: 50vmin;
+}
+.laag0 {
+  block-size: 100vh;
+  background-image: url("assets/voorbeelden/background-fixed_1.jpg");
+}
+.laag1 {
+  background-image: url("assets/voorbeelden/background-fixed_2.jpg");
+}
+.laag2 {
+  background-image: url("assets/voorbeelden/background-fixed_3.jpg");
+}
+.laag3 {
+  background-image: url("assets/voorbeelden/background-fixed_4.jpg");
+}
+header {
+  color: white;
+  inline-size: 75vw;
+  margin: 0 auto;
+  text-align: center;
+  text-shadow: 0 1px 2px black;
+}
+h1 {
+  font-size: 3em;
+  font-family: sans-serif;
+  margin-block-start: 0;
+  padding-block-start: .5em;
+}
+span {
+  display: block;
+  font-size: .7em;
+}
+.text {
+  background-color: white;
+  block-size: 100%;
+  inline-size: 50vw;
+  margin: 0 auto;
+  padding: 2em 1em;
+}
+figure {
+  background-image: url("assets/voorbeelden/background-fixed_1.jpg");
+}
+figcaption {
+  background-color: rgba(35,85,135,.2);
+  color: white;
+  inline-size: 35ch;
+  font-family: sans-serif;
+  margin-left: auto;
+  padding: .5em;
+}
