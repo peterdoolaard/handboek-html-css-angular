@@ -81,6 +81,7 @@ a:any-link, button, [type="button"] {
   font-family: var(--font-sans);
   font-size: 0.9rem;
   transition: all 200ms ease-in-out;
+  z-index: 1;
 
   &:hover {
     background: hsl(300deg 40% 70%);
