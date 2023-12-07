@@ -523,5 +523,12 @@
     "codeTitel": "Box-shadow begrijpen en maken",
     "codeHtml": "/assets/data/12.11.html",
     "codeCss": "/assets/data/12.11.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 12,
+    "codeTitel": "Beeldfilters",
+    "codeHtml": "/assets/data/12.12.html",
+    "codeCss": "/assets/data/12.12.css"
   }
 ]

@@ -1,0 +1,48 @@
+.grid {
+  display: flex;
+  flex-flow: wrap;
+  gap: 1em;
+  margin-block-end: 2em;
+}
+img {
+  inline-size: 320px;
+  block-size: auto;
+}
+h4 {
+  grid-column: 1 / 3;
+  flex: 1 0 100%;
+  font-size: 1.25rem;
+  inline-size: 100%;
+  margin-block-end: 0;
+}
+img:nth-of-type(2) {
+  filter: blur(10px);
+}
+img:nth-of-type(4) {
+  filter: brightness(150%);
+}
+img:nth-of-type(6) {
+  filter: contrast(50%);
+}
+img:nth-of-type(8) {
+  filter: drop-shadow(4px 4px 8px black);
+}
+img:nth-of-type(10) {
+  filter: grayscale(100%);
+}
+img:nth-of-type(12) {
+  filter: hue-rotate(90deg);
+}
+img:nth-of-type(14) {
+  filter:  invert();
+}
+img:nth-of-type(16) {
+  filter: opacity(50%);
+}
+img:nth-of-type(20) {
+  filter: sepia(100%);
+}
+img:nth-of-type(18) {
+  filter: saturate(200%);
+}
+
