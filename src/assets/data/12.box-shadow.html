@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin-block-end: 4rem;
+      text-align: center;
+    }
+
+    .container {
+      align-items: center;
+      display: grid;
+      gap: 8rem;
+      grid-auto-flow: row;
+      justify-content: center;
+      justify-items: center;
+
+      @media (min-width: 768px) {
+        grid-auto-flow: row;
+      }
+    }
+
+    .gimme-shadow {
+      --inset: ;
+      --x: 0;
+      --y: 0;
+      --blur: 0;
+      --spread: 0;
+      aspect-ratio: 1;
+      background: hwb(0 100% 2%);
+      block-size: 240px;
+      box-shadow: var(--inset) var(--x) var(--y) var(--blur) var(--spread) hwb(0 0% 100% / 0.1);
+      display: grid;
+      font-family: sans-serif;
+      font-size: 1.25rem;
+      place-content: center;
+    }
+
+    .controls {
+      background: hwb(0 100% 20%);
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: max-content 4ch max-content 1fr;
+      inline-size: 60ch;
+      overflow-x: auto;
+      padding: 0.5rem;
+
+      & output {
+        text-align: center;
+      }
+
+      & [type="checkbox"] {
+        grid-column: -1 / -3;
+        justify-self: start;
+      }
+
+      & button {
+        background: transparent;
+        block-size: 24px;
+        border: none;
+        inline-size: 24px;
+        padding: 0;
+      }
+
+      & p {
+        grid-column: 1 / -1;
+
+        & code {
+          display: block;
+        }
+      }
+    }
+  </style>
+
+</head>
+<body>
+<header>
+  <h1>Box-shadow creator</h1>
+</header>
+<main class="container">
+  <div class="gimme-shadow">
+    <p>Gimme <s>shelter</s> shadow</p>
+  </div>
+  <form class="controls">
+    <label for="inset">schaduw binnen</label>
+    <output data-inset=""></output>
+    <input id="inset" type="checkbox">
+
+    <label for="x">x-verschuiving</label>
+    <output data-x="1"></output>
+    <input id="x" max="50" min="-50" step="1" type="range">
+    <button
+      type="button"
+      onclick="handleClick(controlX, outputX, '--x')"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-122q-121-15-200.5-105.5T160-440q0-66 26-126.5T260-672l57 57q-38 34-57.5 79T240-440q0 88 56 155.5T440-202v80Zm80 0v-80q87-16 143.5-83T720-440q0-100-70-170t-170-70h-3l44 44-56 56-140-140 140-140 56 56-44 44h3q134 0 227 93t93 227q0 121-79.5 211.5T520-122Z"/></svg>
+    </button>
+
+    <label for="y">y-verschuiving</label>
+    <output data-y="1"></output>
+    <input id="y" max="50" min="-50" step="1" type="range">
+    <button
+      type="button"
+      onclick="handleClick(controlY, outputY, '--y')"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-122q-121-15-200.5-105.5T160-440q0-66 26-126.5T260-672l57 57q-38 34-57.5 79T240-440q0 88 56 155.5T440-202v80Zm80 0v-80q87-16 143.5-83T720-440q0-100-70-170t-170-70h-3l44 44-56 56-140-140 140-140 56 56-44 44h3q134 0 227 93t93 227q0 121-79.5 211.5T520-122Z"/></svg>
+    </button>
+
+    <label for="blur">vervaging</label>
+    <output data-blur="1"></output>
+    <input id="blur" max="50" min="-50" step="1" type="range">
+    <button
+      type="button"
+      onclick="handleClick(controlBlur, outputBlur, '--blur')"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-122q-121-15-200.5-105.5T160-440q0-66 26-126.5T260-672l57 57q-38 34-57.5 79T240-440q0 88 56 155.5T440-202v80Zm80 0v-80q87-16 143.5-83T720-440q0-100-70-170t-170-70h-3l44 44-56 56-140-140 140-140 56 56-44 44h3q134 0 227 93t93 227q0 121-79.5 211.5T520-122Z"/></svg>
+    </button>
+
+    <label for="spread">verspreiding</label>
+    <output data-spread="1"></output>
+    <input id="spread" max="50" min="-50" step="1" type="range">
+    <button
+      type="button"
+      onclick="handleClick(controlSpread, outputSpread, '--spread')"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="M440-122q-121-15-200.5-105.5T160-440q0-66 26-126.5T260-672l57 57q-38 34-57.5 79T240-440q0 88 56 155.5T440-202v80Zm80 0v-80q87-16 143.5-83T720-440q0-100-70-170t-170-70h-3l44 44-56 56-140-140 140-140 56 56-44 44h3q134 0 227 93t93 227q0 121-79.5 211.5T520-122Z"/></svg>
+    </button>
+    <p><strong>CSS-regel</strong> <code class="css-rule"></code></p>
+  </form>
+
+</main>
+<script>
+  const controlInset = document.querySelector('#inset');
+  const controlX = document.querySelector('#x');
+  const controlY = document.querySelector('#y');
+  const controlBlur = document.querySelector('#blur');
+  const controlSpread = document.querySelector('#spread');
+  const outputInset = document.querySelector('[data-inset]');
+  const outputX = document.querySelector('[data-x]');
+  const outputY = document.querySelector('[data-y]');
+  const outputBlur = document.querySelector('[data-blur]');
+  const outputSpread = document.querySelector('[data-spread]');
+  let inset = '';
+  const box = document.querySelector('.gimme-shadow');
+  const css = document.querySelector('.css-rule');
+
+  function init() {
+    outputInset.innerHTML = null;
+    outputX.innerHTML= controlX.value;
+    outputY.innerHTML = controlY.value;
+    outputBlur.innerHTML = controlBlur.value;
+    outputSpread.innerHTML = controlSpread.value;
+    css.innerHTML = `box-shadow: 0px 0px 0px 0px hwb(0 0% 100% / 0.1);`;
+    document.addEventListener('input', onInput);
+  }
+
+  function onInput(event) {
+    if (event.target === controlInset) {
+      inset = controlInset.checked ? 'inset' : '';
+      outputInset.innerHTML = inset;
+      box.style.setProperty('--inset', inset);
+      css.innerHTML = `box-shadow: ${inset} ${controlX.value}px ${controlY.value}px ${controlBlur.value}px ${controlSpread.value}px hwb(0 0% 100% / 0.1);`;
+    }
+    if (event.target === controlX) {
+      outputX.innerHTML = controlX.value + 'px';
+      box.style.setProperty('--x', controlX.value + 'px');
+      css.innerHTML = `box-shadow: ${inset} ${controlX.value}px ${controlY.value}px ${controlBlur.value}px ${controlSpread.value}px hwb(0 0% 100% / 0.1);`;
+
+    }
+    if (event.target === controlY) {
+      outputY.innerHTML = controlY.value;
+      box.style.setProperty('--y', controlY.value + 'px');
+      css.innerHTML = `box-shadow: ${inset} ${controlX.value}px ${controlY.value}px ${controlBlur.value}px ${controlSpread.value}px hwb(0 0% 100% / 0.1);`;
+    }
+    if (event.target === controlBlur) {
+      outputBlur.innerHTML = controlBlur.value;
+      box.style.setProperty('--blur', controlBlur.value + 'px');
+      css.innerHTML = `box-shadow: ${inset} ${controlX.value}px ${controlY.value}px ${controlBlur.value}px ${controlSpread.value}px hwb(0 0% 100% / 0.1);`;
+    }
+    if (event.target === controlSpread) {
+      outputSpread.innerHTML = controlSpread.value;
+      box.style.setProperty('--spread', controlSpread.value + 'px');
+      css.innerHTML = `box-shadow: ${inset} ${controlX.value}px ${controlY.value}px ${controlBlur.value}px ${controlSpread.value}px hwb(0 0% 100% / 0.1);`;
+    }
+  }
+
+  function handleClick(input, output, prop) {
+    input.value = '0';
+    output.innerHTML = '0';
+    box.style.setProperty(prop, '0');
+    css.innerHTML = `box-shadow: ${inset} ${controlX.value}px ${controlY.value}px ${controlBlur.value}px ${controlSpread.value}px hwb(0 0% 100% / 0.1);`;
+  }
+
+
+  init();
+
+</script>
+</body>
+</html>
