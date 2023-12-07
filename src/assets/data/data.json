@@ -530,5 +530,12 @@
     "codeTitel": "Beeldfilters",
     "codeHtml": "/assets/data/12.12.html",
     "codeCss": "/assets/data/12.12.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 13,
+    "codeTitel": "Kleuren mengen met blend-mode",
+    "codeHtml": "/assets/data/12.13.html",
+    "codeCss": "/assets/data/12.13.css"
   }
 ]

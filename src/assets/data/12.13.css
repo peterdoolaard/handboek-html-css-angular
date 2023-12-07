@@ -1,0 +1,14 @@
+.blend1 {
+  background-image: url('/assets/voorbeelden/patroon-steen.jpg');
+  block-size: auto;
+  inline-size: 100%;
+  opacity: .8;
+}
+.blend2 {
+  background-image: linear-gradient(hsla(0,100%,100%,.1), hsla(0,100%,100%,.5), hsla(0,100%,100%,.1));
+  font: 700 8em sans-serif;
+  margin-block: 1rem;
+  mix-blend-mode: overlay;
+  text-align: center;
+}
+
