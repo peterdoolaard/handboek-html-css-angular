@@ -162,13 +162,16 @@ a:any-link, button, [type="button"] {
 }
 
 .actions {
-  display: flex;
+  background: oklch(0.91 0.04 325.93);
+  border-radius: 4px;
   column-gap: 1em;
+  display: flex;
+  margin-block: 1.5rem 1rem;
+  padding: 1em 0.5em;
 }
 
 .code-edit__label {
   align-items: center;
-  border-radius: 1px;
   display: flex;
   font-family: SourceSans3 sans-serif;
   inline-size: 220px;
@@ -177,9 +180,22 @@ a:any-link, button, [type="button"] {
   input {
     display: inline-block;
     margin-inline-start: 2rem;
+    opacity: 0;
 
-    &:focus-visible {
-      outline: 1px solid blue;
+    &:focus-within:focus-visible {
+      outline: 2px solid blue;
+      outline-color: -webkit-focus-ring-color;
+      outline-color: -moz-mac-focusring;
+      outline-offset: 6px;
+    }
+
+    &:checked ~ .code-edit__thumb {
+      background: hsl(300deg 40% 35%);
+      right: 0;
+    }
+
+    &:checked + .code-edit__slider {
+      background: hsl(300deg 40% 85%);
     }
   }
 }
@@ -201,26 +217,6 @@ a:any-link, button, [type="button"] {
   position: absolute;
   right: 1.4em;
   transition: all 200ms ease-in-out;
-}
-
-input:checked ~ .code-edit__thumb {
-  background: hsl(300deg 40% 35%);
-  right: 0;
-}
-
-input:checked + .code-edit__slider {
-  background: hsl(300deg 40% 85%);
-}
-
-.code-edit__label > input {
-  opacity: 0;
-}
-
-.code-edit__label:focus-within {
-  outline: 2px solid blue;
-  outline-color: -webkit-focus-ring-color;
-  outline-color: -moz-mac-focusring;
-  outline-offset: 6px;
 }
 
 .btn-reset-code {

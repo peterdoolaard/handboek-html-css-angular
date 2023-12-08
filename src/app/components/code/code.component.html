@@ -17,7 +17,8 @@
           >
             <span *ngIf="figureContainerInner.classList.contains('__expanded');else uitVouwen">Invouwen</span>
             <ng-template #uitVouwen>
-              <span>Uitvouwen</span></ng-template>
+              <span>Uitvouwen</span>
+            </ng-template>
           </button>
         </header>
         <div
@@ -32,8 +33,19 @@
             [example]="example"
             [toggleEdit]="toggleEdit"
           ></code-example-view>
+          <div class="actions">
+            <label class="code-edit__label">Bewerken&nbsp;
+              <span *ngIf="!toggleEdit.checked">inschakelen</span>
+              <span *ngIf="toggleEdit.checked">uitschakelen</span>
+              <input #toggleEdit type="checkbox">
+              <span class="code-edit__slider"></span>
+              <span class="code-edit__thumb"></span>
+            </label>
+            <button #btnReset class="btn-reset-code" hidden type="button">Code herstellen</button>
+          </div>
           <div #codeWrapper class="code-wrapper">
             <pre class="language-html">
+              <button>HTML invouwen</button>
               <code
                 #exampleHtml
                 class="example-html"
@@ -63,16 +75,6 @@
                 <span class="screen-reader-text">Kopieer de code</span>
               </button>
             </pre>
-          </div>
-          <div class="actions">
-            <label class="code-edit__label">Bewerken&nbsp;
-              <span *ngIf="!toggleEdit.checked">inschakelen</span>
-              <span *ngIf="toggleEdit.checked">uitschakelen</span>
-              <input #toggleEdit type="checkbox">
-              <span class="code-edit__slider"></span>
-              <span class="code-edit__thumb"></span>
-            </label>
-            <button #btnReset class="btn-reset-code" hidden type="button">Code herstellen</button>
           </div>
         </div>
       </figure>
