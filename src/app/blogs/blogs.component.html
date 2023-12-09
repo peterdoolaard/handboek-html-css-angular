@@ -1,0 +1,61 @@
+<h2>CSS-selectors nesten</h2>
+
+<p>In de loop van 2023 werd het mogelijk om CSS-regels te nesten. Hoe werkt het nesten van CSS en wat hebt u
+  eraan?</p>
+<p>De afbeelding is het resultaaBekijk de volgende code. Het is de HTML van voorbeeld 12.4. De HTML bestaat uit een
+  parent-div met een
+  klasse en twee child-divs. De child-divs krijgen met CSS een achtergrond die op verschillende manieren wordt herhaald. Dat ziet er met traditionele CSS zo uit.</p>
+<pre>
+<code class="language-css">.repeat {{ '{' }}
+  margin-top: 3em;
+  inline-size: 100%;
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+
+  .repeat div {{ '{' }}
+  background-color: lightgrey; background-image: url("assets/voorbeelden/schelp_100.png"); block-size: 150px;
+    inline-size: 325px;
+
+    &:first-child {{ '{' }}
+  background-repeat: space;
+    }
+
+    &:last-child {{ '{' }}
+  background-repeat: round;
+    }
+  }
+}</code>
+</pre>
+
+<pre>
+<code class="language-html">
+&lt;div class="repeat">
+  &lt;div>&lt;/div>
+  &lt;div>&lt;/div>
+&lt;/div>
+</code>
+</pre>
+<pre>
+<code class="language-css">.repeat {{ '{' }}
+  margin-top: 3em;
+  inline-size: 100%;
+  display: flex;
+  flex-flow: wrap;
+  gap: 1rem;
+
+  & div {{ '{' }}
+    background-color: lightgrey; background-image: url("assets/voorbeelden/schelp_100.png"); block-size: 150px;
+    inline-size: 325px;
+
+    &:first-child {{ '{' }}
+      background-repeat: space;
+    }
+
+    &:last-child {{ '{' }}
+      background-repeat: round;
+    }
+  }
+}</code>
+</pre>
+
