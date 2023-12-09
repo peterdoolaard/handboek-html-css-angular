@@ -120,6 +120,7 @@ a:any-link, button, [type="button"] {
   }
 
   & pre[class*="language-"] {
+    margin: 0;
     min-block-size: 3.5rem;
     padding: 1em 3em 1em 1em;
     position: relative;
@@ -163,10 +164,10 @@ a:any-link, button, [type="button"] {
 
 .actions {
   background: oklch(0.91 0.04 325.93);
-  border-radius: 4px;
+  border-radius: 4px 4px 0 0;
   column-gap: 1em;
   display: flex;
-  margin-block: 1.5rem 1rem;
+  margin-block: 1.5rem 0;
   padding: 1em 0.5em;
 }
 
