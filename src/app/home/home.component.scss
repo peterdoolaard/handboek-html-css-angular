@@ -5,39 +5,36 @@ aside {
   grid-column: 2;
 }
 
-.widget {
+.widget-container {
   box-shadow: var(--box-shadow-sharp);
   display: inline-block;
-
   margin-block: 2em;
 
-  + .widget {
+  + .widget-container {
     display: none;
+  }
+
+  img {
+    display: block;
   }
 }
 
-.widget img {
-  display: block;
-}
-
-.widget-container {
+.widget-content {
   background: hsl(300deg 40% 90%);
   display: flex;
   flex-flow: column;
-}
 
-@media (min-width: 600px) {
-  .widget-container {
+  @media (min-width: 600px) {
     flex-flow: row;
   }
 }
 
-.widget-text p {
+.widget-text {
   display: flex;
   flex-flow: column;
   padding: 1em;
-}
 
-.widget-text__title {
-  font-weight: 500;
+  &__title {
+    font-weight: 500;
+  }
 }
