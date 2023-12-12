@@ -6,6 +6,8 @@ import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
 })
 export class DynamicTitleStrategy extends TitleStrategy {
   override updateTitle(snapshot: RouterStateSnapshot) {
+    console.log(snapshot.url);
+    if (snapshot.url.indexOf('#') > 0) return;
     if (snapshot.url === '/') {
       document.title = 'Home | Handboek HTML5 en CSS';
     } else {

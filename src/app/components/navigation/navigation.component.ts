@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
-import {AppSharedService } from "../../services/app-shared.service";
+import { AppSharedService } from '../../services/app-shared.service';
 
 @Component({
   selector: 'app-navigation',
@@ -7,12 +7,13 @@ import {AppSharedService } from "../../services/app-shared.service";
   styleUrls: ['./navigation.component.scss']
 })
 export class NavigationComponent implements AfterViewInit {
-@ViewChild('navMain') navMain: ElementRef | undefined;
+  @ViewChild('navMain') navMain: ElementRef | undefined;
 
   constructor(
     private sharedService: AppSharedService,
     private renderer: Renderer2
-  ) {}
+  ) {
+  }
 
   ngAfterViewInit() {
     this.sharedService.classFixed$.subscribe(value => {
@@ -23,6 +24,6 @@ export class NavigationComponent implements AfterViewInit {
           this.renderer.removeClass(this.navMain.nativeElement, '__fixed');
         }
       }
-    })
+    });
   }
 }

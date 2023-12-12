@@ -26,6 +26,7 @@ import { LinksComponent } from './components/links/links.component';
 import { DownloadsComponent } from './downloads/downloads.component';
 import { DynamicTitleStrategy } from './services/dynamic-title-strategy.service';
 import { TestComponent } from './test/test.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { TestComponent } from './test/test.component';
     EscapeMarkupPipe,
     CodeExampleViewComponent,
     TestComponent,
+    BlogsComponent,
   ],
   imports: [
     BrowserModule,

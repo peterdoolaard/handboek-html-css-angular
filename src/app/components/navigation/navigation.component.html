@@ -1,13 +1,26 @@
 <nav class="nav-main" #navMain>
   <ul class="nav-list">
     <li>
-      <a routerLink="/" routerLinkActive="" [routerLinkActiveOptions]="{ exact: true}" ariaCurrentWhenActive="page">Home</a>
+      <a routerLink="/"
+        routerLinkActive=""
+        [routerLinkActiveOptions]="{ exact: true}"
+        ariaCurrentWhenActive="page">Home</a>
     </li>
     <li>
-      <a routerLink="/voorbeelden" [queryParams]="{hoofdstuk: 1}" routerLinkActive="" ariaCurrentWhenActive="page">Voorbeelden 6e editie</a>
+      <a routerLink="/voorbeelden"
+        [queryParams]="{hoofdstuk: 1}"
+        routerLinkActive=""
+        ariaCurrentWhenActive="page">Voorbeelden 6e editie</a>
     </li>
     <li>
-      <a routerLink="/downloads" routerLinkActive="" ariaCurrentWhenActive="page">Downloads</a>
+      <a routerLink="/blogs"
+        routerLinkActive=""
+        ariaCurrentWhenActive="page">Artikelen</a>
+    </li>
+    <li>
+      <a routerLink="/downloads"
+        routerLinkActive=""
+        ariaCurrentWhenActive="page">Downloads</a>
     </li>
   </ul>
 </nav>
