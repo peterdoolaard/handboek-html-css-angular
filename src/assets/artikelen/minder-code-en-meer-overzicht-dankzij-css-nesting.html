@@ -1,4 +1,4 @@
-<article>
+<article class="article">
     <h2>Minder code en meer overzicht dankzij CSS Nesting</h2>
     <p>
       <strong>In de loop van 2023 werd het mogelijk om CSS-regels te nesten. Hoe werkt het nesten van CSS en wat hebt u eraan?</strong>
@@ -6,25 +6,25 @@
     <p>Het is u misschien opgevallen dat bij verschillende voorbeelden de CSS-code op deze site er iets anders uitziet dan in het boek. U ziet bijvoorbeeld niet dit:</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-p {{ '{' }}
-color: blue;
-{{ '}' }}
+p {
+  color: blue;
+}
 
-p strong {{ '{' }}
-color: red;
-{{ '}' }}
+p strong {
+  color: red;
+}
     </code></pre>
   <!--    @formatter:on-->
     <p>Maar u ziet dit. Dit is CSS-nesting:</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-p {{ '{' }}
-color: blue;
+p {
+  color: blue;
 
-  & strong {{ '{' }}
-color: red;
-{{ '}' }}
-{{ '}' }}
+  & strong {
+    color: red;
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <h3>CSS Nesting</h3>
@@ -46,44 +46,44 @@ color: red;
     <p>Bij dieper nesten kan elke selector de parent zijn van een volgende selector.</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-.klasse1 {{ '{' }}
-color: red;
+.klasse1 {
+  color: red;
 
-  .klasse2 {{ '{' }}
-color: green;
+  .klasse2 {
+    color: green;
 
-    .klasse3 {{ '{' }}
-color: blue;
-{{ '}' }}
-{{ '}' }}
-{{ '}' }}
+    .klasse3 {
+      color: blue;
+    }
+  }
+}
 /* Is hetzelfde als: */
-.klasse1 {{ '{' }}
-color: red
-{{ '}' }}
+.klasse1 {
+  color: red
+}
 
-.klasse1 .klasse2 {{ '{' }}
-color: green;
-{{ '}' }}
+.klasse1 .klasse2 {
+  color: green;
+}
 
-.klasse1 .klasse2 .klasse3 {{ '{' }}
-color: blue;
-{{ '}' }}
+.klasse1 .klasse2 .klasse3 {
+  color: blue;
+}
     </code></pre>
   <!--    @formatter:on-->
     <p>De <code>&amp;</code> kan op meerdere plaatsen worden gebruikt. In het voorbeeld hieronder staat elke <code>
   &amp;</code> voor het element <code>ul</code>. De geneste lijst wordt dus rood.</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-ul {{ '{' }}
-& li {{ '{' }}
-color: green;
+ul {
+  & li {
+    color: green;
 
-    & li & li {{ '{' }}
-color: red;
-{{ '}' }}
-{{ '}' }}
-{{ '}' }}
+    & li & li {
+      color: red;
+    }
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <h3>Wel pseudoklassen, geen pseudo-elementen</h3>
@@ -91,26 +91,26 @@ color: red;
     u de content van <code>::before</code> en <code>::after</code> nooit te zien, terwijl de <code>.header</code> wel roze wordt bij <code>:hover</code>.</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-.header, .header::before, .header::after {{ '{' }}
+.header, .header::before, .header::after {
 
-&:hover {{ '{' }}
-background-color: deeppink;
+  &:hover {
+    background-color: deeppink;
     content: 'YO!'
-{{ '}' }}
-{{ '}' }}
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <p>In het volgende voorbeeld wordt het label van een ingeschakeld selectievakje wel roze bij aanwijzen. <code>:has
   </code> en <code>:checked</code> zijn pseudoklassen.</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-label:has(input:checked) {{ '{' }}
-color: blueviolet;
+label:has(input:checked) {
+  color: blueviolet;
 
-  &:hover {{ '{' }}
-color: deeppink;
-{{ '}' }}
-{{ '}' }}
+  &:hover {
+    color: deeppink;
+  }
+}
     </code></pre>
   <!--@formatter:on-->
     <h3>Nesten zonder &</h3>
@@ -118,26 +118,26 @@ color: deeppink;
   </i>), zoals in het voorbeeld hierboven. Een regel voor een klasse <code>.text-link</code> mag ook zonder:</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-a:any-link {{ '{' }}
-color: inherit;
+a:any-link {
+  color: inherit;
 
-  .text-link {{ '{' }}
-color: deeppink;
-{{ '}' }}
-{{ '}' }}
+  .text-link {
+    color: deeppink;
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <p>Als u onthoudt dat een selector die begint met een letter moet worden genest met een <code>&amp;</code>, zit u
     altijd goed. Het bovenste voorbeeld kunt u daarom ook schrijven als:</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-p {{ '{' }}
-color: blue;
+p {
+  color: blue;
 
-  :is(strong) {{ '{' }}
-color: red;
-{{ '}' }}
-{{ '}' }}
+  :is(strong) {
+    color: red;
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <p>De <code>&amp;</code> is niet nodig, want nu begint de selector niet met een letter.</p>
@@ -150,17 +150,17 @@ color: red;
     het een child moet zijn, kan dat op twee manieren:</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-p {{ '{' }}
-color: blue;
+p {
+  color: blue;
 
-  & > strong {{ '{' }}
-color: red;
-{{ '}' }}
+  & > strong {
+    color: red;
+  }
 
-> strong {{ '{' }}
-color: purple;
-{{ '}' }}
-{{ '}' }}
+  > strong {
+    color: purple;
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <p>De tekst in het element <code>strong</code> wordt paars, want de regels zijn even specifiek en dan geldt de normale
@@ -169,34 +169,34 @@ color: purple;
   selector met een letter). Maar een klasse heeft de <code>&amp;</code> niet nodig:</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-p {{ '{' }}
-color: blue;
+p {
+  color: blue;
 
-  & strong {{ '{' }}
-color: red;
-{{ '}' }}
+  & strong {
+    color: red;
+  }
 
-.letop {{ '{' }}
-color: white;
+  .letop {
+    color: white;
     background-color: red;
-{{ '}' }}
-{{ '}' }}
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <p>Ook een sibling werkt met en zonder <code>&amp;</code>:</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-label {{ '{' }}
-font-weight: 500;
+label {
+  font-weight: 500;
 
-  + input:invalid {{ '{' }}
-color: red;
-{{ '}' }}
+  + input:invalid {
+    color: red;
+  }
 
-& + input:invalid {{ '{' }}
-color: red;
-{{ '}' }}
-{{ '}' }}
+  & + input:invalid {
+    color: red;
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <h3>Selectors uitbreiden</h3>
@@ -205,21 +205,21 @@ color: red;
     <p>Een voorbeeld: <code class="language-html">&lt;button class="btn warn text"></code> geeft u bijvoorbeeld zo aan:</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-button {{ '{' }}
+button {
 ...
 
-  &.btn {{ '{' }}
-...
+  &.btn {
+  ...
 
-    &.warn {{ '{' }}
-...
+    &.warn {
+    ...
 
-      &.text {{ '{' }}
-...
-{{ '}' }}
-{{ '}' }}
-{{ '}' }}
-{{ '}' }}
+      &.text {
+      ...
+      }
+    }
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <p>Let op. Zonder <code>&amp;</code> of zodra er een spatie tussen de <code>&amp;</code> en de klasse staat, wordt het een afstammingsselector.</p>
@@ -238,17 +238,17 @@ button {{ '{' }}
     </code></pre>
     <p>Met Sass kunt u schrijven:</p>
     <pre><code class="language-css">
-.article {{ '{' }}
+.article {
 ...
 
-  &-heading {{ '{' }} /* wordt .article-heading */
-    ...
+  &-heading {  /* wordt .article-heading */
+  ...
 
-    &--sub {{ '{' }} /* wordt .article-heading--sub */
-      ...
-{{ '}' }}
-{{ '}' }}
-{{ '}' }}
+    &--sub {  /* wordt .article-heading--sub */
+    ...
+    }
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <p>In CSS is dit (tot nog toe) niet mogelijk. De specificatie is werk in uitvoering, dus wie weet verandert
@@ -260,15 +260,15 @@ button {{ '{' }}
     zien welke eigenschappen onder welke omstandigheden worden aangepast.</p>
   <!--    @formatter:off-->
     <pre><code class="language-css">
-.articles {{ '{' }}
-display: grid;
+.articles {
+  display: grid;
   grid-template-columns: 1fr;
   column-gap: 1rem;
 
-  @media (min-width: 768px) {{ '{' }}
-grid-template-columns: repeat(12, 1fr);
-{{ '}' }}
-{{ '}' }}
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
     </code></pre>
   <!--    @formatter:on-->
     <h3>Kan ik het gebruiken?</h3>
