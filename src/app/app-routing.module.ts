@@ -3,7 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { VoorbeeldenComponent } from './voorbeelden/voorbeelden.component';
 import { DownloadsComponent } from './downloads/downloads.component';
-import { BlogsComponent } from './blogs/blogs.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { ArticleComponent } from './articles/article/article.component';
 
 const routes: Routes = [
   {
@@ -12,8 +13,13 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
-    path: 'blogs',
-    component: BlogsComponent,
+    path: 'artikelen',
+    component: ArticlesComponent,
+    pathMatch: 'full',
+  },
+  {
+    path: 'artikelen/:articleUrl',
+    component: ArticleComponent,
     pathMatch: 'full',
   },
   {

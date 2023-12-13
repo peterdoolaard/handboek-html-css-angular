@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from "@angular/common/http";
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { TitleStrategy } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { IntersectionObserverDirective } from './directives/intersection-observer.directive';
-import { HighlightService } from "./services/highlight.service";
+import { HighlightService } from './services/highlight.service';
 import { EscapeMarkupPipe } from './pipes/escape-markup.pipe';
 
 import { AppComponent } from './app.component';
@@ -15,7 +15,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { LogoComponent } from './components/header/logo/logo.component';
 import { TitleComponent } from './components/header/title/title.component';
 import { StampComponent } from './components/header/stamp/stamp.component';
-import { NavigationComponent } from "./components/navigation/navigation.component";
+import { NavigationComponent } from './components/navigation/navigation.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { VoorbeeldenComponent } from './voorbeelden/voorbeelden.component';
@@ -26,7 +26,9 @@ import { LinksComponent } from './components/links/links.component';
 import { DownloadsComponent } from './downloads/downloads.component';
 import { DynamicTitleStrategy } from './services/dynamic-title-strategy.service';
 import { TestComponent } from './test/test.component';
-import { BlogsComponent } from './blogs/blogs.component';
+import { ArticlesComponent } from './articles/articles.component';
+import { ArticleListComponent } from './articles/article-list/article-list.component';
+import { ArticleComponent } from './articles/article/article.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { BlogsComponent } from './blogs/blogs.component';
     EscapeMarkupPipe,
     CodeExampleViewComponent,
     TestComponent,
-    BlogsComponent,
+    ArticlesComponent,
+    ArticleListComponent,
+    ArticleComponent,
   ],
   imports: [
     BrowserModule,

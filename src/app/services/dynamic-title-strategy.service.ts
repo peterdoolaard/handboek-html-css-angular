@@ -6,13 +6,15 @@ import { RouterStateSnapshot, TitleStrategy } from '@angular/router';
 })
 export class DynamicTitleStrategy extends TitleStrategy {
   override updateTitle(snapshot: RouterStateSnapshot) {
-    console.log(snapshot.url);
     if (snapshot.url.indexOf('#') > 0) return;
     if (snapshot.url === '/') {
       document.title = 'Home | Handboek HTML5 en CSS';
     } else {
       if (snapshot.root.firstChild?.url[0].path === 'downloads') {
         document.title = 'Downloads | Handboek HTML5 en CSS';
+      }
+      if (snapshot.root.firstChild?.url[0].path === 'artikelen') {
+        document.title = 'Artikelen | Handboek HTML5 en CSS';
       }
       if (snapshot.root.firstChild?.url[0].path === 'voorbeelden') {
         const nummer = snapshot.root.queryParams['hoofdstuk'];

@@ -16,3 +16,10 @@ export interface CodeExample {
   codeHtml: string;
   codeCss: string;
 }
+
+export interface Article {
+  url: string;
+  title: string,
+  date: string,
+  summary: string
+}

@@ -2,11 +2,11 @@ import { AfterViewInit, Component } from '@angular/core';
 import { HighlightService } from '../services/highlight.service';
 
 @Component({
-  selector: 'app-blogs',
-  templateUrl: './blogs.component.html',
-  styleUrls: ['./blogs.component.scss'],
+  selector: 'app-articles',
+  templateUrl: './articles.component.html',
+  styleUrls: ['./articles.component.scss'],
 })
-export class BlogsComponent implements AfterViewInit {
+export class ArticlesComponent implements AfterViewInit {
   constructor(private highlightService: HighlightService) {}
 
   ngAfterViewInit() {
