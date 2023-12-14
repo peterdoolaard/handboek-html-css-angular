@@ -2,6 +2,12 @@
   padding-block-end: 5rem;
 }
 
+article:hover a {
+  text-decoration-color: oklch(0.46 0.14 327.53 / 1);
+  text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+}
+
 h2 {
   margin-block-end: 0.75rem;
 }
@@ -13,3 +19,4 @@ h3 {
 a {
   color: inherit;
 }
+
