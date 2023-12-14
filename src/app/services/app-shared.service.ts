@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, catchError, Observable, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
-import { Chapter, CodeExample, Link } from '../models';
+import { Chapter, CodeExample, Link, Article } from '../models';
 
 @Injectable({
   providedIn: 'root',
@@ -56,7 +56,15 @@ export class AppSharedService {
     return this.http.get(path, { responseType: 'text' }).pipe(catchError(this.handleError));
   }
 
+  loadArticlesList() {
+    return this.http.get<Article[]>('/assets/artikelen/artikelen.json');
+  }
+
+  getArticle(path: string) {
+    return this.http.get(path, { responseType: 'text' }).pipe(catchError(this.handleError));
+  }
+
   handleError(error: HttpErrorResponse) {
-    return throwError(() => new Error('Something bad happened; please try again later.'));
+    return throwError(() => new Error('Er is iets fout gegaan. Probeer het s.v.p. nog eens.'));
   }
 }
