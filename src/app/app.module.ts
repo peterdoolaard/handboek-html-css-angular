@@ -27,7 +27,6 @@ import { DownloadsComponent } from './downloads/downloads.component';
 import { DynamicTitleStrategy } from './services/dynamic-title-strategy.service';
 import { TestComponent } from './test/test.component';
 import { ArticlesComponent } from './articles/articles.component';
-import { ArticleListComponent } from './articles/article-list/article-list.component';
 import { ArticleComponent } from './articles/article/article.component';
 
 @NgModule({
@@ -50,7 +49,6 @@ import { ArticleComponent } from './articles/article/article.component';
     CodeExampleViewComponent,
     TestComponent,
     ArticlesComponent,
-    ArticleListComponent,
     ArticleComponent,
   ],
   imports: [

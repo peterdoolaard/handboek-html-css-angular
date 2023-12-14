@@ -38,10 +38,13 @@
       <a class="link-text" href="mailto:handboek@peterdoolaard.nl">handboek@peterdoolaard.nl</a></p>
   </article>
 
-<form class="form">
-  <div [formGroup]="formGroup">
-    <label class="form-label">Kies een hoofdstuk
+<form
+  class="form"
+  [formGroup]="formGroup"
+>
+    <label class="form-label" for="chapter-select">Kies een hoofdstuk</label>
       <select
+        id="chapter-select"
         class="form-select"
         formControlName="selectedHoofdstuk"
         (change)="findChapter()"
@@ -53,8 +56,6 @@
           Hoofdstuk {{ hoofdstuk.hoofdstukNummer }} - {{ hoofdstuk.hoofdstukTitel }}
         </option>
       </select>
-    </label>
-  </div>
 </form>
 </div>
 

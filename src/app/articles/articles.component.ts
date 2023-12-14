@@ -1,15 +1,23 @@
-import { AfterViewInit, Component } from '@angular/core';
-import { HighlightService } from '../services/highlight.service';
+import { Component, OnInit } from '@angular/core';
+import { AppSharedService } from '../services/app-shared.service';
+import { Observable, shareReplay } from 'rxjs';
+import { Article } from '../models';
 
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.scss'],
 })
-export class ArticlesComponent implements AfterViewInit {
-  constructor(private highlightService: HighlightService) {}
+export class ArticlesComponent implements OnInit {
+  articleList$!: Observable<Article[]>;
 
-  ngAfterViewInit() {
-    this.highlightService.highlightAll();
+  constructor(
+    private sharedService: AppSharedService
+  ) {
   }
+
+  ngOnInit() {
+    this.articleList$ = this.sharedService.loadArticlesList().pipe(shareReplay(1));
+  }
+
 }

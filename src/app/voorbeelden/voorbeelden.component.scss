@@ -1,17 +1,17 @@
 .form {
-  grid-column: 1 / span 2;
+  margin-block-start: 1em;
+  //grid-column: 1 / span 2;
 }
 
 .form-label {
   font-size: 1.17em;
-  margin-block-start: 0.5em;
 
   @media (min-width: 700px) {
-  align-items: center;
-  column-gap: 1rem;
-  display: grid;
-  grid-template-columns: var(--grid-columns);
-  justify-content: space-between;
+  //align-items: center;
+  //column-gap: 1rem;
+  //display: grid;
+  //grid-template-columns: var(--grid-columns);
+  //justify-content: space-between;
   }
 }
 

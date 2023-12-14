@@ -2,7 +2,8 @@
 /* ngStyle detects the display value and in return shows the alternative widget with the clean URL */
 /* [ngStyle]="{'display': widgetAd.computedStyleMap().get('display')?.toString() === 'none' ? 'inline-block' : 'none'}" */
 aside {
-  grid-column: 2;
+  container-type: inline-size;
+  display: inline-block;
 }
 
 .widget-container {
@@ -24,7 +25,7 @@ aside {
   display: flex;
   flex-flow: column;
 
-  @media (min-width: 600px) {
+  @container (min-width: 600px) {
     flex-flow: row;
   }
 }
