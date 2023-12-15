@@ -1,14 +1,18 @@
-<div class="articles">
+<div class="content-wrapper">
   <h2>Recente artikelen</h2>
   <ng-container *ngIf="articleList$ | async as articles">
   <article *ngFor="let article of articles">
-      <header>
-        <p><time datetime="article.date">{{ (article.date | date : 'd MMMM y')?.toLowerCase() }}</time></p>
-        <h3>
-          <a [routerLink]="[article.url]">{{ article.title }}</a>
-        </h3>
-      </header>
-      <p>{{ article.summary }}</p>
+    <header>
+      <p><time datetime="article.date">{{ (article.date | date : 'd MMMM y')?.toLowerCase() }}</time></p>
+      <h3>
+        <a [routerLink]="[article.url]">
+            {{ article.title }}
+        </a>
+      </h3>
+    </header>
+    <p>
+      {{ article.summary }}
+    </p>
   </article>
 </ng-container>
 </div>
