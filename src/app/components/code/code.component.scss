@@ -124,7 +124,7 @@ a:any-link, button, [type="button"] {
     min-block-size: 3.5rem;
     padding: 1em 3em 1em 1em;
     position: relative;
-    overflow-x: hidden;
+    overflow-x: auto;
 
     &::before {
       color: oklch(50% 0% 0);
