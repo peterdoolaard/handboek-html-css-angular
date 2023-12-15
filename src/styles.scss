@@ -68,6 +68,7 @@ ul {
 
 .main-content {
   padding: 0.5rem;
+  padding-block-end: 5rem;
 }
 
 
@@ -154,7 +155,7 @@ ul {
   @media (min-width: 768px) {
     grid-template-columns: repeat(12, 1fr);
 
-    :is(header, h2, h3, h4, pre) {
+    :is(header, h2, .h2, h3, h4, pre) {
       grid-column: 1 / -1;
     }
 
