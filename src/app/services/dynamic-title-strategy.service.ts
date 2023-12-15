@@ -15,6 +15,9 @@ export class DynamicTitleStrategy extends TitleStrategy {
       }
       if (snapshot.root.firstChild?.url[0].path === 'artikelen') {
         document.title = 'Artikelen | Handboek HTML5 en CSS';
+        if (snapshot.root.firstChild.params['articleUrl']) {
+          document.title = `${snapshot.root.firstChild.params['articleUrl']} | Handboek HTML5 en CSS`;
+        }
       }
       if (snapshot.root.firstChild?.url[0].path === 'voorbeelden') {
         const nummer = snapshot.root.queryParams['hoofdstuk'];
