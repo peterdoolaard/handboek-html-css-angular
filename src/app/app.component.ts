@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 import { AppSharedService } from './services/app-shared.service';
 
 @Component({
@@ -10,11 +11,27 @@ export class AppComponent implements AfterViewInit {
   @ViewChild('pageWrapper') pageWrapper!: ElementRef;
   @ViewChild('toTop') toTop!: ElementRef;
 
+  currentUrl: string = '';
+
   constructor(
     private sharedService: AppSharedService,
     private elementRef: ElementRef,
     private renderer: Renderer2,
-  ) {}
+    public router: Router
+  ) {
+    // TODO find a solution for the voorbeelden?hoofdstuk=1 path
+    // router.events.subscribe((e) => {
+    //   if (e instanceof NavigationEnd) {
+    //     if (e.url.indexOf('hoofdstuk')) {
+    //       this.currentUrl = '/voorbeelden';
+    //     } else if (e.url !== '') {
+    //       this.currentUrl = e.url;
+    //     } else {
+    //       this.currentUrl = '';
+    //     }
+    //   }
+    // });
+  }
 
   ngAfterViewInit() {
     this.sharedService.classFixed$.subscribe((value) => {
