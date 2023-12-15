@@ -1,19 +1,20 @@
-import { Component, ChangeDetectionStrategy } from '@angular/core';
-import { AppSharedService } from "../../services/app-shared.service";
+import { Component, ChangeDetectionStrategy, AfterViewInit } from '@angular/core';
+import { AppSharedService } from '../../services/app-shared.service';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  // changeDetection: ChangeDetectionStrategy.OnPush
 
 })
-export class HeaderComponent {
+export class HeaderComponent implements AfterViewInit {
 
   constructor(
     private sharedService: AppSharedService,
   ) {
   }
+
 
   ngAfterViewInit() {
     const element = document.querySelector('h1') as Element;
@@ -26,7 +27,7 @@ export class HeaderComponent {
           entry.target.classList.remove('blue');
           this.sharedService.navIsFixed(true);
         }
-      })
+      });
     }, {threshold: 0});
     intersectionObserver.observe(element);
   }

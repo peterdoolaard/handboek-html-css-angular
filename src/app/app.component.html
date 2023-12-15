@@ -1,7 +1,8 @@
 <div #pageWrapper class="page-wrapper">
+<!--  <a class="screen-reader-text" [routerLink]="[currentUrl]" [fragment]="'main-content'">Naar de hoofdinhoud</a>-->
   <app-header />
   <app-navigation />
-  <main class="main-content" tabindex="0">
+  <main class="main-content" id="main-content" tabindex="-1">
     <router-outlet></router-outlet>
   </main>
 </div>
