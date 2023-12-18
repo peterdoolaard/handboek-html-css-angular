@@ -6,7 +6,7 @@ import { AppSharedService } from '../../../services/app-shared.service';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
-  selector: 'code-example-view',
+  selector: 'app-code-example-view',
   templateUrl: './code-example-view.component.html',
   styleUrls: ['./code-example-view.component.scss'],
   encapsulation: ViewEncapsulation.ShadowDom,
