@@ -25,14 +25,14 @@
           #figureContainerInner
           class="figure-container__inner"
         >
-          <code-example-view
+          <app-code-example-view
             [btnReset]="btnReset"
             [codeWrapper]="codeWrapper"
             [exampleCss]="exampleCss"
             [exampleHtml]="exampleHtml"
             [example]="example"
             [toggleEdit]="toggleEdit"
-          ></code-example-view>
+          ></app-code-example-view>
           <div class="actions">
             <label class="code-edit__label">Bewerken&nbsp;
               <span *ngIf="!toggleEdit.checked">inschakelen</span>

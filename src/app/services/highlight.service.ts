@@ -22,7 +22,7 @@ export class HighlightService {
 
   highlightAll() {
     if (isPlatformBrowser(this.platformId)) {
-      Prism.highlightAll()
+      Prism.highlightAll();
       Prism.plugins.NormalizeWhitespace.setDefaults({
         'remove-trailing': true,
         'remove-indent': true,
@@ -37,7 +37,7 @@ export class HighlightService {
   }
 
   highlightAllUnder(element: HTMLElement) {
-    Prism.highlightAllUnder(element)
+    Prism.highlightAllUnder(element);
     Prism.plugins.NormalizeWhitespace.setDefaults({
       'remove-trailing': true,
       'remove-indent': true,

@@ -1,5 +1,5 @@
-import { BehaviorSubject, Observable, Subject } from "rxjs";
-import { debounceTime, filter } from "rxjs/operators";
+import { BehaviorSubject, Observable, Subject } from 'rxjs';
+import { debounceTime, filter } from 'rxjs/operators';
 
 export enum IntersectionStatus {
   Visible = 'Visible',
