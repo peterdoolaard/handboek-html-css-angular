@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 [class*="laag"],
 figure {
   background-attachment: fixed;
@@ -37,7 +40,7 @@ span {
 .text {
   background-color: white;
   block-size: 100%;
-  inline-size: 50vw;
+  inline-size: 100%;
   margin: 0 auto;
   padding: 2em 1em;
 }
