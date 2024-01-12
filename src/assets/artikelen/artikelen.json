@@ -4,6 +4,12 @@
     "title": "Minder code en meer overzicht dankzij CSS Nesting",
     "date": "2023-12-14",
     "summary": "In de loop van 2023 werd het mogelijk om CSS-regels te nesten. Hoe werkt het nesten van CSS en wat hebt u eraan?"
+  },
+  {
+    "url": "waarom-css-subgrid-zo-handig-is",
+    "title": "Waarom CSS Subgrid zo handig is",
+    "date": "2024-01-12",
+    "summary": "CSS Subgrid is beschikbaar in de meestgebruikte browsers en het wordt tijd om het toe te passen in uw projecten. Waarom is een subgrid zoveel handiger dan geneste grids?"
   }
 ]
 

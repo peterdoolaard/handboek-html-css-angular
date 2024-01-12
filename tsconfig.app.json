@@ -4,7 +4,9 @@
   "compilerOptions": {
     "outDir": "./out-tsc/app",
     "resolveJsonModule": true,
-    "types": []
+    "types": [
+      "@angular/localize"
+    ]
   },
   "files": ["src/main.ts"],
   "include": ["src/**/*.d.ts"]
