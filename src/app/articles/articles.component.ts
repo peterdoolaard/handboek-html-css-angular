@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { AppSharedService } from '../services/app-shared.service';
-import { Observable, shareReplay } from 'rxjs';
+import { Observable, shareReplay, tap } from 'rxjs';
 import { Article } from '../models';
 
 @Component({
@@ -17,7 +17,10 @@ export class ArticlesComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.articleList$ = this.sharedService.loadArticlesList().pipe(shareReplay(1));
+    this.articleList$ = this.sharedService.loadArticlesList().pipe(
+      shareReplay(1),
+      tap(result => result.sort((e1, e2) =>
+        e2.date.localeCompare(e1.date)))
+    );
   }
-
 }
