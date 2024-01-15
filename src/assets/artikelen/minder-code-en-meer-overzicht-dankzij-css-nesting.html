@@ -1,0 +1,290 @@
+<article class="article">
+  <header>
+    <p><time datetime="2023-12-14">14 december 2023</time></p>
+    <h2>Minder code en meer overzicht dankzij CSS Nesting</h2>
+  </header>
+  <p>
+    <strong>In de loop van 2023 werd het mogelijk om CSS-regels te nesten. Hoe werkt het nesten van CSS en wat hebt u eraan?</strong>
+  </p>
+  <p>Het is u misschien opgevallen dat bij verschillende voorbeelden de CSS-code op deze site er iets anders uitziet dan in het boek. U ziet bijvoorbeeld niet dit:</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+p {
+    color: blue;
+}
+
+p strong {
+    color: red;
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <p>Maar u ziet dit. Dit is CSS-nesting:</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+p {
+    color: blue;
+
+    strong {
+    color: red;
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <h3>CSS Nesting</h3>
+  <p>
+    <a class="link-text" href="https://drafts.csswg.org/css-nesting/">CSS Nesting</a> maakt het mogelijk om opmaakregels
+    in te sluiten, oftewel te nesten. Het voordeel daarvan is dat u veel minder vaak dezelfde selectors hoeft te
+    schrijven. De CSS bevat daardoor minder herhalingen. Bovendien lijkt de structuur van de CSS meer op de
+    HTML-boomstructuur. Dat maakt de CSS beter leesbaar. Tenminste, als u het nesten niet te ver doorvoert. In het
+    algemeen houdt u het bij twee tot hooguit drie niveaus.</p>
+  <h3>Nesting selector: &amp;</h3>
+  <p>Voor het nesten is een extra selector aan CSS toegevoegd: de <i>nesting selector</i> <code>&amp;</code>. Deze
+    selector representeert de parent van de geneste selector. Dankzij deze <code>&amp;</code> kunt u bijvoorbeeld
+    een keten van selectors gebruiken.</p>
+  <p>Knoppen worden nogal eens soms opgebouwd door verschillende klassen te gebruiken. Dan hebt u bijvoorbeeld dit:
+    <code class="language-html">&lt;button class="btn warn text"></code>. Met geneste CSS geeft u dit zo
+    aan:</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+button {
+    &.btn {
+    ...
+  }
+
+  &.warn {
+    ...
+  }
+
+  &.text {
+    ...
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <p>In de DevTools kunt u zien dat er drie declaraties voor de button worden gemaakt:</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+button.btn {...}
+button.warn {...}
+button.text {...}
+  </code></pre>
+  <!--    @formatter:on-->
+  <p>Let op. Zonder <code>&amp;</code> of zodra er een spatie tussen de <code>&amp;</code> en de klasse staat, wordt
+    het een afstammingsselector. Dan betekent het niet dit: <code class="language-html">&lt;button class="btn
+      warn text"></code>, maar iets als:</p>
+  <pre><code class="language-html">
+  <!--    @formatter:off-->
+  &lt;button>
+    &lt;span class="btn"> &lt;/span>
+    &lt;span class="warn"> &lt;/span>
+    &lt;span class="text">&lt;/span>
+  &lt;/button>
+    <!--    @formatter:on-->
+</code></pre>
+
+  <h3>Combinatieselectors: child, descendent, sibling</h3>
+  <p>Bij geneste CSS-regels gelden dezelfde regels voor combinators als wanneer de regels niet zijn genest. Dus als
+    het een child moet zijn, doet u dat zo:</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+p {
+    color: blue;
+
+    > strong {
+    color: red;
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <p>Algemene afstamming krijgt u vanzelf door niet de <code>&amp;</code> te gebruiken of door een spatie tussen de
+    <code>&amp;</code> en de selector te typen.
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+p {
+    color: blue;
+
+    strong { /* of &amp; strong */
+    color: red;
+  }
+
+  .letop {
+    color: white;
+    background-color: red;
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <p>Bij een sibling werkt het net zo:</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+label {
+    font-weight: 500;
+
+    + input:invalid {
+    color: red;
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <h3>De nesting selector combineren</h3>
+  <p>De betekenis van <code>&amp;</code> verandert op elk parentniveau. Op het eerste niveau is het <code>ul</code>. Op het tweede niveau is het <code>ul li</code>. De geneste lijst wordt dus rood.</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+ul {
+    & li { /* betekent ul li */
+    color: green;
+
+    & li {  /* betekent ul li li */
+      color: red;
+    }
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <p>De <code>&amp;</code> kan er ook achter staan. Het volgende voorbeeld geeft hetzelfde resultaat.</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+ul {
+    li &{ /* betekent ul li ul */
+    color: green;
+
+    & li {  /* betekent ul li ul li */
+      color: red;
+    }
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <h3>Wel pseudoklassen, geen pseudo-elementen</h3>
+  <p>De nesting selector kan wel pseudoklassen representeren, maar geen pseudo-elementen. In de volgende code krijgt
+    u de content van <code>::before</code> en <code>::after</code> nooit te zien, terwijl de <code>.header</code> wel roze wordt bij <code>:hover</code>.</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+.header, .header::before, .header::after {
+
+    &:hover {
+    background-color: deeppink;
+    content: 'YO!'
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <p>In het volgende voorbeeld wordt het label van een ingeschakeld selectievakje wel roze bij aanwijzen. <code>:has
+  </code> en <code>:checked</code> zijn pseudoklassen.</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+label:has(input:checked) {
+    color: blueviolet;
+
+    &:hover {
+    color: deeppink;
+  }
+}
+    <!--@formatter:on-->
+  </code></pre>
+  <h3>Klassenamen uitbreiden kan niet</h3>
+  <p>CSS biedt bijna dezelfde mogelijkheden voor nesten als een CSS-preprocessor zoals <a
+    class="link-text" href="https://sass-lang.com/">
+    Sass</a> en dat is echt fantastisch. De enige optie die ontbreekt is het uitbreiden van klassenamen, zoals in de
+    volgende HTML.</p>
+  <pre><code class="language-html">
+  <!--    @formatter:off-->
+&lt;article class="article">
+  &lt;h2 class="article-heading">
+    &lt;span class="article-heading--sub">&lt;/span>
+  &lt;/h2>
+&lt;/article>
+    <!--    @formatter:on-->
+  </code></pre>
+  <p>Met Sass kunt u schrijven:</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+.article {
+    ...
+
+      &-heading {  /* wordt .article-heading */
+  ...
+
+    &--sub {  /* wordt .article-heading--sub */
+    ...
+    }
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <p>In CSS is dit (tot nog toe) niet mogelijk. De specificatie is werk in uitvoering, dus wie weet verandert
+    dit nog.</p>
+  <h3>Media queries nesten</h3>
+  <p>Tot slot: ook media queries kunnen worden genest, net als andere @-regels zoals <code>@container</code>,
+    <code>@layer</code> of <code>@supports</code>. Dat maakt de CSS echt overzichtelijker, al is dat een persoonlijke
+    mening. De query met de bijbehorende aangepaste CSS komt onder de gewenste parentselector te staan, zodat direct is te
+    zien welke eigenschappen onder welke omstandigheden worden aangepast.</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+.articles {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1rem;
+
+    @media (min-width: 768px) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <h3>De volgorde van de declaraties</h3>
+  <p>Wanneer u binnen een selector gewone declaraties en geneste regels gebruikt, geldt niet automatisch de door u
+    geschreven volgorde. Bij het verwerken van de CSS plaatst de browser geneste regels onder gewone declaraties. Bij
+    gelijke specificiteit geldt dan de volgorderegel In het volgende voorbeeld wordt de tekst blauw.</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+article {
+    color: green;
+    & { color: blue; } /* &amp; betekent 'article' */
+  color: red;
+}
+
+/* want de browser ziet dit als  */
+article {
+    color: green;
+    color: red;
+    & { color: blue; }
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <p>Hierbij gelden ook de regels voor specificiteit. In het volgende voorbeeld wordt de tekst rood, want de
+    specificiteit van <code>:where</code> is 0.</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+article {
+    color: green;
+    color: red;
+    :where(&) { color: blue; }
+}
+  </code></pre>
+  <!--    @formatter:on-->
+  <h3>Specificiteit</h3>
+  <p>Bij het verwerken van geneste CSS wordt de specificiteit net zo berekend als bij <code>:is()</code>. De
+    uiteindelijke specificiteit wordt dus bepaald door de selector met de hoogste specificiteit. Het doet er
+    niet toe of die specifieke selector ook echt wordt gebruikt. Hij telt altijd mee.</p>
+  <p>In het volgende voorbeeld zal de tekst altijd rood zijn, ook als de <code>id="404"</code> niet in de HTML staat.</p>
+  <pre><code class="language-css">
+  <!--    @formatter:off-->
+.error, #404 {
+    p { color: red; } /* :is(.error, #404) p = 111 */
+}
+
+.error {
+    p { color: orange; } /* :is(.error) p = 011 */
+}
+    <!--    @formatter:on-->
+  </code></pre>
+  <h3>Kan ik het gebruiken?</h3>
+  <p>CSS Nesting is in de loop van 2023 geland in alle grote browsers. Eind 2023 wordt het ondersteund door de
+    nieuwste versies en dat is te weinig voor toepassing op algemene websites. Voor veilige, algemene toepassing moet de
+    ondersteuning eigenlijk <a href="https://caniuse.com/?search=nesting">minstens twee browserversies</a> teruggaan.
+    CSS Nesting is geen <i>progressive enhancement</i>. Als de browser het niet kent, valt een groot deel van de opmaak weg.</p>
+  <p>Op een site zoals deze, waar het publiek hoogstwaarschijnlijk de laatste browserverie of zelfs een
+    previewversie gebruikt, is meer mogelijk. Ik maak dan ook volop gebruik van CSS Nesting
+    😀</p>
+</article>
