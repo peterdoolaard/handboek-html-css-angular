@@ -4,6 +4,12 @@
     "title": "Minder code en meer overzicht dankzij CSS Nesting",
     "date": "2023-12-14",
     "summary": "In de loop van 2023 werd het mogelijk om CSS-regels te nesten. Hoe werkt het nesten van CSS en wat hebt u eraan?"
+  },
+  {
+    "url": "een-kant-en-klaar-dialoogvenster",
+    "title": "Een kant en klaar dialoogvenster",
+    "date": "2024-01-26",
+    "summary": "Met het HTML-element <dialog> is een (modaal) dialoogvenster zo gemaakt. Wat CSS, een beetje JavaScript, en het werkt als een zonnetje."
   }
 ]
 
