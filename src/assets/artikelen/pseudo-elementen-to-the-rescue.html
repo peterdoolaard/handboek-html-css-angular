@@ -1,0 +1,238 @@
+<article class="article">
+  <header>
+    <p><time datetime="2024-02-02">2 februari 2024</time></p>
+    <h2>Pseudo-elementen to the rescue</h2>
+  </header>
+  <p>
+    <strong>Pseudo-elementen kunnen u redden als gewone elementen niet mogelijk zijn, bijvoorbeeld om een HTML-lijst vorm te geven.</strong>
+  </p>
+  <p>
+    Voor een opdrachtgever moest ik de opmaak van een lijst aanpassen. Dat klinkt niet heel spannend, maar het was toch een interessant klusje. Het ging om een lijst van items waaruit een keus kan worden gemaakt. Dat was aanvankelijk een eenvoudig tweekoloms grid zoals in de eerste afbeelding. Na een herziening van het ontwerp moest het worden zoals in de tweede afbeelding: twee door witruimte gescheiden kolommen. Hoe pakt u dat aan? Laten we de mogelijkheden bekijken aan de hand van <a href="https://codepen.io/dool/pen/poYpVWP?editors=1000">de live code op deze site</a>.
+  </p>
+  <figure>
+    <div class="wrapper">
+      <a href="assets/artikelen/images/pseudo-elementen-01.png">
+        <img alt="" class="__portrait" src="assets/artikelen/images/pseudo-elementen-01.png">
+      </a>
+      <a href="assets/artikelen/images/pseudo-elementen-02.png">
+        <img alt="" class="__portrait" src="assets/artikelen/images/pseudo-elementen-02.png">
+      </a>
+    </div>
+    <figcaption>Links de oorspronkelijke lijst en rechts het nieuwe ontwerp.</figcaption>
+  </figure>
+  <h3>De oorspronkelijke weergave</h3>
+  <p>In de kern is het een gewone HTML-lijst: het zijn geen willekeurige alinea’s, er zit een volgorde in de items en het is een opsomming van mogelijkheden. Het moet daarom niet alleen visueel een lijst zijn, maar ook voor ondersteunende technologie, zoals schermleessoftware. De elementen ol en li zijn dus in elk geval onmisbaar.</p>
+
+  <p>Het aantal items is bekend en het ontwerp vereist een vaste breedte voor de component met de lijst. De responsiviteit zit alleen in de mobiele weergave tot 700px. Dan staat de lijst in &eacute;&eacute;n kolom.</p>
+  <p>In dit voorbeeld is de body een flexbox waarin een container met een breedte van 700px gecentreerd wordt geplaatst. De container is relatief gepositioneerd om de eerste drie div’s absoluut te kunnen plaatsen. Deze div’s vormen, door ze wat naar links te schuiven, de schaduw, de rand en de witte achtergrond van de container. Het hoekje linksboven is afgeknipt met een clip-path.</p>
+
+  <aside class="article-aside">
+    <h3>Terzijde: positionering</h3>
+    <p>
+      <b>TL;DR&emsp; Gepositioneerde elementen hebben een eigen stapelvolgorde en die stapel ligt op de stapel van statische elementen.</b></p>
+    <p>In deze lay-out zijn veel elementen relatief en absoluut gepositioneerd. Zodra een element is gepositioneerd wordt het uit de normale flow/stapelvolgorde gehaald. Statische elementen (normale flow) komen dan onder gepositioneerde elementen te liggen. Om die reden moet de section met de header en het formulier &oacute;&oacute;k relatief worden geplaatst, anders is die content niet zichtbaar. Probeer dit uit door in de DevTools <code>position: relative</code> op de section uit te schakelen. Het label blijft dan wel zichtbaar, want dat is al relatief gepositioneerd om de input absoluut te kunnen plaatsen.</p>
+  </aside>
+
+  <p>De section (met als toegankelijke naam de koptekst) bevat de echte inhoud. De section is een flexbox in de richting kolom (items onder elkaar), met daarin gecentreerd de header en de form. Padding houdt de content vrij van de rand.</p>
+
+  <p>De header heeft een breedte van 100% en vult dus alle ruimte binnen de padding (het contentgebied van de section). De form moet iets inspringen en heeft daarom een breedte van 98%, ook ten opzichte van de section. Omdat de header en de form worden gecentreerd in de flexbox staat de smallere form netjes ingesprongen ten opzichte van de header.</p>
+
+  <p>De ol-lijst is een grid met een vast aantal rijen en twee gelijke kolommen. De lijstitems zijn de griditems en die zijn opgebouwd uit een label met daarin een pictogram, een aangepast keuzerondje en een teamnaam.</p>
+
+  <p>Het label is een flexbox waarin alle items links zijn uitgelijnd en verticaal zijn gecentreerd. Het pictogram wordt verborgen voor screenreaders en de toegankelijke naam is de teamnaam.</p>
+
+  <p>De grijze achtergrondkleur en de zwarte rand rondom de lijst zijn ingesteld op de ol. De kolommen worden gescheiden door een column-gap van 3rem.</p>
+  <h3>Opties voor de aangepaste weergave</h3>
+  <p>Toen het ontwerp werd aangepast, leverde dat twee vragen op:</p>
+  <ul>
+    <li>Hoe krijg je witruimte tussen de twee kolommen?</li>
+    <li>Hoe krijg je om elke kolom een zwarte rand?</li>
+  </ul>
+  <h4>Optie 1: een div om elke groep li-elementen</h4>
+  <p>Het zou snel zijn opgelost met twee extra containers om de twee kolommen heen, bijvoorbeeld zo:</p>
+
+  <pre><code class="language-html">
+    &ltol>
+      &ltdiv>
+        &ltli>linkerkolom&lt/li>
+      &lt/div>
+      &ltdiv>
+        &ltli>rechterkolom&lt/li>
+      &lt/div>
+    &lt/ol>
+  </code></pre>
+
+  <p>Maar helaas, en ook wel logisch, volgens de HTML-standaard mag een lijst-element alleen lijstitem-elementen als kind hebben. Daarmee vervalt optie 1.</p>
+  <h4>Optie 2: maak van de lijst een multi-column lay-out</h4>
+  <p>In plaats van met grid kunnen we met <code>column-count</code> ook twee kolommen maken. Misschien kunnen we dan randen toevoegen? Nee, er is dan nog steeds geen mogelijkheid om de achtergrondkleur en de rand om de afzonderlijke kolommen te zetten. Optie 2 vervalt ook.</p>
+  <h4>Optie 3: maakt extra elementen die n&iacute; in de weg zitten</h4>
+  <p>We komen steeds terug bij de kern van het probleem: het ontbreken van containers om de afzonderlijke kolommen. We hebben extra elementen nodig, maar in een lijst is dat niet toegestaan. Wat nu?</p>
+  <p>Als 'echte' elementen niet mogelijk zijn, hebben we ook nog pseudo-elementen! En daarmee kunnen we wel een visuele scheiding maken. Het is een beetje knutselen, maar het levert valide code op, &eacute;n het gewenste resultaat.</p>
+  <h3>Visueel gescheiden kolommen met ::before en ::after</h3>
+  <p>Met <code>::before</code> en <code>::after</code> van de <code>ol</code> kunnen we elke kolom afzonderlijk opmaken. Daarvoor moeten we deze pseudo-elementen absoluut plaatsen, dus de
+    <code>ol</code> moet <code>position: relative</code> krijgen.</p>
+  <p>Om ook maar iets met een pseudo-element te kunnen doen, moet er content zijn. Zonder content bestaat het niet. Eigenlijk doen we alleen alsof er content is, want er zijn alleen twee aanhalingstekens, zelfs geen spatie. Maar het is voldoende.</p>
+  <p>Merk op dat we alle aanpassingen aan de lijst doen binnen de media query. Tot 700px verandert er namelijk niets aan de lay-out.</p>
+
+  <pre><code class="language-css">@media (min-width: 700px) {
+  ol::before {
+    content: "";
+  }
+}</code></pre>
+
+  <p>Zodra deze CSS is toegevoegd, wordt een extra item toegevoegd aan de lijst. En omdat de lijst/ol een grid is, is het item net zo groot als elk ander item in de lijst, alleen is het leeg.</p>
+
+  <figure>
+    <div class="wrapper">
+      <a href="assets/artikelen/images/pseudo-elementen-03.png">
+        <img alt="" class="__portrait" src="assets/artikelen/images/pseudo-elementen-03.png">
+      </a>
+    </div>
+    <figcaption>Het pseudo-element ::before op zijn positie in de normale flow.</figcaption>
+  </figure>
+
+  <p>Maar dit is niet wat we willen. Daarom moet het absoluut worden geplaatst.</p>
+
+  <pre><code class="language-css">@media (min-width: 700px) {
+  ol::before {
+    content: "";
+    position: absolute;
+  }
+}</code></pre>
+
+  <p>Zodra we dat doen, is het formaat van het element 0 bij 0 pixels. Er is immers geen inhoud en het grid heeft er geen invloed meer op.</p>
+
+  <figure>
+    <div class="wrapper">
+      <a href="assets/artikelen/images/pseudo-elementen-04.png">
+        <img alt="" class="__portrait" src="assets/artikelen/images/pseudo-elementen-04.png">
+      </a>
+    </div>
+    <figcaption>Het pseudo-element ::before is absoluut gepositioneerd en daarmee uit de flow gehaald.</figcaption>
+  </figure>
+
+  <p>Om het pseudo-element de juiste afmetingen te geven, stellen we de uiteinden in met <code>top, bottom</code> en <code>left</code>. Dat zijn posities ten opzichte van de parent, dus het element
+    <code>ol</code>. De breedte is een verhaal apart. We proberen eerst de halve breedte van de lijst verminderd met de halve gap van het grid. Omdat we dan nog steeds niets zien, voegen we ook gelijk de rand toe.</p>
+
+  <pre><code class="language-css">@media (min-width: 700px) {
+  ol::before {
+    border: 2px solid #000;
+    border-block-start: none;
+    content: "";
+    inline-size: calc(50% - 1.5rem);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+}</code></pre>
+
+  <figure>
+    <div class="wrapper">
+      <a href="assets/artikelen/images/pseudo-elementen-05.png">
+        <img alt="" class="__portrait" src="assets/artikelen/images/pseudo-elementen-05.png">
+      </a>
+    </div>
+    <figcaption>De dikke rand komt doordat de rand van de ol niet samenvalt met de rand van het pseudo-element.</figcaption>
+  </figure>
+
+  <p>We komen in de buurt. Links en onder zien we een dikke rand. Dat komt doordat de rand van de ol niet samenvalt met de rand van het pseudo-element. En dat komt weer doordat een pseudo-element wordt gepositioneerd ten opzichte van de paddingbox van de parent. Het nulpunt is waar de padding ophoudt. De randen worden daardoor naast elkaar gezet.</p>
+  <p>We lossen het op door het nulpunt links en onder te verschuiven met de dikte van de rand. Dat heeft tot gevolg dat de rand rechts strak tegen de langste naam staat. We moeten de breedte vergroten. Bij 50% - 1rem is er net wat meer ruimte. Tot slot voegen we de achtergrondkleur toe die nu nog op de ol staat. De ol krijgt juist een transparante of witte achtergrond. Het resultaat is hetzelfde, want de laag eronder is de div met de witte achtergrond. Merk op dat we de transparante achtegrond alleen instellen op de media query. Op mobiel </p>
+
+  <pre><code class="language-css">@media (min-width: 700px) {
+  ol {
+    background-color: transparent;
+  }
+
+  ol::before {
+    background-color: #f1f1f1;
+    border: 2px solid #000;
+    border-block-start: none;
+    content: "";
+    inline-size: calc(50% - 1rem);
+    position: absolute;
+    top: 0;
+    bottom: -2px;
+    left: -2px;
+  }
+}</code></pre>
+
+  <figure>
+    <div class="wrapper">
+      <a href="assets/artikelen/images/pseudo-elementen-06.png">
+        <img alt="" class="__portrait" src="assets/artikelen/images/pseudo-elementen-06.png">
+      </a>
+    </div>
+    <figcaption>De rand staat op de goede plek en het lijstelement zelf heeft nu een witte achtergrond.</figcaption>
+  </figure>
+
+  <p>De linkerkolom is nu klaar en de rechterkolom staat op een witte achtergrond. Deze kolom krijgt de vormgeving van het pseudo-element
+    <code>::after</code>. Het is grotendeels dezelfde CSS als bij <code>::before</code>. Het verschil is dat nu het pseudo-element wordt uitgelijnd op rechterkant:
+    <code>left</code> wordt <code>right: -2px</code>.</p>
+
+  <pre><code class="language-css">@media (min-width: 700px) {
+  ol::after {
+    background: #f1f1f1;
+    border: 2px solid #000;
+    border-top: none;
+    content: "";
+    inline-size: calc(50% - 1rem);
+    position: absolute;
+    top: 0;
+    right: -2px;
+    bottom: -2px;
+  }
+}</code></pre>
+
+  <figure>
+    <div class="wrapper">
+      <a href="assets/artikelen/images/pseudo-elementen-07.png">
+        <img alt="" class="__portrait" src="assets/artikelen/images/pseudo-elementen-07.png">
+      </a>
+    </div>
+    <figcaption>De opmaak voor de rechterkolom is goed, maar waar is de content gebleven?</figcaption>
+  </figure>
+
+  <p>Bekijken we nu het resultaat, dan is de rechterkolom verdwenen. Wat nu weer!</p>
+  <p>De verklaring is dat we werken in een gepositioneerd omgeving waarin de stapelvolgorde is:</p>
+  <pre class="pseudo">lijst ol
+::before
+lijstitems li
+::after</pre>
+
+  <p>Omdat ::after het laatst komt, ligt die bovenop de rest. We kunnen dat controleren door de instelling right uit te schakelen (in de DevTools). Nu wordt de linkerkolom afgedekt.
+    De oplossing is: leg de lijstitems hoger op de stapel door ze z-index: 1 te geven.</p>
+
+  <pre><code class="language-css">@media (min-width: 700px) {
+  li {
+    z-index: 1;
+  }
+}</code></pre>
+
+  <figure>
+    <div class="wrapper">
+      <a href="assets/artikelen/images/pseudo-elementen-08.png">
+        <img alt="" class="__portrait" src="assets/artikelen/images/pseudo-elementen-08.png">
+      </a>
+    </div>
+    <figcaption>Met de z-index plaatsen we de lijstitems hoger op de stapel, zodat ze altijd op de pseudo-elementen liggen.</figcaption>
+  </figure>
+
+  <p>Tot slot verwijderen we de rand op de ol, want die verbindt onderaan nog de beide kolommen.</p>
+
+  <pre><code class="language-css">@media (min-width: 700px) {
+  ol {
+    border: none;
+  }
+}</code></pre>
+
+  <figure>
+    <div class="wrapper">
+      <a href="assets/artikelen/images/pseudo-elementen-02.png">
+        <img alt="" class="__portrait" src="assets/artikelen/images/pseudo-elementen-02.png">
+      </a>
+    </div>
+    <figcaption>Het eindresultaat.</figcaption>
+  </figure>
+
+</article>
