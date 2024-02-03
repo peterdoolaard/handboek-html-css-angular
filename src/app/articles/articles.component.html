@@ -3,7 +3,7 @@
   <ng-container *ngIf="articleList$ | async as articles">
   <article *ngFor="let article of articles">
     <header>
-      <p><time datetime="article.date">{{ (article.date | date : 'd MMMM y':'CET':'nl-NL')?.toLowerCase() }}</time></p>
+      <p><time [attr.datetime]="article.date">{{ (article.date | date : 'd MMMM y':'CET':'nl-NL')?.toLowerCase() }}</time></p>
       <h3>
         <a [routerLink]="[article.url]">
             {{ article.title }}
