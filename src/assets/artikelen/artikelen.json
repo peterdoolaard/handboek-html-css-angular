@@ -10,6 +10,12 @@
     "title": "Pseudo-elementen to the rescue",
     "date": "2024-02-02",
     "summary": "Pseudo-elementen kunnen u redden als gewone elementen niet mogelijk zijn, bijvoorbeeld om een HTML-lijst vorm te geven."
+  },
+  {
+    "url": "een-kant-en-klaar-dialoogvenster",
+    "title": "Een kant en klaar dialoogvenster",
+    "date": "2024-01-26",
+    "summary": "Met het HTML-element <dialog> is een (modaal) dialoogvenster zo gemaakt. Wat CSS, een beetje JavaScript, en het werkt als een zonnetje."
   }
 ]
 
