@@ -4,7 +4,18 @@
       <p><time datetime="2023-12-14">14 december 2023</time></p>
       <h2>Nieuwe pagina Artikelen</h2>
     </header>
-    <p>De site is uitgebreid met een pagina voor artikelen. Het eerste artikel gaat over een nieuwe mogelijkheid in CSS: het nesten van CSS-selectors.</p>
+    <p>De site is uitgebreid met een pagina voor <a class="link-text" routerLink="artikelen">artikelen</a>.
+      <ng-container *ngIf="articleList$ | async as articles">
+        De nieuwste artikelen:
+        <ul>
+          <li *ngFor="let article of articles | slice:0:3">
+            <a class="link-text" [routerLink]="'artikelen/'+[article.url]">
+              {{ article.title }}
+            </a>
+          </li>
+        </ul>
+      </ng-container>
+    </p>
   </article>
   <article>
     <header>
