@@ -1,0 +1,50 @@
+<article class="article">
+  <header>
+    <p><time datetime="2024-02-08">8 februari 2024</time></p>
+    <h2>Baseline: kan ik feature xyz gebruiken in productie?</h2>
+  </header>
+  <p>Wanneer is een nieuwe feature van HTML, CSS of JavaScript bruikbaar op een live-site? Het antwoord op deze vraag is iets makkelijker geworden met de invoering van het begrip baseline.</p>
+  <h3>Wat is de baseline?</h3>
+  <p>Baseline is een ‘streep in het zand’ die aangeeft of een feature klaar is voor algemeen gebruik. Dat was in de eerste versie het moment waarop de feature is ingebouwd in de belangrijkste browsers. Maar dat betekent niet dat deze daadwerkelijk beschikbaar is voor alle gebruikers en dat helpt webdevelopers nauwelijks verder. Daarom is besloten twee strepen te trekken.</p>
+  <p>In de nieuwe definitie zijn er twee baselines:</p>
+  <ul><li><b>Nieuw beschikbaar.</b> Het is interoperabel, wat wil zeggen dat de belangrijkste browsers het ondersteunen.</li>
+    <li><b>Breed beschikbaar.</b> De feature kan in het algemeen veilig worden gebruikt. Dit punt wordt bereikt 30 maanden nadat de feature nieuw beschikbaar was.</li>
+  </ul>
+  <p>De baseline wordt gebaseerd op beschikbaarheid in Chrome, Edge, Firefox en Safari.</p>
+  <h3>Hoe hard is de baseline?</h3>
+  <p>Een streep in het zand is geen harde grens. 30 maanden is een ruime, veilige richtlijn gebaseerd op wereldwijd gebruik.</p>
+  <p>Een webapplicatie voor een specifieke groep waarvan bekend is dat die altijd een bijgewerkte browser gebruikt, kan vertrouwen op ‘nieuw beschikbaar’. Of zelfs nog eerder als de specifieke browser het al ondersteunt.</p>
+  <p>In alle ander gevallen is voorzichtigheid verstandig. In principe wilt u geen gebruikers uitsluiten door niet-ondersteunde features toe te passen. We kennen wilswaar de evergreen browser die veel updates krijgt en die ook klaarzet, maar een gebruiker moet altijd nog het laatste zetje geven. Er zijn mensen die updates uitstellen of bewust vermijden, die niet kunnen updaten omdat er iets fout zit dat ze niet kunnen oplossen, of die oudere hardware gebruiken waarop de nieuwste browserversie niet wordt geïnstalleerd (denk iPad of iPhone).</p>
+  <h3>Waar vindt u de baseline?</h3>
+  <p>Het Mozilla Developer Network, beter bekend als MDN, publiceert de baseline in de naslag voor HTML, CSS en JavaScript. Op dezelfde pagina is ook te vinden vanaf welke browserversie de feature beschikbaar is.</p>
+  <figure>
+      <a href="assets/artikelen/images/baseline-01.png">
+        <img alt="" src="assets/artikelen/images/baseline01.png">
+      </a>
+    <figcaption>Het HTML-element dialog is hier 23 maanden in alle browsers beschikbaar, vandaar de baseline nieuw beschikbaar.</figcaption>
+  </figure>
+<figure>
+      <a href="assets/artikelen/images/baseline-02.png">
+        <img alt="" src="assets/artikelen/images/baseline02.png">
+      </a>
+    <figcaption>De CSS-eigenschap grid heeft baseline breed beschikbaar.</figcaption>
+  </figure>
+<figure>
+      <a href="assets/artikelen/images/baseline-03.png">
+        <img alt="" src="assets/artikelen/images/baseline03.png">
+      </a>
+    <figcaption>De Popover API (JavaScript) is nog niet beschikbaar in Firefox: geen baseline.</figcaption>
+  </figure>
+
+  <p>Misschien mist u nu de website caniuse.com. Deze publiceert de baseline ook. Hoewel Can I Use ook zelf nieuwe features test, baseert het zich vaak op data van MDN. Daarmee is MDN de beste bron, maar u kunt vanwege het gemakkelijk zoeken ook Can I Use gebruiken.</p>
+  <aside class="article-aside">
+    <h3>Meer over de baseline</h3>
+    <ul>
+      <li><a class="link-text" href="https://web.dev/blog/introducing-baseline">Introducing Baseline</a></li>
+      <li><a class="link-text" href="https://web.dev/articles/baseline-features">Baseline features you can use today</a></li>
+      <li><a class="link-text" href="https://developer.mozilla.org/en-US/blog/baseline-unified-view-stable-web-features/">Introducing Baseline: a unified view of stable web features</a></li>
+      <li><a class="link-text" href="https://web.dev/blog/baseline2023">Baseline 2023</a></li>
+    </ul>
+  </aside>
+
+</article>
