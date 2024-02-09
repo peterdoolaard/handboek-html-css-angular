@@ -4,10 +4,10 @@
       <p><time datetime="2023-12-14">14 december 2023</time></p>
       <h2>Nieuwe pagina Artikelen</h2>
     </header>
-    <p>De site is uitgebreid met een pagina voor <a class="link-text" routerLink="artikelen">artikelen</a>.
+    <p>De site is uitgebreid met een pagina voor <a class="link-text" routerLink="artikelen">artikelen</a>.</p>
       <ng-container *ngIf="articleList$ | async as articles">
-        De nieuwste artikelen:
-        <ul>
+        <p>De nieuwste artikelen:</p>
+        <ul role="list">
           <li *ngFor="let article of articles | slice:0:3">
             <a class="link-text" [routerLink]="'artikelen/'+[article.url]">
               {{ article.title }}
@@ -15,7 +15,6 @@
           </li>
         </ul>
       </ng-container>
-    </p>
   </article>
   <article>
     <header>
@@ -72,26 +71,27 @@
           <span>Van Duuren Media, 2022</span>
         </p>
       </div>
-    </a> <a
-    [ngStyle]="{'display': widgetAd.computedStyleMap().get('display')?.toString() === 'none' ? 'inline-block' : 'none'}"
-    class="widget-container"
-    href="https://www.bol.com/nl/nl/p/handboek-handboek-html5-en-css/9300000070553907/"
-  >
-    <div class="widget-content">
-      <picture class="widget-image">
-        <source srcset="/src/assets/images/9789463562645-groot.avif" type="image/avif">
-        <source srcset="/src/assets/images/9789463562645-groot.webp" type="image/webp">
-        <img alt="Omslag Handboek HTML 5 en CSS" height="402" loading="lazy" src="/src/assets/images/9789463562645-300.jpg" width="300">
-      </picture>
-      <p class="widget-text">
-        <span class="widget-text__title">Handboek HTML 5 en CSS<br>6e editie</span>
-        <span>Peter Doolaard</span>
-        <span>978-94-6356-264-5</span>
-        <span>524 pagina's</span>
-        <span>&euro; 44,99</span>
-        <span>Van Duuren Media, 2022</span>
-      </p>
-    </div>
-  </a>
+    </a>
+<!--    <a-->
+<!--      [ngStyle]="{'display': widgetAd.computedStyleMap().get('display')?.toString() === 'none' ? 'inline-block' : 'none'}"-->
+<!--      class="widget-container"-->
+<!--      href="https://www.bol.com/nl/nl/p/handboek-handboek-html5-en-css/9300000070553907/"-->
+<!--    >-->
+<!--    <div class="widget-content">-->
+<!--      <picture class="widget-image">-->
+<!--        <source srcset="/src/assets/images/9789463562645-groot.avif" type="image/avif">-->
+<!--        <source srcset="/src/assets/images/9789463562645-groot.webp" type="image/webp">-->
+<!--        <img alt="Omslag Handboek HTML 5 en CSS" height="402" loading="lazy" src="/src/assets/images/9789463562645-300.jpg" width="300">-->
+<!--      </picture>-->
+<!--      <p class="widget-text">-->
+<!--        <span class="widget-text__title">Handboek HTML 5 en CSS<br>6e editie</span>-->
+<!--        <span>Peter Doolaard</span>-->
+<!--        <span>978-94-6356-264-5</span>-->
+<!--        <span>524 pagina's</span>-->
+<!--        <span>&euro; 44,99</span>-->
+<!--        <span>Van Duuren Media, 2022</span>-->
+<!--      </p>-->
+<!--    </div>-->
+<!--  </a>-->
   </aside>
 </div>
