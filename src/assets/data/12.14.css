@@ -1,0 +1,103 @@
+:host {
+  color-scheme: light dark;
+
+  --light-bg-body: #f5f7fa;
+  --light-bg-variant: #e8eef3;
+  --light-color: #2c3e50;
+  --light-color-link: #3498db;
+  --light-color-link-hover: #2980b9;
+  --dark-bg-body: #2c3e50;
+  --dark-bg-variant: #34495e;
+  --dark-color: #ecf0f1;
+  --dark-color-link: #5dade2;
+  --dark-color-link-hover: #7fbbe9;
+}
+
+/* Deze div is de container voor alle elementen.*/
+.body {
+  line-height: 1.6;
+  padding: 2rem;
+  margin: 0;
+  background-color: light-dark(var(--light-bg-body), var(--dark-bg-body));
+  color: light-dark(var(--light-color), var(--dark-color));
+
+  &:has(.theme-toggle:checked) {
+    color-scheme: dark;
+  }
+
+  &:has(.theme-toggle:not(:checked)) {
+    color-scheme: light;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+:host {
+  color: light-dark(var(--light-color), var(--dark-color));
+  background-color: light-dark(var(--light-bg-body), var(--dark-bg-body));
+}
+
+.body :where(a,h1,h2,h3,h4,h5,h6) {
+  color: light-dark(var(--light-color-link), var(--dark-color-link));
+}
+
+a:hover {
+  color: light-dark(var(--light-color-link-hover), var(--dark-color-link-hover));
+}
+
+header {
+  position: relative;
+}
+
+header, footer {
+  background-color: light-dark(var(--light-bg-variant), var(--dark-bg-variant));
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+header, main, footer {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+article {
+  margin: 2rem 0;
+}
+
+label {
+  background-image: linear-gradient(to right, light-dark(var(--dark-bg-body), var(--light-bg-body)) 50%, light-dark(var(--light-bg-body), var(--dark-bg-body)) 50%);
+  block-size: 2rem;
+  border: 2px solid light-dark(var(--light-color), var(--dark-color));
+  border-radius: 50%;
+  cursor: pointer;
+  inline-size: 2rem;
+  position: absolute;
+  right: 3rem;
+  top: 3rem;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+
+  > input {
+    appearance: none;
+    block-size: 100%;
+    cursor: pointer;
+    inline-size: 100%;
+    position: absolute;
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+}
+
+  label:has(input:focus-visible) {
+    outline: 2px dotted light-dark(var(--light-color), var(--dark-color));
+    outline-offset: 2px;
+  }
+
+  label:hover {
+    transform: scale(1.1);
+  }
+

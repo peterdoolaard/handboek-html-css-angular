@@ -537,5 +537,12 @@
     "codeTitel": "Kleuren mengen met blend-mode",
     "codeHtml": "/assets/data/12.13.html",
     "codeCss": "/assets/data/12.13.css"
+  },
+  {
+    "hoofdstukNummer": 12,
+    "codeNummer": 14,
+    "codeTitel": "Lichte en donkere modus",
+    "codeHtml": "/assets/data/12.14.html",
+    "codeCss": "/assets/data/12.14.css"
   }
 ]

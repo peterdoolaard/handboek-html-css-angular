@@ -1,0 +1,36 @@
+<div class="body">
+  <header>
+    <h1>Header</h1>
+    <p>Dit is een voorbeeld van een thema met een lichte en een donkere variant.</p>
+    <label aria-label="Wissel tussen donker en licht thema" for="themeToggle">
+      <input class="theme-toggle" type="checkbox">
+    </label>
+  </header>
+  <main>
+    <article>
+      <h2>
+        Werkt zonder JavaScript
+      </h2>
+      <p>De schakelaar voor het lichte of donker thema is een label met een checkbox als child. Als de checkbox is ingeschakeld, geldt
+        <code>color-scheme: dark</code>. En bij een uitgeschakelde checkbox geldt
+        <code>color-scheme: light</code>.</p>
+    </article>
+    <article>
+      <h2>
+        Checkbox zonder opmaak
+      </h2>
+      <p>Met appearance: none is de checkbox van zijn opmaak verlost. Daardoor is de checkbox altijd visueel verborgen, terwijl de functionaliteit behouden blijft. </p>
+    </article>
+    <article>
+      <h2>
+        Focus-visible voor zichtbare focus
+      </h2>
+      <p>Het uitschakelen van focus-visible op de input moet wel worden hersteld voor fatsoenlijke toetsenbordnavigatie. Daarvoor zorgt de selector
+        <code>label:has(input:focus-visible)</code>. Deze zet een outline op het label als de input met het toetsenbord focus krijgt.</p>
+    </article>
+  </main>
+  <footer>
+    <a href="/voorbeelden?hoofdstuk=12">Footertekst zonder betekenis</a>
+  </footer>
+</div>
+
